@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom's Favourite Market</title>
+    <link rel="shortcut icon" href="Images/logo.png">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/cartStyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ProductListStyle.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="backPage.html"><img src="Images/logo.png"><span id="title">Mom's Favourite
+                    Market (ADMIN)</span></a></a>
+            <!--LINK TO MAIN PAGE-->
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
+                data-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="ProductList.html" class="nav-link">Product List</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="backstoreUserAccounts.html" class="nav-link">User List</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="orderLists.html" class="nav-link">Order List</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="loginpage2.html" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <center>
+
+        <div id="ProductList" class="col-md-11">
+            <h2 class="text-center" style="color:#334754;">Product List</h2>
+            <div class="table-responsive">
+                <table class="table" border="1">
+
+                    <tr>
+                        <th colspan="7" class="table-dark" style="background-color:#334754;">All Products</th>
+
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="Select all " value="Select all" /> Select all</td>
+                        <td></td>
+                        <td></td>
+                        <td>Collection</td>
+                        <td>
+
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    All Products
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="ProductList.html">All products</a>
+                                    <a class="dropdown-item" href="BakeryProductList.html">Bakery</a>
+                                    <a class="dropdown-item" href="ButcheryProductList.html">Butchery</a>
+                                    <a class="dropdown-item" href="Dairy&EggsProductList.html">Dairy & Eggs</a>
+                                    <a class="dropdown-item" href="F&VProductList.html">Fruits & Vegetables</a>
+                                    <a class="dropdown-item" href="PantryProductList.html">Pantry</a>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td><button type="button"><a href="AddProduct.html">Add Product</a></button></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td> </td>
+                        <td>Name</td>
+                        <td>Type</td>
+                        <td>Product Number</td>
+                        <td>Price</td>
+                        <td>Inventory</td>
+                        <td> </td>
+
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="1% milk 1L" /><img class="img-fluid" src="Images/milk1.png">
+                        </th>
+                        <td>1% Milk (1L)</td>
+                        <td>Dairy & Eggs</td>
+                        <td>112</td>
+                        <td>$1.85</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="1% milk 4L" /><img class="img-fluid" src="Images/milk2.png">
+                        </th>
+                        <td>1% Milk (4L)</td>
+                        <td>Dairy & Eggs</td>
+                        <td>111</td>
+                        <td>$6.38</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="2% milk 1L" /><img class="img-fluid" src="Images/milk3.png">
+                        </th>
+                        <td>2% Milk (1L)</td>
+                        <td>Dairy & Eggs</td>
+                        <td>114</td>
+                        <td>$1.93</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="2% milk 4L" /><img class="img-fluid" src="Images/milk4.png">
+                        </th>
+                        <td>2% Milk (4L)</td>
+                        <td>Dairy & Eggs</td>
+                        <td>113</td>
+                        <td>$6.68</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="Flour" /><img class="img-fluid" src="Images/flour.png"></th>
+                        <td>All Purpose Flour</td>
+                        <td>Pantry</td>
+                        <td>531</td>
+                        <td>$8.29</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="banana" /><img class="img-fluid" src="Images/banana.png"></th>
+                        <td>Banana</td>
+                        <td>Fruits & Vegetables</td>
+                        <td>212</td>
+                        <td>$0.33</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="pear" /><img class="img-fluid" src="Images/pear.png"></th>
+                        <td>Bartlett Pear</td>
+                        <td>Fruits & Vegetables</td>
+                        <td>213</td>
+                        <td>$0.88</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="blueberry yogurt" checked="checked" /> <img class="img-fluid"
+                                src="Images/yogurtcup.png"></img></td>
+                        <td>Blueberry Yogurt Pack</td>
+                        <td>Dairy & Eggs</td>
+                        <td>133</td>
+                        <td>$7.49</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="Chicken" /><img class="img-fluid"
+                                src="Images/chickenbreast.png">
+                        </th>
+                        <td>Boneless Chicken Breast, 3 Pack</td>
+                        <td>Butchery</td>
+                        <td>431</td>
+                        <td>$10.21</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="pork" /><img class="img-fluid" src="Images/pork.png"></th>
+                        <td>Butterfly Pork Chops, 3 Pack</td>
+                        <td>Butchery</td>
+                        <td>413</td>
+                        <td>$8.59</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="canned peas" /><img class="img-fluid"
+                                src="Images/cannedpeas.png">
+                        </th>
+                        <td>Canned Peas</td>
+                        <td>Pantry</td>
+                        <td>512</td>
+                        <td>$1.69</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="tuna" /><img class="img-fluid" src="Images/cannedtuna.png">
+                        </th>
+                        <td>Canned Tuna Chunks</td>
+                        <td>Pantry</td>
+                        <td>513</td>
+                        <td>$1.49</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="celery" checked="checked" /><img class="img-fluid"
+                                src="Images/celery.png"></th>
+                        <td>Celery</td>
+                        <td>Fruits & Vegetables</td>
+                        <td>223</td>
+                        <td>$3.69</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="cheddar cheese" checked="checked" /><img class="img-fluid"
+                                src="Images/cheddarcheese.png"></th>
+                        <td>Cheddar Cheese</td>
+                        <td>Dairy & Eggs</td>
+                        <td>132</td>
+                        <td>$4.49</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="chocolate chips" /><img class="img-fluid"
+                                src="Images/chocolatechip.png"></th>
+                        <td>Chocolate Chips</td>
+                        <td>Pantry</td>
+                        <td>534</td>
+                        <td>$16.99</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                    <tr>
+                        <th><input type="checkbox" name="duck" /><img class="img-fluid" src="Images/duckconfit.png">
+                        </th>
+                        <td>Confit Duck Legs, 2 Pack</td>
+                        <td>Butchery</td>
+                        <td>433</td>
+                        <td>$16.99</td>
+                        <td>In stock</td>
+                        <td><button type="button"> <a href="AddProduct.html">Edit</a></button></td>
+                    </tr>
+
+                </table>
+
+                <button type="button">&#8249;</button>
+                <button type="button" id="specialButton"><a href="ProductList2.html">&#8250;</a></button>
+                <br></br>
+            </div>
+        </div>
+
+
+
+    </center>
+
+
+
+    <!--CDN import for header & footer-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
