@@ -13,12 +13,12 @@ Contents of this File :
 6. Hosting
 7. Project Status
 8. Developers
-
-    1. Introduction :
+----------------
+1. Introduction :
 This  second part of our project has the goal of transforming our static pages to dynamic. In addition to the main aim of  building  a user-friendly portal that is responsive and adjustable  to various devices ,we also  made  it user interactive that can respond to the needs of users with many different functionalities. Instead of displaying static content  now it can modify/remove/add and implement other types of tasks.
 
 
-    2. Description and functionality of each part 
+2. Description and functionality of each part 
 New implemented functionalities of each part are the following :
 * Main/Home Page: This page gives the users access to all sections of the website, along with a summary of the ongoing promotions and the latest news. It also apprises the user of the history of the website and its approach towards environmental issues. The different sections provide recipes and display the open job positions for prospective candidates. In addition to all that it includes  “contact us”  button in the footer that can allow the user to fill out a form in case they have any inquiries or question regarding their order. The button validates whether the order number provided is in the correct format then allows the user to ask  questions about their orders.
 
