@@ -19,10 +19,10 @@ This  second part of our project has the goal of transforming our static pages t
 
 
 2. Description and functionality of each part 
+
 New implemented functionalities of each part are the following :
+
 * Main/Home Page: This page gives the users access to all sections of the website, along with a summary of the ongoing promotions and the latest news. It also apprises the user of the history of the website and its approach towards environmental issues. The different sections provide recipes and display the open job positions for prospective candidates. In addition to all that it includes  “contact us”  button in the footer that can allow the user to fill out a form in case they have any inquiries or question regarding their order. The button validates whether the order number provided is in the correct format then allows the user to ask  questions about their orders.
-
-
 
 * Aisle pages: These allow the user to browse through all the products. A page for each aisle has been created and the aisles themselves are initially ordered by relevance( 6 aisles in total). However, the user can also sort the products in alphabetical order (from A to Z or from Z to A). Further, items can be arranged according to their price as well- in ascending or descending order. It also has the “weekly deal” section that has a list of promotions and its prices correspond to the prices provided in each item’s description page where any change in the price reflect automatically in the “weekly deal” section.
 
@@ -68,7 +68,7 @@ To fix a bug or enhance a particular module, do the following:
 
 
 6. Hosting
-Hosting has been done on Github, by user haris2055. One repository has been created to store both the front-end and back-end. They are connected by the sign in page. The repository name is Mom-sFavouriteMarket. The repository has been made public so we're able to use the free features that allows us to generate a link for the repository. Given access to all team members so they're able to edit and upload as well.
+Hosting has been done on Github, by user XavierKMT. One repository has been created to store both the front-end and back-end. They are connected by the sign in page. The repository name is MomsFavouriteMarket. The repository has been made public so we're able to use the free features that allows us to generate a link for the repository. Given access to all team members so they're able to edit and upload as well.
 
 7. Project Status
 The project is being implemented in three parts, and hence is still being developed. The project ins converted from static to dynamic interface with different function in each page. PHP will be used in next step of the assignment.
