@@ -58,13 +58,13 @@ The website aims at assisting the user at every step in case of any difficulties
 5. Launch
 The project is available on the GitHub repository and can be set-up and run by pulling it onto the user's local device.
 To fix a bug or enhance a particular module, do the following:	
-  1. Fork the repository	
-  2. Make a new branch	
-  3. Make the appropriate changes 	
-  4. Add the changes (git Add -A)
-  5. Commit your changes (git commit -m "Improve feature")
-  6. Merge the changes with the main branch (git merge)
-  7. Push the changes (using git push command)
+    1. Fork the repository	
+    2. Make a new branch	
+    3. Make the appropriate changes 	
+    4. Add the changes (git Add -A)
+    5. Commit your changes (git commit -m "Improve feature")
+    6. Merge the changes with the main branch (git merge)
+    7. Push the changes (using git push command)
 
 
 6. Hosting
