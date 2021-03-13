@@ -25,7 +25,7 @@ Description
 The website consists of the following pages:
 
 	Front-End:
-~~
+
 *Main/Home Page:This page gives the users access to all sections of the website, along with a summary of the ongoing promotions and the latest news. It also apprises the user of the history of the website and its approach towards environmental issues. The different sections provide recipes and display the open job positions for prospective candidates.
 
 *Aisle pages: These allow the user to browse through all the products. A page for each aisle has been created and the aisles themselves are initially ordered by relevance. However, the user can also sort the products in alphabetical order (from A to Z or from Z to A). Further, items can be arranged according to their price as well- in ascending or descending order.
@@ -41,7 +41,7 @@ The website consists of the following pages:
 
 	
 	Back-Store:
-~~
+
 *Product List pages: These pages allow the Admin to browse through all the products. They will be able to see the image of the product, its name, its product number, its price and its inventory. In addition, they will also be able to add a new product or edit an existing one. All the products of a particular aisle will be visible to them.
 
 *Edit a Product page: New products can be added and the description of existing ones can be modified by filling in the text boxes provided. The instructions have been laid out in a clear manner in order to enhance the browsing experience.
@@ -83,7 +83,7 @@ To fix a bug or enhance a particular module, do the following:
 Hosting
 -------
 Hosting has been done on Github, by user XavierKMT. The website name is MomsFavouriteMarket.
-The link to the website is https://xavierkmt.github.io/MomsFavouriteMarket/
+The link to the website is https://xavierkmt.github.io/MomsFavouriteMarket/ .
 The back-end page can be accessed through the admin log in button located in the sign up page.
 
 
