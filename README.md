@@ -13,7 +13,7 @@ Contents of this File :
 6. Hosting
 7. Project Status
 8. Developers
--
+-----
 1. Introduction :
 This  second part of our project has the goal of transforming our static pages to dynamic. In addition to the main aim of  building  a user-friendly portal that is responsive and adjustable  to various devices ,we also  made  it user interactive that can respond to the needs of users with many different functionalities. Instead of displaying static content  now it can modify/remove/add and implement other types of tasks.
 
