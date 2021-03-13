@@ -4,14 +4,14 @@ Mom's Favourite Market- Grocery Store Website
 ---------------------------------------------
 
 Contents of this File
-*Introduction
-*Description
-*Support
-*Technologies
-*Launch
-*Hosting
-*Project Status
-*Developers
+* Introduction
+* Description
+* Support
+* Technologies
+* Launch
+* Hosting
+* Project Status
+* Developers
 
 
 Introduction
@@ -62,10 +62,10 @@ The website aims at assisting the user at every step in case of any difficulties
 
 Technologies
 ------------
-*HTML5
-*CSS
-*Bootstrap 4
-*JavaScript
+* HTML5
+* CSS
+* Bootstrap 4
+* JavaScript
 
 Launch
 ------
