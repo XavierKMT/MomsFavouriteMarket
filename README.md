@@ -1,8 +1,8 @@
-# Assignment 2 SOEN 287 SECTION  W #
-# DUE DATE    14 March 2021 #
+## Assignment 2 SOEN 287 SECTION  W
+DUE DATE    14 March 2021 ##
 
 
-## Mom's Favourite Market- Grocery Store Website ##
+### Mom's Favourite Market- Grocery Store Website ###
 
 Contents of this File :
 1. Introduction
