@@ -24,7 +24,7 @@ Description
 
 The website consists of the following pages:
 
-	Front-End:
+Front-End
 
 * Main/Home Page:This page gives the users access to all sections of the website, along with a summary of the ongoing promotions and the latest news. It also apprises the user of the history of the website and its approach towards environmental issues. The different sections provide recipes and display the open job positions for prospective candidates.
 
@@ -40,7 +40,7 @@ The website consists of the following pages:
 
 
 	
-	Back-Store:
+Back-Store:
 
 * Product List pages: These pages allow the Admin to browse through all the products. They will be able to see the image of the product, its name, its product number, its price and its inventory. In addition, they will also be able to add a new product or edit an existing one. All the products of a particular aisle will be visible to them.
 
