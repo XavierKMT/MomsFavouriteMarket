@@ -14,11 +14,11 @@ Contents of this File :
 7. Project Status
 8. Developers
 
-1. Introduction :
+  1. Introduction :
 This  second part of our project has the goal of transforming our static pages to dynamic. In addition to the main aim of  building  a user-friendly portal that is responsive and adjustable  to various devices ,we also  made  it user interactive that can respond to the needs of users with many different functionalities. Instead of displaying static content  now it can modify/remove/add and implement other types of tasks.
 
 
-2. Description and functionality of each part 
+  2. Description and functionality of each part 
 New implemented functionalities of each part are the following :
 * Main/Home Page: This page gives the users access to all sections of the website, along with a summary of the ongoing promotions and the latest news. It also apprises the user of the history of the website and its approach towards environmental issues. The different sections provide recipes and display the open job positions for prospective candidates. In addition to all that it includes  “contact us”  button in the footer that can allow the user to fill out a form in case they have any inquiries or question regarding their order. The button validates whether the order number provided is in the correct format then allows the user to ask  questions about their orders.
 
@@ -46,16 +46,16 @@ New implemented functionalities of each part are the following :
 
 * Order 4013.1,2,3 pages : These webpages give the Admin access to modify, add, remove, update and save new changes to the items of a specific order. In addition to that, the Admin can also verify the available quantity of the specific item (whether or not it is in stock). It also updates all products by adding removing or editing them.
 
-3. Support
+  3. Support
 The website aims at assisting the user at every step in case of any difficulties. A 'Contact Us' button has been provided for this very purpose, which can be found at the bottom of all the webpages. Moreover, a map has also been linked for customers who may want to visit the store in-person. In addition to all that contact number is also added on main page making sure that the customer is aware of our 24/7 support line.
 
-4. Technologies	
+  4. Technologies	
 * HTML5
 * CSS	
 * Bootstrap 4
 * JavaScript 
 
-5. Launch
+  5. Launch
 The project is available on the GitHub repository and can be set-up and run by pulling it onto the user's local device.
 To fix a bug or enhance a particular module, do the following:	
 1. Fork the repository	
@@ -67,15 +67,16 @@ To fix a bug or enhance a particular module, do the following:
 7. Push the changes (using git push command)
 
 
-6. Hosting
+  6. Hosting
 Hosting has been done on Github, by user haris2055. One repository has been created to store both the front-end and back-end. They are connected by the sign in page. The repository name is Mom-sFavouriteMarket. The repository has been made public so we're able to use the free features that allows us to generate a link for the repository. Given access to all team members so they're able to edit and upload as well.
 
-7. Project Status
+  7. Project Status
 The project is being implemented in three parts, and hence is still being developed. The project ins converted from static to dynamic interface with different function in each page. PHP will be used in next step of the assignment.
 
 
 NOTE:  Clear organized folders and  sufficient documentation of comments are added through the code of each part.
-8. Developers:
+
+  8. Developers:
 * Christina Darstbanian (ID: 40097340)
 
 * Divleen Kaur Ahluwalia (ID: 40116121)
