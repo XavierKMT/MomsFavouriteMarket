@@ -62,10 +62,10 @@ The website aims at assisting the user at every step in case of any difficulties
 
 Technologies
 ------------
-HTML5
-CSS
-Bootstrap 4
-JavaScript
+*HTML5
+*CSS
+*Bootstrap 4
+*JavaScript
 
 Launch
 ------
