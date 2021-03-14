@@ -4,7 +4,7 @@ function deleteProduct(r) {
     document.getElementById("productsTable").deleteRow(i);
   }
 
-//To delete all the products in from the page
+//To delete all the products in the page
 function deleteAll(r){
     var i = r.parentNode.parentNode.rowIndex + 2;
     for (p = 3; p< 20 ; p++){
