@@ -108,7 +108,7 @@ let resetCheck=function(){
     for(i=0; i<inputs.length; i++){
         inputs[i].value='';
     }
-    // inputs[inputs.length-1].checked=false;
+   
     document.getElementById("mismatch").style.display="none";
     document.getElementById("mismatch2").style.display="none";
     document.getElementById("mismatch_password").style.display="none";
