@@ -1,10 +1,10 @@
 <html>
-<!--Name: Divleen Kaur Ahuwalia, Student ID: 40116121-->
+<!--NAME: DIVLEEN KAUR AHLUWALIA, STUDENT ID: 40116121-->
 
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/signuppageHF.css">
     <title>Mom's Favourite Market</title>
     <link rel="shortcut icon" href="Images/logo.png">
@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 
@@ -101,8 +102,7 @@
                         <label for="first_name">First Name</label>
                         <input type="text" class="form-control" id="first_name" placeholder=" First Name">
                     </div>
-                    <!-- </div> -->
-                    <!-- <div class="form-group row"> -->
+                   
 
                     <div class="form-group col-sm-5">
                         <label for="last_name">Last Name</label>
@@ -115,11 +115,13 @@
                     <div class="form-group col-sm-5">
                         <label for="inputEmail">Email</label>
                         <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        <span id="mismatch2" style="display:none;color:#e04362 ;font-style: italic;">Please enter a valid Email ID!</span>
                     </div>
 
                     <div class="form-group col-sm-5">
                         <label for="confEmail">*Confirm Email</label>
-                        <input type="email" class="form-control" id="confEmail" placeholder="Email">
+                        <input type="email" class="form-control" id="confEmail" placeholder="Email" required>
+                        <span id="mismatch" style="display:none;color:#e04362; font-style: italic;">The email addresses provided do not match!</span>
                     </div>
 
                 </div>
@@ -129,13 +131,12 @@
                         <label for="inputPassword">Password</label>
                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                     </div>
-                    <!-- </div>
+                   
 
-
-            <div class="form-group row"> -->
                     <div class="form-group col-sm-5">
                         <label for="confPassword">*Confirm Password</label>
-                        <input type="password" class="form-control" id="confPassword" placeholder="Password">
+                        <input type="password" class="form-control" id="confPassword" placeholder="Password" required>
+                        <span id="mismatch_password" style="display:none;color:#e04362;font-style: italic;">The passwords provided do not match!</span>
                     </div>
                 </div>
 
@@ -163,6 +164,7 @@
                     <div class="col-sm-5">
                         <label for="phone">Phone</label>
                         <input type="text" class="form-control" id="phone" placeholder="(+1)">
+                        <span id="mismatch_phone" style="display:none;color:#e04362;font-style: italic;">Invalid phone number. No special characters please!</span>
                     </div>
                     <div class="col-sm-5">
                     </div>
@@ -173,10 +175,10 @@
                 <div style="padding-left: 5%; padding-right: 5%">
                     <h3 style="text-align: center;">Subscribing to our e-communications</h3>
 
-                    <input type="checkbox">
+                    <input type="checkbox" id="subscription_box_1">
                     <label>I would like to receive the latest deals and promotions offered by Mom's Favorite Market and
                         it's trusted partners.</label><br>
-                    <input type="checkbox">
+                    <input type="checkbox" id="subscription_box_2">
                     <label>I would like to sign-up for the Mom's Favourite newsletter. It includes: </label>
                     <ul style="margin-left:5%">
                         <li>Popular recipes</li>
@@ -197,12 +199,12 @@
                                 Conditions</a></u></strong>
                     </h2>
                     <p>
-                        <input type="radio"><sup>*</sup>
+                        <input type="radio" id="radioCheck" required><sup>*</sup>
                         Yes, I have read and accepted the Terms and Conditions. By checking this box, I hereby agree to
                         them.
                     </p>
-                    <button class="btn btn-outline-secondary" role="submit" name="signup-submit">Create Account</button>
-                    <button class="btn btn-outline-secondary" role="reset" name="signup-reset">Reset</button>
+                    <button class="btn btn-outline-secondary" type="submit" id="signup-submit" onclick="submission()">Create Account</button>
+                    <button class="btn btn-outline-secondary"  id="signup-reset">Reset</button>
 
                     <div class="form-row">
                         <P>Already have an account? Log in <a href="loginpage.html">here</a></P>
@@ -216,7 +218,7 @@
         </div>
     </form>
 
-
+    <script src="JS/signupvalidation.js"></script>
 
     <!--FOOTER-->
     <!--Using Boot Strap Website as well as W3school for reference -->
