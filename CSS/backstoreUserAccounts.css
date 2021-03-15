@@ -23,7 +23,7 @@ button {
 }
 
 .styled-table thead tr{
-    background-color: #e45e79;
+    background-color:#e04362;
 }
 .styled-table th, .styled-table td{
     padding: 12px 15px;
@@ -35,5 +35,5 @@ button {
     background-color: #f3f3f3;
 }
 .styled-table tbody tr:last-of-type{
-    border-bottom: 2px solid #e45e79;
+    border-bottom: 2px solid #e04362;
 }
