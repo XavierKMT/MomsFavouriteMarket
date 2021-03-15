@@ -22,6 +22,7 @@
 
     <!--imports the javascript code-->
     <script src= "JS/ProductPageButtons.js"></script>
+    <script src= "JS/editProduct.js"></script>
 </head>
 
 <body>
@@ -124,7 +125,7 @@
                 <td>$6.99</td>
                 <td>In stock</td>
                 <!--Button to edit the product-->
-                <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+                <td><button type="button" onclick="productToEdit(21)"> <a href = "EditProduct.html">Edit</a></button></td>
                 <!--Product to delete the product-->
                 <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
@@ -135,7 +136,7 @@
                 <td>612</td>
                 <td>$2.99</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(22)"> <a href = "EditProduct.html">Edit</a></button></td>
                <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
@@ -145,7 +146,7 @@
                 <td>613</td>
                 <td>$1.41</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(26)"> <a href = "EditProduct.html">Edit</a></button></td>
                <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
            
