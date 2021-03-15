@@ -20,11 +20,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <!--Icons from fontawesome website is implemented-->
-    <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
+    
 
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/cartStyle.css">
+
+    <script src="cartScript.js"></script>
+
+    <!--Icons from fontawesome website is implemented-->
+    <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -76,7 +80,7 @@
 
                 <div class="table-responsive">
                     <div class="main">
-                        <table class="table">
+                        <table class="table" id="ed">
                             <tr>
                                 <th></th>
                                 <th style="color:#334754; font-size: 22px;">PRODUCT</th>
@@ -92,8 +96,9 @@
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;">Bagel</td>
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;">1</td>
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;">$4</td>
-                                <td style="vertical-align: middle; font-size:17px;""><button type=" button""><i class=" far
-                                        fa-times-circle"></i></button></td>
+                                <td style="vertical-align: middle; font-size:17px;"">
+                                    <button type=" button" onclick="del1(this)"><i class=" far fa-times-circle"></i></button>
+                                </td>
                                 <td style="vertical-align: middle;  font-size:17px;""><a href=" 4013.1.html"
                                     class="editButton"><button type="button">EDIT</button></a>
                                 </td>
@@ -105,8 +110,9 @@
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;">Strawberry</td>
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;">1</td>
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;">$3</td>
-                                <td style="vertical-align: middle;font-size:17px;"><button type="button""><i class=" far
-                                        fa-times-circle"></i></button></td>
+                                <td style="vertical-align: middle;font-size:17px;">
+                                    <button type="button" onclick="del1(this)"><i class=" far fa-times-circle"></i></button>
+                                </td>
                                 <td style="vertical-align: middle;font-size:17px;""><a href=" 4013.2.html"
                                     class="editButton"><button type="button">EDIT</button></a>
                                 </td>
@@ -119,8 +125,9 @@
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;"">Milk</td>
                                 <td style=" vertical-align: middle; color:#334754; font-size:20px;"">1</td>
                                 <td style="vertical-align: middle; color:#334754; font-size:20px;"">$6.56</td>
-                                <td style=" vertical-align: middle; font-size:17px;""><button type="button""><i class="
-                                        far fa-times-circle"></i></button></td>
+                                <td style=" vertical-align: middle; font-size:17px;"">
+                                    <button type="button" onclick="del1(this)"><i class="far fa-times-circle"></i></button>
+                                </td>
                                 <td style="vertical-align: middle; color:#334754; font-size:17px;""><a href="
                                     4013.3.html" class="editButton"><button type="button">EDIT</button></a>
                                 </td>
@@ -131,11 +138,13 @@
                                     <form style="float: right; margin-top:20px;">
                                         <input type="text" placeholder="Add Product"
                                             style="border-radius:20px;width: 200px; border-color: #334754; border: 1px solid black;">
-                                        <button type="button"><i class="fas fa-plus-circle"></i></button>
+                                        <button type="button" onclick="fcn1(this)"><i class="fas fa-plus-circle"></i></button>
 
                                     </form>
                                 </td>
                             </tr>
+
+                            <tr id="removea"></tr>
 
                         </table>
 
@@ -163,6 +172,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+    
 
 
 
