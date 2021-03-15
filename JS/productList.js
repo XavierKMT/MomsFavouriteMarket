@@ -45,7 +45,7 @@ let products = [{name: 'Blueberry Yogurt Pack', picture: 'yogurtcup', price: '5.
     {name: 'Flaked Light Tuna', picture: 'cannedtuna', price: '1.49', aisle: 'Non-Perishable', volume: '170ml', ppv: '$0.88/100ml', id: '513'},
     {name: 'Lean Minced Turkey', picture: 'mincedturkey', price: '2.99', aisle: 'Butchery', weight: '450g', ppw: '$0.66/100g', id: '432'},
     {name: 'Unsalted Butter', picture: 'unsaltedbutter', price: '4.89', aisle: 'Dairy & Eggs', weight: '454g', ppw: '$1.08/100g', id: '116'},
-    {name: 'Sliced White Bread', picture: 'whitebread', price: '3.58', aisle: 'Bakery', weight: '675g', ppw: '$0.38/100g', id: '311'},
+    {name: 'Sliced White Bread', picture: 'whitebread', price: '2.50', aisle: 'Bakery', weight: '675g', ppw: '$0.37/100g', id: '311'},
     {name: 'Whole Wheat Bagel', picture: 'wholewheatbagel', price: '5.89', aisle: 'Bakery', weight: '450g', quantity: '6 bagels', id: '332'},
     {name: 'Sliced Whole Wheat Bread', picture: 'wholewheatbread', price: '4.19', aisle: 'Bakery', weight: '675g', ppw: '$0.62/100g', id: '313'},
     {name: 'Mixed Fruit Flavored Yogurt Pack', picture: 'yogurtpack', price: '5.99', aisle: 'Dairy & Eggs', weight: '16x100g', ppw: '$0.37/100g', id: '134'},
