@@ -57,13 +57,45 @@
         </nav>
 
     </header>
+    <script type="text/javascript">
+    
+   
 
+    
 
+   function deleterow1(r){
+       var i = r.parentNode.parentNode.rowIndex;
+       document.getElementById("myTable").deleteRow(i);
+    }
+    
+    function gotoedit(){
+        location.href="editProfile.html"
+    }
 
+    
+    
+  function addrow(){
+        var tbl = document.getElementById("myTable");
+        var row = tbl.insertRow(1);
+        var cell0 = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+        var cell2 = row.insertCell(2);
+        var cell3 = row.insertCell(3);
+
+        cell0.innerHTML = "YYYYYYY";
+        cell1.innerHTML = "123456";
+        cell2.innerHTML = '<button type="button" onclick="gotoedit()" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button>';
+        cell3.innerHTML = '<button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button>';
+    }
+  
+    
+    </script>
+
+  
     <div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 60px; margin-right:60px; margin-top:15px;">
         <h1 style="text-align:center; color: grey">List of Users</h1>
         <hr style="margin-bottom:4%">
-        <table>
+        <table id="myTable">
             <tr>
                 <th>User's Email</th>
                 <th>UserID</th>
@@ -72,122 +104,103 @@
                 </th>
 
             </tr>
+            <div id="row1">
             <tr>
                 <td>
-                    XXXXX
+                    XXXXXXX
                 </td>
                 <td>
-                    99999
+                    12345
                 </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
+                <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
 
             </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
+            </div>
+            <div id="row2">
+                <tr>
+                    <td>
+                        XXXXXXX
+                    </td>
+                    <td>
+                        12345
+                    </td>
+                    <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                    <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
+    
+                </tr>
+                </div>
+                <div id="row3">
+                    <tr>
+                        <td>
+                            XXXXXXX
+                        </td>
+                        <td>
+                            12345
+                        </td>
+                        <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                        <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
+        
+                    </tr>
+                    </div>
+                    <div id="row4">
+                        <tr>
+                            <td>
+                                XXXXXXX
+                            </td>
+                            <td>
+                                12345
+                            </td>
+                            <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                            <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
+            
+                        </tr>
+                        </div>
 
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-            <tr>
-                <td>
-                    XXXXX
-                </td>
-                <td>
-                    99999
-                </td>
-                <td><a href="editProfile.html">edit</a></td>
-                <td><a href="">delete</a></td>
-
-            </tr>
-
+                        <div id="row5">
+                            <tr>
+                                <td>
+                                    XXXXXXX
+                                </td>
+                                <td>
+                                    12345
+                                </td>
+                                <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                                <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
+                
+                            </tr>
+                            </div>
+                            <div id="row1">
+                                <tr>
+                                    <td>
+                                        XXXXXXX
+                                    </td>
+                                    <td>
+                                        12345
+                                    </td>
+                                    <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                                    <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
+                    
+                                </tr>
+                                </div>
+                                <div id="row1">
+                                    <tr>
+                                        <td>
+                                            XXXXXXX
+                                        </td>
+                                        <td>
+                                            12345
+                                        </td>
+                                        <td><button type="button" onclick="location.href='editProfile.html';" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Edit</button></td>
+                                        <td><button type="button" onclick="deleterow1(this)" style="width: 100px; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px;">Delete</button></td>
+                        
+                                    </tr>
+                                    </div>
         </table>
-        <button type="button" role="submit" name="signup-submit" style="margin-left: 47%; margin-right: 60px;"
-            href="">Add
+        <button type="button" role="submit" name="signup-submit" style="margin-left: 47%; margin-right: 60px; position: relative;"
+            onclick="addrow()">Add
             User</button>
-        <button type="button" role="submit" name="signup-submit" style="margin-left: 45.5%   ; margin-right: 60px;">Save
+        <button type="button" role="submit" name="signup-submit" style="margin-left: 45.75%   ; margin-right: 60px; position: relative;">Save
             Changes</button>
     </div>
 
