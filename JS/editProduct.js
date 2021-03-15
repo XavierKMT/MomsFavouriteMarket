@@ -13,7 +13,7 @@ function fillInBlanks() {
     image += '.png';
 
     document.getElementById('productName').value = name;
-    document.getElementById('price').value = price;
+    document.getElementById('price').value = '$' + price;
     document.getElementById('itemId').value = itemID;
     document.getElementById('stock').value = 10;
     document.getElementById('pic2').innerHTML = image;
