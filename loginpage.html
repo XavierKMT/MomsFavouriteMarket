@@ -34,13 +34,11 @@
                 data-target="#main-navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,9 +50,11 @@
                             <li><a class="dropdown-item" href="Bakery_Relevance.html">Bakery</a></li>
                             <li><a class="dropdown-item" href="Butchery_Relevance.html">Butchery</a></li>
                             <li><a class="dropdown-item" href="Pantry_Relevance.html">Non-Perishable Food</a></li>
-
-
+                            <li><a class="dropdown-item" href="Frozen_Relevance.html">Frozen Food</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="WeeklyDeals.html" class="nav-link">Weekly Deals!</a>
                     </li>
                     <li class="nav-item">
                         <a href="environment1.html" class="nav-link">Environment</a>
@@ -65,12 +65,10 @@
                     <li class="nav-item">
                         <a href="About us.html" class="nav-link">About Us</a>
                     </li>
-
-
                     <li class="nav-item">
                         <a href="loginpage.html" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
                     </li>
-
+        
                     <li class="nav-item">
                         <a href="Cart.html" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
                     </li>
@@ -96,24 +94,25 @@
             <h1 style="text-align:center; color: grey">Please Sign In Below</h1>
             <hr style="margin-bottom:4%">
             <div class="container">
-                <form action="">
-                    <label>Email</label>
-                    <input type="email" name="EmailAdress" placeholder="Please enter your email" />
-                </form>
-
-                <form action="">
-                    <label>Password</label>
-                    <input type="password" name="Password" placeholder="password" />
-                </form>
-                <button type="button" role="submit" name="signup-submit"
-                    style="margin-left: 190px   ; margin-right: 60px;">Log In</button>
-                <button type="button" role="submit" name="forgot-password"
-                    style="margin-left: 160px   ; margin-right: 60px; margin-top: 30px;"><a href="backPage.html"
+                <form >
+                    <label>Email:</label>
+                    <input type="email" name="EmailAdress" placeholder="Please enter your email" required/>
+                </br>
+            </br>
+                    <label>Password:</label>
+                    <input type="password" name="Password" placeholder="Password" required/>
+                
+                <button type="submit" role="submit" name="signup-submit"
+                    style="margin-left: 160px   ; margin-right: 60px;margin-top: 30px;color: white" >Log In</button>
+                
+                    <button type="button"  name="forgot-password"
+                    style="margin-left: 128px   ; margin-right: 61px; margin-top: 30px;"><a href="backPage.html"
                         style="text-decoration: none; color: white;">ADMIN
                         Login In</a></button>
-                <button type="button" role="submit" name="forgot-password"
-                    style="margin-left: 160px   ; margin-right: 60px; margin-top: 30px;">Forgot Password</button>
-
+                
+                        <button type="button" name="forgot-password"
+                    style="margin-left: 123px   ; margin-right: 60px; margin-top: 30px;"><a href="passwordreset.html" style="text-decoration: none; color: white;"> Forgot Password</a></button>
+                </form>
                 <p>
                 <h5>If you don't have an account, join the family <a href="signuppageHF.html"> here!</a></h5>
                 </p>
