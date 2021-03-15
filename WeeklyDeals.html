@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="CSS/weeklydealsStyle.css">
 
     <script src="JS/addToCart.js"></script>
-    <script src="JS/productList.js"></script>
 </head>
 
 <body>
@@ -101,7 +100,7 @@
                 <tr>
                     <td> </td>
                     <td>Name</td>
-                    <td>Type</td>
+                    <td>Aisle</td>
                     <td>New Price</td>
                     <td>Weight</td>
                     <td>Price per weight</td>
@@ -116,10 +115,10 @@
                     <td>Dairy & Eggs</td>
                     <td id = "sales"><span class = "bigger"> $4.77</span> ea.</td>
                     <td>30 un.</td>
-                    <td>$0.25/un</td>
+                    <td>$0.16/un</td>
                     <td id = "oldPrices">$7.49 ea.</td>
                     <!--Add to cart button-->
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
+                   <td><button type="button" onclick="addToCart(8)"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
                 </tr>  
                 <!--The same concept for each products-->
                 <tr>
@@ -130,7 +129,7 @@
                     <td>12 x 95g</td>
                     <td>$0.53/100g</td>
                     <td id = "oldPrices">$7.49 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
+                   <td><button type="button" onclick="addToCart(1)"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
                 </tr>
     
                 <tr>
@@ -139,9 +138,9 @@
                     <td>Butchery</td>
                     <td id = "sales"><span class="bigger">$5.11</span> ea.</td>
                     <td> approx. 600g</td>
-                    <td id = "oldPrices">$1.70/100g</td>
+                    <td id = "oldPrices">$0.85/100g</td>
                     <td id = "oldPrices">$10.21 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
+                   <td><button type="button" onclick="addToCart(14)"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
                 </tr>
     
                 <tr>
@@ -310,7 +309,7 @@
                 </tr>  
 
                 <tr>
-                    <th><a href="StrawberryYogurt.html"><img class = "img-fluid" src = "Images/straberryyogurt.png"></img></a></th>
+                    <th><a href="StrawberryYogurt.html"><img class = "img-fluid" src = "Images/strawberryyogurt.png"></img></a></th>
                     <td><a href="StrawberryYogurt.html">Strawberry Yogurt Pack</a></td>
                     <td>Dairy & Eggs</td>
                     <td id = "sales"><span class = "bigger"> $5.99</span> ea.</td>
