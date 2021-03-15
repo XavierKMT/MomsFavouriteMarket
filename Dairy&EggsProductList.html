@@ -22,6 +22,7 @@
 
     <!--imports the javascript code-->
     <script src= "JS/ProductPageButtons.js"></script>
+    <script src= "JS/editProduct.js"></script>
 </head>
 
 <body>
@@ -122,7 +123,7 @@
                 <td>$7.49</td>
                 <td>In stock</td>
                 <!--Button to edit the product-->
-                <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+                <td><button type="button" onclick="productToEdit(1)"> <a href = "EditProduct.html">Edit</a></button></td>
                 <!--Product to delete the product-->
                 <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
@@ -133,7 +134,7 @@
                 <td>132</td>
                 <td>$4.49</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(13)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
@@ -143,7 +144,7 @@
                 <td>134</td>
                 <td>$5.99</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(51)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
@@ -153,87 +154,87 @@
                 <td>131</td>
                 <td>$5.99</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(41)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
-                <th><img class = "img-fluid" src = "Images/straberryyogurt.png"></img></th>
+                <th><img class = "img-fluid" src = "Images/strawberryyogurt.png"></img></th>
                 <td>Strawberry Yogurt Pack</td>
                 <td>117</td>
                 <td>$7.49</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(42)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
                 <th><img class = "img-fluid" src = "Images/12browneggs.png"></img></th>
-                <td>Large Brown Eggs</td>
+                <td>10 Large Brown Eggs</td>
                 <td>123</td>
                 <td>$4.69</td>
                 <td>In stock</td>
-                <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+                <td><button type="button" onclick="productToEdit(3)"> <a href = "EditProduct.html">Edit</a></button></td>
                <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
                 <th><img class = "img-fluid" src = "Images/30eggs.png"></img></th>
-                <td>Large Eggs</td>
+                <td>30 Large Eggs</td>
                 <td>121</td>
                 <td>$7.49</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(8)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
                 <th><img class = "img-fluid" src = "Images/10whiteeggs.png"></img></th>
-                <td>Large White Eggs</td>
+                <td>10 Large White Eggs</td>
                 <td>413</td>
                 <td>$2.99</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(2)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
-                <th><img class = "img-fluid" src = "Images/milk2.png"></img></th>
+                <th><img class = "img-fluid" src = "Images/1milk4L.png"></img></th>
                 <td>1% Milk (4L)</td>
                 <td>111</td>
                 <td>$6.38</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(5)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
-                <th><img class = "img-fluid" src = "Images/milk1.png"></img></th>
+                <th><img class = "img-fluid" src = "Images/1milk1L.png"></img></th>
                 <td>1% Milk (1L)</td>
                 <td>112</td>
                 <td>$1.85</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(4)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
-                <th><img class = "img-fluid" src = "Images/milk4.png"></img></th>
+                <th><img class = "img-fluid" src = "Images/2milk4L.png"></img></th>
                 <td>2% Milk (4L)</td>
                 <td>113</td>
                 <td>$6.68</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(7)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
             <tr>
-                <th><img class = "img-fluid" src = "Images/milk3.png"></img></th>
+                <th><img class = "img-fluid" src = "Images/2milk1L.png"></img></th>
                 <td>2% Milk (1L)</td>
                 <td>114</td>
                 <td>$1.93</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(6)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
@@ -243,7 +244,7 @@
                 <td>115</td>
                 <td>$4.69</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(40)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
 
@@ -253,7 +254,7 @@
                 <td>116</td>
                 <td>$4.89</td>
                 <td>In stock</td>
-               <td><button type="button"> <a href = "AddProduct.html">Edit</a></button></td>
+               <td><button type="button" onclick="productToEdit(47)"> <a href = "EditProduct.html">Edit</a></button></td>
               <td><input type="button" value="Delete" onclick="deleteProduct(this)"/></td>
             </tr>
            
