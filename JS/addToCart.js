@@ -10,7 +10,7 @@ function addToCart(itemNum) {
     cartSize = localStorage.getItem('cart');
     cartSize = parseInt(cartSize);
     localStorage.setItem('itemInCart' + cartSize, itemNum);
-    for(i=0;i<cartSize;i++) {
+    for(i=1;i<=cartSize;i++) {
         if (parseInt(localStorage.getItem('itemInCart' + i)) == itemNum) {
             alert("This item is already in the cart");
             localStorage.setItem('cart', cartSize - 1);
