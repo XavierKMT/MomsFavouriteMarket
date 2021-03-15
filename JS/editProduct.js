@@ -4,7 +4,7 @@ function productToEdit(product) {
 
 function fillInBlanks() {
     var item = localStorage.getItem('productToEdit');
-    item = parseInt(item);
+    item = parseInt(item)-1;
     var name = products[item].name;
     var price = products[item].price;
     var weight = products[item].weight;
