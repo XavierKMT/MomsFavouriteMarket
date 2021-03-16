@@ -649,10 +649,26 @@ function subTotal()
         i++;
     }
 
-    return (Math.round(subtotal*100)/100);
-
-    // ta.parentNode.parentNode
+    displaySubtotal(Math.round(subtotal*100)/100);
   
+}
+
+function displaySubtotal(amount)
+{
+    var ta = document.getElementById("mySubtotalCart");
+   
+    var gst=(Math.round((amount *0.05)*100)/100);
+    var qst=(Math.round((amount *0.09975)*100)/100);
+    var total=(Math.round((amount+qst+gst)*100)/100)
+
+    ta.rows[0].cells[1].innerHTML="$"+amount;
+
+    ta.rows[1].cells[1].innerHTML="$"+gst;
+
+    ta.rows[2].cells[1].innerHTML="$"+qst;
+
+    ta.rows[3].cells[1].innerHTML="$"+total;
+ 
 }
 
 function updateQ(target,add)
@@ -686,6 +702,8 @@ function updateQ(target,add)
             // subTotal(target);
         }
     }
+
+    subTotal()
 }
 
 
