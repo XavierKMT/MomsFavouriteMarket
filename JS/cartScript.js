@@ -708,7 +708,7 @@ function displayCart() {
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     if (cartSize == NaN) {
-        cartList.innerHTML = 'Cart is empty';
+        cartList.innerHTML = `Cart is empty`;
     } else {
         for(i=0;i<cartSize;i++) {
             let item = localStorage.getItem('itemInCart' + (i+1));
