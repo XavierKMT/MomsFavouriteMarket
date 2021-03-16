@@ -105,7 +105,7 @@
                         <tr style="border-color: white;">
                             <th colspan="5" class="text-center table-dark"
                                 style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
-                                <h4>Bread & Bakery (1)</h4>
+                                <h4>Bread & Bakery</h4>
                             </th>
                         </tr>
 
@@ -116,9 +116,9 @@
                             <td style="vertical-align: middle;">
 
                                 <form>
-                                    <button type="button" onclick=""><i class=" fas fa-plus-circle"></i></button>
-                                    <input type="text" value="1">
-                                    <button type="button"><i class="fas fa-minus-circle"></i></button>
+                                    <button type="button" onclick="updateQ(this,true)"><i class=" fas fa-plus-circle"></i></button>
+                                    <input type="text" value="1"  disabled="disabled">
+                                    <button type="button" onclick="updateQ(this,false)"><i class="fas fa-minus-circle"></i></button>
                                 </form>
                             </td>
 
@@ -133,7 +133,7 @@
                         <tr>
                             <th colspan="5" class="text-center table-dark"
                                 style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
-                                <h4>Fruits & Vegetables (1)</h4>
+                                <h4>Fruits & Vegetables</h4>
                             </th>
                         </tr>
 
@@ -143,9 +143,9 @@
                             <td style="vertical-align: middle; font-size:23px;color:#334754;">Strawberries</td>
                             <td style="vertical-align: middle;">
                                 <form>
-                                    <button type="button" onclick=""><i class="fas fa-plus-circle"></i></button>
-                                    <input type="text" value="1">
-                                    <button type="button"><i class="fas fa-minus-circle"></i></button>
+                                    <button type="button" onclick="updateQ(this,true)"><i class="fas fa-plus-circle"></i></button>
+                                    <input type="text" value="1"  disabled="disabled">
+                                    <button type="button" onclick="updateQ(this,false)"><i class="fas fa-minus-circle"></i></button>
                                 </form>
                             </td>
 
@@ -159,7 +159,7 @@
                         <tr>
                             <th colspan="5" class="text-center table-dark"
                                 style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
-                                <h4>Dairy & Eggs (1)</h4>
+                                <h4>Dairy & Eggs</h4>
                             </th>
                         </tr>
 
@@ -169,9 +169,9 @@
                             <td style="vertical-align: middle; font-size:23px;color:#334754;">Milk</td>
                             <td style="vertical-align: middle;">
                                 <form>
-                                    <button type="button"><i class="fas fa-plus-circle"></i></button>
-                                    <input type="text" value="1">
-                                    <button type="button"><i class="fas fa-minus-circle"></i></button>
+                                    <button type="button" onclick="updateQ(this,true)"><i class="fas fa-plus-circle"></i></button>
+                                    <input type="text" value="1"  disabled="disabled">
+                                    <button type="button" onclick="updateQ(this,false)"><i class="fas fa-minus-circle"></i></button>
                                 </form>
                             </td>
 
@@ -217,8 +217,10 @@
                         </tr>
                     </table>
 
-                    <button type="button">CHECKOUT</button>
-                    <button type="button" id="specialButton" style="margin-bottom: 10px;">CONTINUE SHOPPING</button>
+                    <button type="button" onclick="proceedToPay()">CHECKOUT</button>
+                    <a href="index.html">
+                        <button type="button" id="specialButton" style="margin-bottom: 10px;">CONTINUE SHOPPING</button>
+                    </a>
                 </div>
             </div>
         </div>
