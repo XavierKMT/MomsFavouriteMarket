@@ -141,6 +141,33 @@ function verifyItem(target)
         return obj;
     }
 
+    else if(target.toUpperCase()===("Bagel").toUpperCase())
+    {
+        obj.isValidName= true;
+        obj.imgSrc= "Images/bagel.jpg";
+        obj.name="Bagel";
+        obj.price="$4";
+        return obj;
+    }
+
+    else if(target.toUpperCase()===("Strawberries").toUpperCase())
+    {
+        obj.isValidName= true;
+        obj.imgSrc= "Images/strawberry.jpg";
+        obj.name="Strawberries";
+        obj.price="$3";
+        return obj;
+    }
+
+    else if(target.toUpperCase()===("Milk").toUpperCase())
+    {
+        obj.isValidName= true;
+        obj.imgSrc= "Images/milk.jpg";
+        obj.name="Milk";
+        obj.price="$6.56";
+        return obj;
+    }
+
     else if(target.toUpperCase()===("CHEDDAR CHEESE"))
     {
         obj.isValidName= true;
@@ -586,38 +613,40 @@ function proceedToPay()
     alert("Preparing Your Items For Checkout!");
 }
 
-function getInitalPrice(target,add)
+function getInitalPrice(target)
 {
-    // var valString= target.parentNode.parentNode.nextElementSibling.innerHTML;
-    // var price= valString.substring(1);
-    // return price;
+    var itemName=target.parentNode.parentNode.previousElementSibling.innerHTML;
+    var initialPrice=0;
 
-    if(add)
-    {
-        
-    }
-
-    else{
-
-    }
-
-
+    initialPrice=((verifyItem(itemName).price).substring(1))*1;
+    return initialPrice;
 }
 
 function updatePrice(targ,pr,qty)
 {
-    var price="$"+(pr*qty);
-        targ.parentNode.parentNode.nextElementSibling.innerHTML=price;
+
+    subTotal(pr,qty);
+    var price=Math.round((pr*qty)*100)/100;
+    var priceStr="$"+price
+    targ.parentNode.parentNode.nextElementSibling.innerHTML=priceStr;
+
+}
+
+function subTotal(price,qty)
+{
+   var temp=price *qty;
+    alert(temp);
 }
 
 function updateQ(target,add)
 {
     var quantity=0;
-    var price=getInitalPrice(target);
+    var price=0;
     
     if (add===true)
     {
         quantity=++target.nextElementSibling.value;
+        price=getInitalPrice(target);
         updatePrice(target,price,quantity);
     }
 
@@ -626,14 +655,18 @@ function updateQ(target,add)
         if(target.previousElementSibling.value >0)
         {
             quantity=--target.previousElementSibling.value;
+            price=getInitalPrice(target);
             updatePrice(target,price,quantity);
          }
 
         if(target.previousElementSibling.value==0)
         {
             del3(target);
+            price=0;
+            updatePrice(target,price,quantity);
         }
     }
 }
+
 
 
