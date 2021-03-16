@@ -703,5 +703,40 @@ function updateQ(target,add)
     subTotal();
 }
 
-
-
+function displayCart() {
+    let cartSize = localStorage.getItem('cart');
+    cartSize = parseInt(cartSize);
+    let cartList = document.getElementById('myTableCart');
+    if (cartSize == NaN) {
+        cartList.innerHTML = 'Cart is empty';
+    } else {
+        for(i=0;i<cartSize;i++) {
+            let item = localStorage.getItem('itemInCart' + (i+1));
+            item = parseInt(item);
+            item--;
+            cartList.innerHTML += `
+            <tr>
+                <th colspan="5" class="text-center table-dark"
+                    style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
+                    <h4>${products[item].aisle}</h4>
+                </th>
+            </tr>
+                <tr style="border-color:white;">
+                    <td><img src="Images/${products[item].picture}.png"></td>
+                    <td style="vertical-align: middle; font-size:23px;color:#334754;">${products[item].name}</td>
+                    <td style="vertical-align: middle;">
+                        <form>
+                            <button type="button" onclick="updateQ(this,true)"><i class="fas fa-plus-circle"></i></button>
+                            <input type="text" value="1"  disabled="disabled">
+                            <button type="button" onclick="updateQ(this,false)"><i class="fas fa-minus-circle"></i></button>
+                        </form>
+                    </td>
+                    <td style="vertical-align: middle;">$${products[item].price}</td>
+                    <td style="vertical-align: middle;">
+                        <button type="button"onclick="del(this)"><i class=" far fa-trash-alt"></i></i></button>
+                    </td>
+                </tr>
+            `;
+        }
+    }
+}
