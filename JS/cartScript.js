@@ -708,7 +708,11 @@ function displayCart() {
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     if (cartSize == NaN) {
-        cartList.innerHTML = `Cart is empty`;
+        cartList.innerHTML = `
+        <td>
+            Cart is empty
+        </td>
+        `;
     } else {
         for(i=0;i<cartSize;i++) {
             let item = localStorage.getItem('itemInCart' + (i+1));
@@ -723,7 +727,7 @@ function displayCart() {
             </tr>
                 <tr style="border-color:white;">
                     <td><img src="Images/${products[item].picture}.png"></td>
-                    <td style="vertical-align: middle; font-size:23px;color:#334754;">${products[item].name}</td>
+                    <td style="vertical-align: middle; font-size:23px;color:#334754; max-width:150px">${products[item].name}</td>
                     <td style="vertical-align: middle;">
                         <form>
                             <button type="button" onclick="updateQ(this,true)"><i class="fas fa-plus-circle"></i></button>
