@@ -8,6 +8,7 @@ function del(target)
     headerDel.parentNode.removeChild(headerDel);
 
     rowDel.parentNode.removeChild(rowDel);
+    subTotal()
 }
 
 function del1(target)
@@ -625,7 +626,6 @@ function getInitalPrice(target)
 function updatePrice(targ,pr,qty)
 {
 
-    // subTotal(pr,qty);
     var price=Math.round((pr*qty)*100)/100;
     var priceStr="$"+price
     targ.parentNode.parentNode.nextElementSibling.innerHTML=priceStr;
