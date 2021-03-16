@@ -681,7 +681,6 @@ function updateQ(target,add)
         quantity=++target.nextElementSibling.value;
         price=getInitalPrice(target);
         updatePrice(target,price,quantity);
-        // subTotal(target);
     }
 
     else 
@@ -691,7 +690,6 @@ function updateQ(target,add)
             quantity=--target.previousElementSibling.value;
             price=getInitalPrice(target);
             updatePrice(target,price,quantity);
-            // subTotal(target);
          }
 
         if(target.previousElementSibling.value==0)
@@ -699,11 +697,10 @@ function updateQ(target,add)
             del3(target);
             price=0;
             updatePrice(target,price,quantity);
-            // subTotal(target);
         }
     }
 
-    subTotal()
+    subTotal();
 }
 
 
