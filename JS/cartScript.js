@@ -8,7 +8,7 @@ function del(target)
     headerDel.parentNode.removeChild(headerDel);
 
     rowDel.parentNode.removeChild(rowDel);
-    subTotal()
+    subTotal();
 }
 
 function del1(target)
