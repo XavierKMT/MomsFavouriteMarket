@@ -635,7 +635,6 @@ function updatePrice(targ,pr,qty)
 function subTotal(price,qty)
 {
    var temp=price *qty;
-    alert(temp);
 }
 
 function updateQ(target,add)
