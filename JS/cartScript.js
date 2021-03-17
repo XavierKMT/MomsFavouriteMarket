@@ -703,10 +703,10 @@ function updateQ(target,add)
     subTotal();
 }
 
-
-
 function emptyCart() {
-    let cartList = document.getElementById('myTableCart');
+    var cartList =document.getElementById('myTableCart');
+    var btn= document.getElementById("emptyC");
+    btn.parentNode.removeChild(btn);
     cartList.innerHTML = '';
     subTotal();
 }
