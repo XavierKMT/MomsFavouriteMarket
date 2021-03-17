@@ -707,8 +707,9 @@ function displayCart() {
     let cartSize = localStorage.getItem('cart');
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
+    console.log('here1');
     if (cartSize == undefined) {
-        console.log('here')
+        console.log('here2');
         cartList.innerHTML += `
         <tr>
             <th colspan="5" class="text-center table-dark"
