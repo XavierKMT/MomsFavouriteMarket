@@ -709,9 +709,9 @@ function displayCart() {
     let cartList = document.getElementById('myTableCart');
     if (cartSize == NaN) {
         cartList.innerHTML = `
-        <td>
+        <tr>
             Cart is empty
-        </td>
+        </tr>
         `;
     } else {
         for(i=0;i<cartSize;i++) {
