@@ -745,5 +745,6 @@ function displayCart() {
                 </tr>
             `;
         }
+        subTotal();
     }
 }
