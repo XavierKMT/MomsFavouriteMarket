@@ -708,7 +708,7 @@ function displayCart() {
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     if (cartSize == NaN) {
-        cartList.innerHTML = `
+        cartList.innerHTML += `
         <br>
         <br>
         <tr>
@@ -749,4 +749,24 @@ function displayCart() {
         }
         subTotal();
     }
+}
+
+function emtpyCart() {
+    var cartSize = localStorage.getItem('cart');
+    cartSize = parseInt(cartSize);
+    for(i=1;i<=cartSize;i++) {
+        localStorage.removeItem('itemInCart' + i);
+    }
+    localStorage.removeItem('cart');
+    let cartList = document.getElementById('myTableCart');
+    cartList.innerHTML += `
+    <br>
+    <br>
+    <tr>
+        <th colspan="5" class="text-center table-dark"
+            style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
+            <h4>Cart is empty</h4>
+        </th>
+    </tr>
+    `;
 }
