@@ -706,5 +706,5 @@ function updateQ(target,add)
 
 function emtpyCart() {
     let cartList = document.getElementById('myTableCart');
-    cartList.innerHTML += ``;
+    cartList.innerHTML = ``;
 }
