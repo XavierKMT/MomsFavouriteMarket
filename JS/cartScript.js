@@ -760,8 +760,6 @@ function emtpyCart() {
     localStorage.removeItem('cart');
     let cartList = document.getElementById('myTableCart');
     cartList.innerHTML += `
-    <br>
-    <br>
     <tr>
         <th colspan="5" class="text-center table-dark"
             style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
