@@ -739,13 +739,13 @@ function displayCart() {
                         <button type="button"onclick="del(this)"><i class=" far fa-trash-alt"></i></i></button>
                     </td>
                 </tr>
-                <tr>
-                    <div style="text-align: center;">
-                        <button type="button"onclick="emptyCart()"><i class="fas fa-shopping-cart"></i> EMPTY CART</i></button>
-                    </div>
-                </tr>
             `;
-        }        
+        }
+        cartList.innerHTML += `
+        <div style="text-align: center;">
+            <button type="button"onclick="emptyCart()"><i class="fas fa-shopping-cart"></i> EMPTY CART</i></button>
+        </div>
+        `;
     } else {
         console.log('here3');
         cartList.innerHTML += `
