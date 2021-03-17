@@ -720,6 +720,7 @@ function displayCart() {
         `;
     } else {
         for(i=0;i<cartSize;i++) {
+            console.log('here3');
             let item = localStorage.getItem('itemInCart' + (i+1));
             item = parseInt(item);
             item--;
