@@ -68,7 +68,7 @@ To fix a bug or enhance a particular module, do the following:
 
 
 6. Hosting
-Hosting has been done on Github, by user XavierKMT. One repository has been created to store both the front-end and back-end. They are connected by the sign in page. The repository name is MomsFavouriteMarket. The repository has been made public so we're able to use the free features that allows us to generate a link for the repository. Given access to all team members so they're able to edit and upload as well.
+Hosting has been done on Github, by user XavierKMT. One repository has been created to store both the front-end and back-end. They are connected by the sign in page. The repository name is MomsFavouriteMarket. The repository has been made public so we're able to use the free features that allows us to generate a link for the repository. Given access to all team members so they're able to edit and upload as well.The link to the page is: https://xavierkmt.github.io/MomsFavouriteMarket/
 
 7. Project Status
 The project is being implemented in three parts, and hence is still being developed. The project ins converted from static to dynamic interface with different function in each page. PHP will be used in next step of the assignment.
