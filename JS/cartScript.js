@@ -708,7 +708,7 @@ function displayCart() {
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     console.log('here1');
-    if (cartSize == undefined) {
+    if (cartSize == NaN) {
         console.log('here2');
         cartList.innerHTML += `
         <tr>
