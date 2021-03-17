@@ -708,6 +708,7 @@ function displayCart() {
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     if (cartSize == undefined) {
+        console.log('here')
         cartList.innerHTML += `
         <tr>
             <th colspan="5" class="text-center table-dark"
