@@ -742,9 +742,11 @@ function displayCart() {
             `;
         }
         cartList.innerHTML += `
-        <div style="text-align: center;">
-            <button type="button"onclick="emptyCart()"><i class="fas fa-shopping-cart"></i> EMPTY CART</i></button>
-        </div>
+        <tr>
+            <div style="text-align: center;">
+                <button type="button"onclick="emptyCart()"><i class="fas fa-shopping-cart"></i> EMPTY CART</i></button>
+            </div>
+        </tr>
         `;
     } else {
         console.log('here3');
