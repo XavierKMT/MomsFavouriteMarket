@@ -707,7 +707,7 @@ function displayCart() {
     let cartSize = localStorage.getItem('cart');
     cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
-    if (cartSize == NaN) {
+    if (cartSize == undefined) {
         cartList.innerHTML += `
         <tr>
             <th colspan="5" class="text-center table-dark"
