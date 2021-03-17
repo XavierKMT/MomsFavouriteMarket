@@ -2,6 +2,8 @@ function addToCart(itemNum) {
     alert('Item added to cart');
     //this was an attempt to make the products actually get added to the cart
     //however that will be done in assignment 3 using php, so the code was just left here in case
+    //this could be used to keep track of which items have been added to the cart, 
+    //but it would keep them in the local storage even after the user left the page with no automatic way for them to delete it
     /*
     let cartSize = localStorage.getItem('cart');
     
