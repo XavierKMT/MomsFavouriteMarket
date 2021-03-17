@@ -784,4 +784,5 @@ function emtpyCart() {
         </th>
     </tr>
     `;
+    displayCart();
 }
