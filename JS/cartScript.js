@@ -705,22 +705,11 @@ function updateQ(target,add)
 
 function displayCart() {
     let cartSize = localStorage.getItem('cart');
+    cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     console.log('here1');
-    if (cartSize == NaN) {
+    if (cartSize >= 1) {
         console.log('here2');
-        cartList.innerHTML += `
-        <tr>
-            <br>
-            <th colspan="5" class="text-center table-dark"
-                    style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
-                    <h4>Cart is empty</h4>
-            </th>
-        </tr>
-        `;
-    } else {
-        cartSize = parseInt(cartSize);
-        console.log('here3');
         for(i=0;i<cartSize;i++) {
             let item = localStorage.getItem('itemInCart' + (i+1));
             item = parseInt(item);
@@ -753,6 +742,18 @@ function displayCart() {
             `;
         }
         subTotal();
+        
+    } else {
+        console.log('here3');
+        cartList.innerHTML += `
+        <tr>
+            <br>
+            <th colspan="5" class="text-center table-dark"
+                    style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
+                    <h4>Cart is empty</h4>
+            </th>
+        </tr>
+        `;
     }
 }
 
