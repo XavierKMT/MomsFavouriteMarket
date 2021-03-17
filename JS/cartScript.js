@@ -739,16 +739,23 @@ function displayCart() {
                         <button type="button"onclick="del(this)"><i class=" far fa-trash-alt"></i></i></button>
                     </td>
                 </tr>
-                <div style="text-align: center;">
+                <tr>
+                    <div style="text-align: center;">
                         <button type="button"onclick="emptyCart()"><i class="fas fa-shopping-cart"></i> EMPTY CART</i></button>
-                </div>
+                    </div>
+                </tr>
             `;
         }        
     } else {
         console.log('here3');
         cartList.innerHTML += `
         <tr>
-            <br>
+            <td>
+                <br>
+                <br>
+            </td>
+        </tr>
+        <tr>
             <th colspan="5" class="text-center table-dark"
                     style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
                     <h4>Cart is empty</h4>
