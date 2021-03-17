@@ -743,9 +743,7 @@ function displayCart() {
                         <button type="button"onclick="emptyCart()"><i class="fas fa-shopping-cart"></i> EMPTY CART</i></button>
                 </div>
             `;
-        }
-        subTotal();
-        
+        }        
     } else {
         console.log('here3');
         cartList.innerHTML += `
@@ -758,6 +756,7 @@ function displayCart() {
         </tr>
         `;
     }
+    subTotal();
 }
 
 function emtpyCart() {
