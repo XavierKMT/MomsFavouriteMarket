@@ -705,8 +705,6 @@ function updateQ(target,add)
 
 function emptyCart() {
     var cartList =document.getElementById('myTableCart');
-    var btn= document.getElementById("emptyC");
-    btn.parentNode.removeChild(btn);
     cartList.innerHTML = '';
     subTotal();
 }
