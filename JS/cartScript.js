@@ -711,10 +711,12 @@ function displayCart() {
         cartList.innerHTML = `
         <br>
         <br>
-        <th colspan="5" class="text-center table-dark"
+        <tr>
+            <th colspan="5" class="text-center table-dark"
                     style="border-radius: 20px; border-color:white; padding:3px; background-color:#334754;">
                     <h4>Cart is empty</h4>
-                </th>
+            </th>
+        </tr>
         `;
     } else {
         for(i=0;i<cartSize;i++) {
