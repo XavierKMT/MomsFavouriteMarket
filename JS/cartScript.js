@@ -704,7 +704,9 @@ function updateQ(target,add)
 }
 
 
-function emtpyCart() {
+
+function emptyCart() {
     let cartList = document.getElementById('myTableCart');
-    cartList.innerHTML = ``;
+    cartList.innerHTML = '';
+    subTotal();
 }
