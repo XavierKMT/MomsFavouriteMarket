@@ -705,7 +705,6 @@ function updateQ(target,add)
 
 function displayCart() {
     let cartSize = localStorage.getItem('cart');
-    cartSize = parseInt(cartSize);
     let cartList = document.getElementById('myTableCart');
     console.log('here1');
     if (cartSize == NaN) {
@@ -720,8 +719,9 @@ function displayCart() {
         </tr>
         `;
     } else {
+        cartSize = parseInt(cartSize);
+        console.log('here3');
         for(i=0;i<cartSize;i++) {
-            console.log('here3');
             let item = localStorage.getItem('itemInCart' + (i+1));
             item = parseInt(item);
             item--;
