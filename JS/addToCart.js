@@ -1,4 +1,8 @@
 function addToCart(itemNum) {
+    alert('Item added to cart');
+    //this was an attempt to make the products actually get added to the cart
+    //however that will be done in assignment 3 using php, so the code was just left here in case
+    /*
     let cartSize = localStorage.getItem('cart');
     
     if (cartSize == undefined) {
@@ -19,4 +23,5 @@ function addToCart(itemNum) {
         }
     }
     localStorage.setItem('itemInCart' + cartSize, itemNum);
+    */
 }
