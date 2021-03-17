@@ -727,7 +727,7 @@ function displayCart() {
             </tr>
                 <tr style="border-color:white;">
                     <td><img src="Images/${products[item].picture}.png"></td>
-                    <td style="vertical-align: middle; font-size:23px;color:#334754; max-width:150px">${products[item].name}</td>
+                    <td style="vertical-align: middle; font-size:23px;color:#334754; max-width:100px;">${products[item].name}</td>
                     <td style="vertical-align: middle;">
                         <form>
                             <button type="button" onclick="updateQ(this,true)"><i class="fas fa-plus-circle"></i></button>
