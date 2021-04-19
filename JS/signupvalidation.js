@@ -1,6 +1,12 @@
 user_email=document.getElementById('inputEmail');
 user_confirm_email=document.getElementById('confEmail');
 user_phone=document.getElementById('phone');
+user_first_name = document.getElementById('first_name');
+user_last_name = document.getElementById('last_name');
+city_name = document.getElementById("inputCity");
+e = document.getElementById("province");
+
+
 let email_expression = /[\w]+@[\w.]+/;      //This is the regular expression the email is compared against.
 
 /**The check_email function checks the Email fields to ensure that both the IDs entered are the same and are also valid.
@@ -102,7 +108,7 @@ let resetCheck=function(){
 submitButton.addEventListener('click', function(e)
 {
     e.preventDefault();
-   
+    
 });
     
 /**The submission function checks all the fields once more to ensure that the user not entered invalid details or left some field incomplete. It gives either
@@ -110,6 +116,26 @@ submitButton.addEventListener('click', function(e)
  */
 function submission()
 {   
+    user_newsletter = document.getElementById("subscription_box_2");
+    user_deals = document.getElementById ("subscription_box_1");
+    var user_province = e.options[e.selectedIndex].value;
+    var emailAdd = user_confirm_email.value;
+    var phone_1 = user_phone.value;
+    var submission_data = "submit";
+    var newsletter;
+    var deals;
+    if(user_newsletter.checked == true){
+        newsletter = "true";
+    }
+    else{
+        newsletter = "false";
+    }
+    if(user_deals.checked == true){
+        deals = "true";
+    }
+    else{
+        deals = "false";
+    }
     
     if(!check_email() || !check_password() || !phone_number()){
         if(!check_email()){
@@ -140,8 +166,25 @@ function submission()
         }
         else
         {
-            swal("Done!", "Your form was submitted successfully!", "success");
-            resetCheck();
+           
+            $.ajax({
+                url: '../php/info.php',
+                type: 'POST',
+                data: {email_2: emailAdd, submit: submission_data, fname: user_first_name.value, phone: phone_1, lname: user_last_name.value, password_2:user_confirm_password.value, city: city_name.value, province: user_province, sub1: deals, sub2: newsletter}
+
+              })
+              .done(function(message) {
+                swal({
+                    title: "Done!",
+                    text: "Your form was submitted successfully! You can now login!",
+                    type: "success"
+                }).then(function() {
+                    window.location = "../php/loginpage.php";
+                });
+              })
+              .fail(function() {
+                alert("There was a problem. Please try again later.");
+              });
         }
     }
     

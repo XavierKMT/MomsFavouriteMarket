@@ -1,6 +1,9 @@
 user_email=document.getElementById('inputEmail4');
 user_new_email=document.getElementById('inputEmail');
 user_phone=document.getElementById('phone');
+user_city = document.getElementById('inputCity');
+user_address = document.getElementById('inputAddress');
+e = document.getElementById("province");
 let email_expression = /[\w]+@[\w.]+/;
 
 
@@ -130,7 +133,7 @@ submitButton.addEventListener('click', function(e)
  */
 function submission()
 {   
-   
+    var user_province = e.options[e.selectedIndex].value;
     if(((user_email.value!="")&&(user_new_email.value==""))||((user_email.value=="")&&(user_new_email.value!="")))
     {
         
@@ -165,6 +168,18 @@ function submission()
         swal("Please ensure the following field(s) are correctly filled:\n\n"+ email + "\n " + password + "\n"+ phone);
     }
     else{
+        $.ajax({
+            url: '../php/editProfile.php',
+            type: 'POST',
+            data: {original_email: user_email.value, new_email: user_new_email.value, new_password: user_new_password.value, address: user_address.value, new_city: user_city.value, new_province: user_province, new_phone: user_phone.value}
+
+          })
+          .done(function(message) {
+            
+          })
+          .fail(function() {
+            alert("There was a problem. Please try again later.");
+          });
         swal("Done!", "The changes were saved successfully!", "success");
         resetCheck();
     }
