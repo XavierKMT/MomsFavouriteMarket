@@ -187,7 +187,7 @@
 <!--Ask the user to submit after they are done with the form-->
 <a href="#"  class="editButton"    style = "color:blue;text-align: center; padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
 style="text-decoration: none;
-color: white;font-size:16px; " ><input type="submit"  class="btn btn-primary"  onsubmit="return fields()" onclick="fields()" name="submit"> 
+color: white;font-size:16px; " ><input type="submit"  class="btn btn-primary"  onsubmit="return fields()" onclick="fields()" name="submit"> Submit
 </button ></a>
                     <br /><br />
 </div>
