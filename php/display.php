@@ -106,7 +106,7 @@
                                // found the user
                                 if($search == 'phil@gmail.com')
                                {
-                                $found = true;$found1 = true;
+                                $found = true;
                                 $next= $key;
                                 echo $lines[$next-2]; echo "<br>";
                                    echo $lines[$next-1]; echo "<br>";
@@ -146,7 +146,7 @@
                                 echo " -------------------------Thank you for choosing Mom's favourite Market----------------------";
                                }
                             else{
-                                    $found = true;$found1 = true;
+                                    $found = true;
                                  $next= $key;
                                  echo $lines[$next-2]; echo "<br>";
                                     echo $lines[$next-1]; echo "<br>";
