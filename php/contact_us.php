@@ -173,7 +173,7 @@
 <div class="form-group col-sm-5" style= "margin-left:8%;">
 <label for="inputPassword">Telephone number(Required). </label>
 <input type="text" name = "tel" class="form-control" id="phone" placeholder="# Telephone">
-</div>
+
 </div>
 <div class="form-row justify-content-center">
 <div class="form-group col-sm-10">
