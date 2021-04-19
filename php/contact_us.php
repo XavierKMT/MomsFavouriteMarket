@@ -136,32 +136,26 @@
         </nav>
         </header>
 
-
-    <form   action= "display.php" method="POST" >
-        
+<form   action= "display.php" method="POST" >
         <div class="container">
-            <hr style="margin-bottom:4%">
-               <!--it starts the begining of the form where it asks the user to fill it out-->
-            <p style="margin-left: 60px; color: grey; font-size: large;" >Submit this form and we will be able to assist you with all your questions regarding your online order.</p>
+<hr style="margin-bottom:4%">
+<!--it starts the begining of the form where it asks the user to fill it out-->
+<p style="margin-left: 60px; color: grey; font-size: large;" >Submit this form and we will be able to assist you with all your questions regarding your online order.</p>
+<div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 60px; margin-right:60px">
+<div class="form-row justify-content-center">
+<div class="form-group col-sm-5">
+<!-- Asks the user to enter their first name and it mentioned that it is required-->
+<label for="first_name">First Name(Required).</label>
+<input type="text" name= "first" class="form-control"   id="first_name"  placeholder="First name" >
+</div>
+<div class="form-group col-sm-5">
+<!--Asks the user for their family name-->
+<label for="last_name">Last Name(Required).</label>
+<input type="text" name="last" class="form-control" id="last_name" placeholder=" Last Name">
+</div>
+</div>
 
-            <div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 60px; margin-right:60px">
-
-                <div class="form-row justify-content-center">
-                    <div class="form-group col-sm-5">
-                   
-                           <!-- Asks the user to enter their first name and it mentioned that it is required-->
-                        <label for="first_name">First Name(Required).</label>
-                        <input type="text" name= "first" class="form-control"   id="first_name"  placeholder="First name" >
-                    </div>
-                 
-                    <div class="form-group col-sm-5">
-                           <!--Asks the user for their family name-->
-                        <label for="last_name">Last Name(Required).</label>
-                        <input type="text" name="last" class="form-control" id="last_name" placeholder=" Last Name">
-                    </div>
-                </div>
-
-                <div class="form-row justify-content-center">
+<div class="form-row justify-content-center">
 
                     <div class="form-group col-sm-5">
                            <!--Asks the user for their email address-->
