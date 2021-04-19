@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../CSS/cartStyle.css">
     
 </head>
-</head>
+
 
 
 <body>
@@ -195,6 +195,7 @@
                         header('Location: contact_us.php');
                     }
 
+                                    
                                     ?>
                        
 
