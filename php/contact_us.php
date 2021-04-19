@@ -134,7 +134,7 @@
                 </ul>
             </div>
         </nav>
-       
+        </header>
 
 <form   action= "display.php" method="POST" >
         <div class="container">
