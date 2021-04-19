@@ -12,7 +12,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <title>Mom's Favourite Market</title>
-    <link rel="shortcut icon" href="Images/logo.png">
+    <link rel="shortcut icon" href="../Images/logo.png">
     <!--some important links of bootstrap fucntions to facilitate the responsiviness of a page -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -21,8 +21,8 @@
     <!-- important citations relative to some fonts used in the file -->
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/cartStyle.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/cartStyle.css">
     <!--javascripts script begins here including all the necessary functions-->
     <script type="text/javascript"   >
     // the first function called flields represent the form boxes where it checks first of all if they are empty or not 
@@ -85,7 +85,7 @@
     
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="php/index.php"><img src="Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="../index.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -96,7 +96,7 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="php/index.php" class="nav-link">Home</a>
+                        <a href="../index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -113,23 +113,23 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="php/WeeklyDeals.php" class="nav-link">Weekly Deals!</a>
+                        <a href="WeeklyDeals.php" class="nav-link">Weekly Deals!</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/environment1.php" class="nav-link">Environment</a>
+                        <a href="environment1.php" class="nav-link">Environment</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/careers.php" class="nav-link">Careers</a>
+                        <a href="careers.php" class="nav-link">Careers</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/About us.php" class="nav-link">About Us</a>
+                        <a href="About us.php" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/loginpage.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
+                        <a href="loginpage.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
                     </li>
         
                     <li class="nav-item">
-                        <a href="php/Cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                        <a href="Cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
                     </li>
                 </ul>
             </div>
@@ -137,7 +137,7 @@
 
 
 
-    <form   action= "php/display.php" method="POST" >
+    <form   action= "display.php" method="POST" >
         
         <div class="container">
             <hr style="margin-bottom:4%">
@@ -218,7 +218,7 @@
                     <button type="button" 
                     style="  padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
                         style="text-decoration: none;
-                        color: white;font-size:16px;" href="php/index.php">BACK </a></button>
+                        color: white;font-size:16px;" href="../index.php">BACK </a></button>
         </div>
         </div> 
 
@@ -248,7 +248,7 @@
                 <h5 class="text-center">Resources</h5>
                 <ul class="list-unstyled text-small text-center">
                          <!-- the link to start the form-->
-                        <li><a class="text-muted"   href="php/contact_us.php"  ><span style="color: white;">Contact Us</span></a></li>
+                        <li><a class="text-muted"   href="contact_us.php"  ><span style="color: white;">Contact Us</span></a></li>
 
                     <li><a class="text-muted" href="#"><span style="color: white;">About Us</span></a></li>
                     <!--IGA 5600 Boul Henri-Bourassa O, Montréal, QC H4R 0B8-->
