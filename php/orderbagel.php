@@ -55,7 +55,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="php/backPage.php"><img src="../Images/logo.png"><span id="title">Mom's Favourite
+            <a class="navbar-brand" href="successadmin.php"><img src="../Images/logo.png"><span id="title">Mom's Favourite
                     Market (ADMIN)</span></a></a>
             <!--LINK TO MAIN PAGE-->
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
@@ -179,7 +179,7 @@ style="box-shadow: 0 0.8em 0.8em -0.4em; margin-top: 50px; padding-left: 30px; b
                    
                     <td>
                    <div id="yes">
-                    <img src="Images/bagel.jpg"></div> </td>
+                    <img src="../Images/bagel.jpg"></div> </td>
                    
                     <td  id="part" name="item"  style="vertical-align: middle; color:#334754; font-size:20px;"> 
                     '.$itemname.'
