@@ -153,74 +153,54 @@
 <label for="last_name">Last Name(Required).</label>
 <input type="text" name="last" class="form-control" id="last_name" placeholder=" Last Name">
 
+</div>
+</div>
 
 <div class="form-row justify-content-center">
 <div class="form-group col-sm-5">
-                           <!--Asks the user for their email address-->
-                        <label for="inputEmail"> Your acccount related Email Address(Required).</label>
-                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                    
-                    <div class="form-group col-sm-5" id="ordernum">
-                           <!--Asks the user for their order number-->
-                        <label for="confEmail"> Order number(Required). </label>
-                       
-                        <input type="item" name="onumber" class="form-control"  name= "order" id="ordernumber"  placeholder="order  number" >
-                    </div>
-
-                </div>
-
-                <div class="form-row justify-content">
-                    <div class="form-group col-sm-5" style= "margin-left:8%;">
-                        <label for="inputPassword">Telephone number(Required). </label>
-                        <input type="text" name = "tel" class="form-control" id="phone" placeholder="# Telephone">
-                    </div>
-                   
-
-
-            
-                   
-                </div>
-                <div class="form-row justify-content-center">
-                <div class="form-group col-sm-10">
-               
-                      <label for="exampleFormControlTextarea1" class="form-label" id= "text">Type your question(s) here(Required).</label>
-                        <textarea class="form-control" name="question" id="exampleFormControlTextarea1" rows="8"></textarea>
-                      
-                </div>
-
-
-                <br><br><br>
-                    </div>
-                    <br><br><br>
-                    <div class="form-row justify-content-center">
-                    <div class="form-group col-sm-1">
-                    <!--Ask the user to submit after they are done with the form-->
-                    <a href="#"  class="editButton"    style = "color:blue;text-align: center; padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
-                        style="text-decoration: none;
-                        color: white;font-size:16px; " ><input type="submit"  class="btn btn-primary"  onsubmit="return fields()" onclick="fields()" name="submit"> 
-                    </button ></a>
-               
-
+<!--Asks the user for their email address-->
+<label for="inputEmail"> Your acccount related Email Address(Required).</label>
+<input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
+</div>
+<div class="form-group col-sm-5" id="ordernum">
+<!--Asks the user for their order number-->
+<label for="confEmail"> Order number(Required). </label>
+<input type="item" name="onumber" class="form-control"  name= "order" id="ordernumber"  placeholder="order  number" >
+</div>
+</div>
+<div class="form-row justify-content">
+<div class="form-group col-sm-5" style= "margin-left:8%;">
+<label for="inputPassword">Telephone number(Required). </label>
+<input type="text" name = "tel" class="form-control" id="phone" placeholder="# Telephone">
+</div>
+</div>
+<div class="form-row justify-content-center">
+<div class="form-group col-sm-10">
+<label for="exampleFormControlTextarea1" class="form-label" id= "text">Type your question(s) here(Required).</label>
+<textarea class="form-control" name="question" id="exampleFormControlTextarea1" rows="8"></textarea>
+</div><br><br><br>
+</div>
+<br><br><br>
+<div class="form-row justify-content-center">
+<div class="form-group col-sm-1">
+<!--Ask the user to submit after they are done with the form-->
+<a href="#"  class="editButton"    style = "color:blue;text-align: center; padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
+style="text-decoration: none;
+color: white;font-size:16px; " ><input type="submit"  class="btn btn-primary"  onsubmit="return fields()" onclick="fields()" name="submit"> 
+</button ></a>
                     <br /><br />
-                        
-                    </div>
-
-                    </div>
-                    <button type="button" 
-                    style="  padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
-                        style="text-decoration: none;
-                        color: white;font-size:16px;" href="../index.php">BACK </a></button>
+</div>
+</div>
+<button type="button" 
+style="  padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
+style="text-decoration: none;
+color: white;font-size:16px;" href="../index.php">BACK </a></button>
         </div>
         </div> 
 
         </form>
                       
-
-
-        
-
-        <footer class="container-fluid"
+<footer class="container-fluid"
         style="background-color:#334754; margin-top: 400px; padding-bottom: 20px; padding-top:40px;">
         <div class="row">
             <div class="col-lg-4">
