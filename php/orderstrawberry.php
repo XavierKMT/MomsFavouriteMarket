@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mom's Favourite Market</title>
-    <link rel="shortcut icon" href="Images/logo.png">
+    <link rel="shortcut icon" href="../Images/logo.png">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,8 +15,8 @@
 
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/cartStyle.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/cartStyle.css">
     <!--The beginning of javascript file-->
 
     <script type="text/javascript" >
@@ -54,7 +54,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="successadmin.php"><img src="Images/logo.png"><span id="title">Mom's Favourite
+            <a class="navbar-brand" href="successadmin.php"><img src="../Images/logo.png"><span id="title">Mom's Favourite
                     Market (ADMIN)</span></a></a>
             <!--LINK TO MAIN PAGE-->
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
@@ -65,19 +65,19 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="php/ProductList.php" class="nav-link">Product List</a>
+                        <a href="ProductList.php" class="nav-link">Product List</a>
                     </li>
                      <!--Each includes a link to the backend pages-->
                     <li class="nav-item">
-                        <a href="php/backstoreUserAccounts.php" class="nav-link">User List</a>
+                        <a href="backstoreUserAccounts.php" class="nav-link">User List</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="php/orderLists.php" class="nav-link">Order List</a>
+                        <a href="orderLists.php" class="nav-link">Order List</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="php/loginpage2.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
+                        <a href="loginpage2.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
                     </li>
 
                 </ul>
@@ -91,13 +91,13 @@
 
     <button type="button"  style=" margin-top:3%; margin-left:3%;" style=" padding:10px;padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:80px; margin-bottom: 30px;" ><a
                                         style="text-decoration: none;
-                                        color: white;font-size:16px;" href="php/order4013.php">BACK </a></button>
+                                        color: white;font-size:16px;" href="order4013.php">BACK </a></button>
 
    
    
 <?php
 // opens the file to read that order details info
-$file = fopen('data/Strawberry.txt', "r+");
+$file = fopen('../data/Strawberry.txt', "r+");
 $ordernumber= fgets($file);
 
 
@@ -107,27 +107,27 @@ $ordernumber= fgets($file);
 // if the user clicks + button it increases the quantity of the item                  
   if((isset($_POST['add'])) && ($quantity<30)  ){
 
-        $content = file_get_contents('data/Strawberry.txt');
+        $content = file_get_contents('../data/Strawberry.txt');
         $content = str_replace($quantity,$quantity+1,$content);
         $quantity= $quantity+1;
-            file_put_contents('data/Strawberry.txt', $content);
+            file_put_contents('../data/Strawberry.txt', $content);
 
 }      // if the user clicks mines button it decreaese the quantity of the item .
             if((isset($_POST['re']))  && ($quantity>1) )
             {
                 
-                $content = file_get_contents('data/Strawberry.txt');
+                $content = file_get_contents('../data/Strawberry.txt');
                 $content = str_replace($quantity,$quantity-1,$content);
                
                 $quantity= $quantity-1;
-                     file_put_contents('data/Strawberry.txt', $content);
+                     file_put_contents('../data/Strawberry.txt', $content);
 
             }
 
 // if user clicks on delete then it deletes that specific item
  if((isset($_POST['del']))){
  // reads the file  gets all the info and deletes them.
-    $lines = file('data/Strawberry.txt');
+    $lines = file('../data/Strawberry.txt');
   
     $search =$ordernumber;
     foreach($lines as $key=>$value)
@@ -136,11 +136,11 @@ $ordernumber= fgets($file);
         $next= $key;
         $itemname= $lines[$next+1];
         $quantity= $lines[$next+2];
-        $content = file_get_contents('data/Strawberry.txt');
+        $content = file_get_contents('../data/Strawberry.txt');
         $content = str_replace($search, '',$content);$content = str_replace( $itemname, '',$content);
         $content = str_replace($quantity, '',$content);
            // puts everything back to file after changes.
-            file_put_contents('data/Strawberry.txt', $content);  
+            file_put_contents('../data/Strawberry.txt', $content);  
              // if there is an empty line stop       
          if($line === "\n"){
                exit();
@@ -181,7 +181,7 @@ style="box-shadow: 0 0.8em 0.8em -0.4em; margin-top: 50px; padding-left: 30px; b
                    
                     <td>
                    <div id="yes">
-                    <img src="Images/strawberry.jpg"></div> </td>
+                    <img src="../Images/strawberry.jpg"></div> </td>
                    
                     <td  id="part" name="item"  style="vertical-align: middle; color:#334754; font-size:20px;"> 
                     '.$itemname.'
