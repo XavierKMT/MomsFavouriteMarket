@@ -157,7 +157,7 @@
 </div>
 
 <div class="form-row justify-content-center">
-    
+
 <div class="form-group col-sm-5">
 <!--Asks the user for their email address-->
 <label for="inputEmail"> Your acccount related Email Address(Required).</label>
@@ -166,7 +166,7 @@
 <div class="form-group col-sm-5" id="ordernum">
 <!--Asks the user for their order number-->
 <label for="confEmail"> Order number(Required). </label>
-<input type="item" name="onumber" class="form-control"  name= "order" id="ordernumber"  placeholder="order  number" >
+<input type="item" name="onumber" class="form-control"   id="ordernumber"  placeholder="order  number" >
 </div>
 </div>
 <div class="form-row justify-content">
