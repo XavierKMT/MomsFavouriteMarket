@@ -15,7 +15,7 @@ Contents of this File :
 8. Developers
 -----
 1. Introduction :
-This  second part of our project has the goal of transforming our static pages to dynamic. In addition to the main aim of  building  a user-friendly portal that is responsive and adjustable  to various devices ,we also  made  it user interactive that can respond to the needs of users with many different functionalities. Instead of displaying static content  now it can modify/remove/add and implement other types of tasks.
+This third part of our project has the goal of transforming our dynamic pages into a fully functioning and responsive website. In addition to the main aim of  building  a user-friendly portal that is responsive and adjustable  to various devices, we also  made  it user interactive that can respond to the needs of users with many different functionalities. Instead of displaying static content now it can modify/remove/add and implement other types of tasks.
 
 
 2. Description and functionality of each part 
@@ -53,7 +53,8 @@ The website aims at assisting the user at every step in case of any difficulties
 * HTML5
 * CSS	
 * Bootstrap 4
-* JavaScript 
+* JavaScript
+* PHP
 
 5. Launch
 The project is available on the GitHub repository and can be set-up and run by pulling it onto the user's local device.
