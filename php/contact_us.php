@@ -157,6 +157,7 @@
 </div>
 
 <div class="form-row justify-content-center">
+    
 <div class="form-group col-sm-5">
 <!--Asks the user for their email address-->
 <label for="inputEmail"> Your acccount related Email Address(Required).</label>
