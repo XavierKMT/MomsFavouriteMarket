@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mom's Favourite Market</title>
-    <link rel="shortcut icon" href="Images/logo.png">
+    <link rel="shortcut icon" href="../Images/logo.png">
     <!--some important links of bootstrap fucntions to facilitate the responsiviness of a page -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,8 +13,8 @@
     <!-- important citations relative to some fonts used in the file -->
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/cartStyle.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/cartStyle.css">
     
 </head>
 </head>
@@ -24,7 +24,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="php/index.php"><img src="Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="../index.php"><img src="Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="php/index.php" class="nav-link">Home</a>
+                        <a href="../index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -43,32 +43,32 @@
                             Aisles
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="php/Dairy&Eggs_Relevance.php">Dairy & Eggs</a></li>
-                            <li><a class="dropdown-item" href="php/F&V_Relevance.php">Fruits & Vegetables</a></li>
-                            <li><a class="dropdown-item" href="php/Bakery_Relevance.php">Bakery</a></li>
-                            <li><a class="dropdown-item" href="php/Butchery_Relevance.php">Butchery</a></li>
-                            <li><a class="dropdown-item" href="php/Pantry_Relevance.php">Non-Perishable Food</a></li>
-                            <li><a class="dropdown-item" href="php/Frozen_Relevance.php">Frozen Food</a></li>
+                            <li><a class="dropdown-item" href="Dairy&Eggs_Relevance.php">Dairy & Eggs</a></li>
+                            <li><a class="dropdown-item" href="F&V_Relevance.php">Fruits & Vegetables</a></li>
+                            <li><a class="dropdown-item" href="Bakery_Relevance.php">Bakery</a></li>
+                            <li><a class="dropdown-item" href="Butchery_Relevance.php">Butchery</a></li>
+                            <li><a class="dropdown-item" href="Pantry_Relevance.php">Non-Perishable Food</a></li>
+                            <li><a class="dropdown-item" href="Frozen_Relevance.php">Frozen Food</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="php/WeeklyDeals.php" class="nav-link">Weekly Deals!</a>
+                        <a href="WeeklyDeals.php" class="nav-link">Weekly Deals!</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/environment1.php" class="nav-link">Environment</a>
+                        <a href="environment1.php" class="nav-link">Environment</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/careers.php" class="nav-link">Careers</a>
+                        <a href="careers.php" class="nav-link">Careers</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/About us.php" class="nav-link">About Us</a>
+                        <a href="About us.php" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="php/loginpage.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
+                        <a href="loginpage.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
                     </li>
         
                     <li class="nav-item">
-                        <a href="php/Cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                        <a href="Cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
                     </li>
                 </ul>
             </div>
@@ -95,7 +95,7 @@
                         $search = $_POST['email']; // finding the user with his email adresss
                         
                         // Read from file
-                        $lines = file('data/userData.txt');
+                        $lines = file('../data/userData.txt');
                         $found = false;
                         foreach($lines as $key=>$value)// having a for loop of lines of the files
                         {
@@ -116,15 +116,15 @@
                               // printing order details from the file
                                     echo "<br> Order details are: <br> ";
                                     echo $lines[$next+8];echo "<br>";
-                              $content = file_get_contents('data/bagel.txt');
-                                  $file = fopen('data/bagel.txt', "r+");
+                              $content = file_get_contents('../data/bagel.txt');
+                                  $file = fopen('../data/bagel.txt', "r+");
                                         $ordernumber= fgets($file);
                                         $itemname= fgets($file);
                                         static $quantity;
                                         $quantity=(int)fgets($file);
                                          echo $itemname." "; echo $quantity; 
-                                         $content = file_get_contents('data/Strawberry.txt');
-                                         $file = fopen('data/Strawberry.txt', "r+");
+                                         $content = file_get_contents('../data/Strawberry.txt');
+                                         $file = fopen('../data/Strawberry.txt', "r+");
                                          // printing the item name and quantity
                                          $ordernumber= fgets($file);
                                         $itemname= fgets($file);
@@ -132,8 +132,8 @@
                                         $quantity=(int)fgets($file);
                                         echo "<br>";
                                         echo  $itemname." "; echo $quantity;
-                                        $content = file_get_contents('data/milk.txt');
-                                        $file = fopen('data/milk.txt', "r+");
+                                        $content = file_get_contents('../data/milk.txt');
+                                        $file = fopen('../data/milk.txt', "r+");
                                         
                                         $ordernumber= fgets($file);
                                         $itemname= fgets($file);
@@ -177,7 +177,7 @@
                                             ?>
                                             <script type="text/javascript">
                                             alert("You are not an existing customer Please sign up first !!! ");
-                                            window.location.href = "php/signuppageHF.php";
+                                            window.location.href = "signuppageHF.php";
                                             </script>
                                             <?php
                                        
@@ -192,7 +192,7 @@
 
                     elseif((empty($_POST['first'] && $_POST['last'] && $_POST['email'] && $_POST['onumber'] && $_POST['tel'] && $_POST['question']))  ||  !((preg_match("/^[1-9]{5}[A-Z]{2}$/",$match))) || ((empty($_POST['first'] && $_POST['last'] && $_POST['email'] && $_POST['onumber'] && $_POST['tel'] && $_POST['question']))  &&  !((preg_match("/^[1-9]{5}[A-Z]{2}$/",$match)))))
                     {
-                        header('Location: php/contact_us.php');
+                        header('Location: contact_us.php');
                     }
 
                                     ?>
@@ -238,7 +238,7 @@
                 <h5 class="text-center">Resources</h5>
                 <ul class="list-unstyled text-small text-center">
                          <!-- the link to start the form-->
-                        <li><a class="text-muted"   href="php/contact_us.php"  ><span style="color: white;">Contact Us</span></a></li>
+                        <li><a class="text-muted"   href="contact_us.php"  ><span style="color: white;">Contact Us</span></a></li>
 
                     <li><a class="text-muted" href="#"><span style="color: white;">About Us</span></a></li>
                     <!--IGA 5600 Boul Henri-Bourassa O, Montréal, QC H4R 0B8-->
