@@ -19,8 +19,7 @@
 
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/cartStyle.css">
-    <script type="text/javascript" src="contact us.js">
-    </script>
+  
     
 </head>
 
@@ -28,7 +27,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html"><img src="Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="php/index.html"><img src="Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -39,7 +38,7 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="php/index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -47,32 +46,32 @@
                             Aisles
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="Dairy&Eggs_Relevance.html">Dairy & Eggs</a></li>
-                            <li><a class="dropdown-item" href="F&V_Relevance.html">Fruits & Vegetables</a></li>
-                            <li><a class="dropdown-item" href="Bakery_Relevance.html">Bakery</a></li>
-                            <li><a class="dropdown-item" href="Butchery_Relevance.html">Butchery</a></li>
-                            <li><a class="dropdown-item" href="Pantry_Relevance.html">Non-Perishable Food</a></li>
-                            <li><a class="dropdown-item" href="Frozen_Relevance.html">Frozen Food</a></li>
+                            <li><a class="dropdown-item" href="php/Dairy&Eggs_Relevance.php">Dairy & Eggs</a></li>
+                            <li><a class="dropdown-item" href="php/F&V_Relevance.php">Fruits & Vegetables</a></li>
+                            <li><a class="dropdown-item" href="php/Bakery_Relevance.php">Bakery</a></li>
+                            <li><a class="dropdown-item" href="php/Butchery_Relevance.php">Butchery</a></li>
+                            <li><a class="dropdown-item" href="php/Pantry_Relevance.php">Non-Perishable Food</a></li>
+                            <li><a class="dropdown-item" href="php/Frozen_Relevance.php">Frozen Food</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="WeeklyDeals.html" class="nav-link">Weekly Deals!</a>
+                        <a href="php/WeeklyDeals.php" class="nav-link">Weekly Deals!</a>
                     </li>
                     <li class="nav-item">
-                        <a href="environment1.html" class="nav-link">Environment</a>
+                        <a href="php/environment1.php" class="nav-link">Environment</a>
                     </li>
                     <li class="nav-item">
-                        <a href="careers.html" class="nav-link">Careers</a>
+                        <a href="php/careers.php" class="nav-link">Careers</a>
                     </li>
                     <li class="nav-item">
-                        <a href="About us.html" class="nav-link">About Us</a>
+                        <a href="php/About us.php" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="loginpage.html" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
+                        <a href="php/loginpage.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
                     </li>
         
                     <li class="nav-item">
-                        <a href="Cart.html" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                        <a href="php/Cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-lg"></i></a>
                     </li>
                 </ul>
             </div>
@@ -375,7 +374,7 @@
                 <h5 class="text-center">Resources</h5>
                 <ul class="list-unstyled text-small text-center">
                         <!--has the link to go and complete the form-->
-                    <li><a class="text-muted"   href="contact us.html"  ><span style="color: white;">Contact Us</span></a></li>
+                    <li><a class="text-muted"   href="php/contact_us.php"  ><span style="color: white;">Contact Us</span></a></li>
 
                     <li><a class="text-muted" href="#"><span style="color: white;">About Us</span></a></li>
                     <!--IGA 5600 Boul Henri-Bourassa O, Montréal, QC H4R 0B8-->
