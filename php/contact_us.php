@@ -31,15 +31,12 @@
     function fields(){
         var ok = document.getElementById("ordernumber");
         var ok2 = document.getElementById("last_name");
-        var ok3 = document.getElementById("inputEmail");
-        
+        var ok3 = document.getElementById("inputEmail");  
         var ok5 = document.getElementById("phone");
         var ok6 = document.getElementById("text");
         var ok7 = document.getElementById("first_name");
        
-       
-
-    //    document.write(ok7.value);
+ //    document.write(ok7.value);
        
 
         // the variable ok1 is the variable that has the correct format of the order box and it is checked againts all the other boxes that exist in the page
