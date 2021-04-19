@@ -152,12 +152,12 @@
 <!--Asks the user for their family name-->
 <label for="last_name">Last Name(Required).</label>
 <input type="text" name="last" class="form-control" id="last_name" placeholder=" Last Name">
+</div></div>
 </div>
 </div>
 
 <div class="form-row justify-content-center">
-
-                    <div class="form-group col-sm-5">
+<div class="form-group col-sm-5">
                            <!--Asks the user for their email address-->
                         <label for="inputEmail"> Your acccount related Email Address(Required).</label>
                         <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
