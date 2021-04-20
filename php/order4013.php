@@ -84,7 +84,7 @@
                                 <td style='vertical-align: middle; color:#334754; font-size:20px;'>$qty[$x]</td>
                                 <td style='vertical-align: middle; color:#334754; font-size:20px;'>$$price[$x]</td>
                                 <td style='vertical-align: middle; font-size:17px;'>
-                                        <input type='text' name='it' value=$items[$x] hidden>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
                                         <button type='submit' name='deleItem'><i class='far fa-times-circle'></i></button>
     
                                 </td>
@@ -101,17 +101,20 @@
                         
 
                             
-
+                        <?php
+                        echo"
+    
                             <tr>
-                                <td colspan="6">
-                                    <form style="float: right; margin-top:20px;">
-                                        <input type="text" placeholder="Add Product"
-                                            style="border-radius:20px;width: 200px; border-color: #334754; border: 1px solid black;">
-                                        <button type="button" onclick="fcn1(this)"><i class="fas fa-plus-circle"></i></button>
-
+                                <td colspan='6'>
+                                    <form action='backendCart.php' method='POST' style='float: right; margin-top:20px;'>
+                                        <input type='text' name='enter' placeholder='Add Product'
+                                            style='border-radius:20px;width: 200px; border-color: #334754; border: 1px solid black;'>
+                                        <button type='submit' name='add'><i class='fas fa-plus-circle'></i></button>
+        
                                     </form>
                                 </td>
-                            </tr>
+                            </tr>";
+                        ?>
 
                         </table>
 
