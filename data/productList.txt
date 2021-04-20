@@ -1,0 +1,266 @@
+Honeycrisp Apple
+Fruits & Vegetables
+Fruits
+$1.41 
+$1.05
+160g
+$8.80/kg
+Average price per apple
+Average weight
+Price per weight
+211
+50
+apple.png
+------------------------------------- 
+Banana
+Fruits & Vegetables
+Fruits
+$0.33
+no deal
+190g
+$1.74/kg
+Average price per banana
+Average weight
+Price per weight
+212
+50
+banana.png
+------------------------------------- 
+Bartlett Pear
+Fruits & Vegetables
+Fruits
+$0.88
+no deal
+160g
+$5.46/kg
+Average price per pear
+Average weight
+Price per weight
+213
+50
+pear.png
+------------------------------------- 
+Large Navel Orange
+Fruits & Vegetables
+Fruits
+$1.49
+no deal
+(Sold individually)
+
+Price
+
+
+214
+30
+orange.png
+------------------------------------- 
+Celery
+Fruits & Vegetables
+Vegetables
+$3.69
+no deal
+(Sold individually)
+
+Price
+
+
+223
+30
+celery.png
+------------------------------------- 
+Enlish HH Seedless Cucumber
+Fruits & Vegetables
+Vegetables
+$2.50
+$1.50
+(Sold individually)
+
+Price
+
+
+221
+20
+cucumber.png
+------------------------------------- 
+Red Pepper
+Fruits & Vegetables
+Vegetables
+$3.96
+no deal
+300g
+$13.21/kg
+Average price per pepper
+Average weight
+Price per weight
+222
+32
+redpepper.png
+------------------------------------- 
+Romaine Lettuce
+Fruits & Vegetables
+Vegetables
+$2.99
+no deal
+(Sold individually)
+
+Price
+
+
+224
+80
+lettuce.png
+------------------------------------- 
+Plain Bagels
+Bakery
+Bagels
+$3.99
+$2.99
+450g
+6 
+Price
+Weight
+Quantity
+331
+80
+plainbagel.png
+------------------------------------- 
+Whole Wheat Bagels
+Bakery
+Bagels
+$5.89
+no deal
+480g
+6 
+Price
+Weight
+Quantity
+332
+70
+wholewheatbagel.png
+------------------------------------- 
+Sliced White Bread
+Bakery
+Breads
+$3.58
+$2.50
+675g
+$0.38/100g
+Price
+Weight
+Price per weight
+311
+70
+whitebread.png
+------------------------------------- 
+Sliced Whole Wheat Bread
+Bakery
+Breads
+$4.19
+no deal
+675g
+$0.64/100g
+Price
+Weight
+Price per weight
+312
+70
+wholewheatbread.png
+------------------------------------- 
+French Baguette
+Bakery
+Breads
+$3.19
+$2.49
+250g
+$1.28/100g
+Price
+Weight
+Price per weight
+313
+10
+Baguette.png
+------------------------------------- 
+Maple Pastry Bites
+Bakery
+Pastries
+$4.99
+no deal
+12 x 20g
+$2.08/100g
+Price
+Weight
+Price per weight
+321
+15
+mapplepastry.png
+------------------------------------- 
+Palm Leaf Pastries
+Bakery
+Pastries
+$6.99
+no deal
+150g
+$4.66/100g
+Price
+Weight
+Price per weight
+322
+15
+leafpastry.png
+------------------------------------- 
+Lean Ground Beef
+Butchery
+Meat
+approx. $7.73 
+approx. $3.87
+approx 500g
+$1.55/100g
+Average price
+Average weight
+Price per weight
+411
+100
+groundbeef.png
+------------------------------------- 
+Rib Steak
+Butchery
+Meat
+$10.58
+$5.29
+300g
+$35.25/kg
+Average price
+Average weight
+Price per weight
+413
+100
+steak.png
+------------------------------------- 
+Butterfly Pork Chops, 3 Pack
+Butchery
+Meat
+$8.59
+$4.30
+600g
+$13.21/kg
+Average price
+Average weight
+Price per weight
+414
+100
+pork.png
+------------------------------------- 
+Boneless Chicken Breast, 3 Pack
+Butchery
+Poultry
+$10.21
+$5.11
+600g
+$1.70/100g
+Average price
+Average weight
+Price per weight
+431
+150
+chickenbreast.png
+------------------------------------- 
