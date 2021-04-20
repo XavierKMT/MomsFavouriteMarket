@@ -103,7 +103,7 @@
                     $readfile = fopen($file,"r");
                     while (!feof($readfile)) {
                         $line = explode(";",fgets($readfile));
-                        if (in_array(133, $line)) {
+                        if (in_array(431, $line)) {
                             break;
                         }
                     }
@@ -132,7 +132,7 @@
                                     $readfile = fopen($file,"r");
                                     while (!feof($readfile)) {
                                         $line = explode(";",fgets($readfile));
-                                        if (in_array(133, $line)) {
+                                        if (in_array(431, $line)) {
                                             $newFile = "../data/cartOrder.txt";
                                             $cartFile = fopen($newFile,"a+");
                                             $fullCart = file($newFile);
