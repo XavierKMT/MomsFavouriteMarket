@@ -121,7 +121,7 @@
                 </tr>
             </table>
             <br />
-            <center> <input type= "submit" value = "Save"/> </center>
+            <center> <input type="submit" id="saveItem" value = "Save"/> </center>
             <button type="button" onclick="myFunction()" id = "SaveProduct">Add Product</button>
             <br />
             <br />
