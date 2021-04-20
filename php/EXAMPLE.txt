@@ -1,0 +1,8 @@
+12345AB
+Bagel,3,5
+Strawberries,6,4
+Milk,8,2
+Honeycrips Apple,4,6
+Shredded Mozzarella Cheese Bag,5.99,7
+Plain Bagels,2.99,3
+All Purpose Flour,8.29,4
