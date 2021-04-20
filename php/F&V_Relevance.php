@@ -14,18 +14,18 @@
 
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/cartStyle.css">
-    <link rel="stylesheet" href="CSS/asilesStyle.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/cartStyle.css">
+    <link rel="stylesheet" href="../CSS/asilesStyle.css">
 
-    <script src="JS/addToCart.js"></script>
-    <script src="JS/productList.js"></script>
+    <script src="../JS/addToCart.js"></script>
+    <script src="../JS/productList.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="../../Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="index.html"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -87,7 +87,7 @@
 
     <!--The banner-->
     <br></br>
-    <center> <img class="img-fluid" src="../../Images/Fruits&Veggies.jpg " alt="banner for Fruits & Vegetables"> </center>
+    <center> <img class="img-fluid" src="../Images/Fruits&Veggies.jpg " alt="banner for Fruits & Vegetables"> </center>
     <br></br>
 
    <!--buttons on top-->
