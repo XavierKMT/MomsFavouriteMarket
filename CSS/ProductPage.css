@@ -101,18 +101,6 @@ button#SaveProduct:hover{
     cursor:pointer;
 }
 
-input[type = submit]{
-    color:white;
-    background-color: #6DAFFE; 
-    border-style:none;
-    margin: auto;
-    margin-bottom: 2.5%;
-    display: block;
-    padding:5px 7px 3px 7px;
-    border-radius:10px;
-    width: 200px;
-}
-
 input:hover[type = submit]{
     border-color:#334754;
     background-color: #e04362;
