@@ -1,3 +1,53 @@
+<?php
+
+include("organizingProduct_FE.php");
+
+$saleNum = count($sales);
+//echo $saleNum;
+
+$name = array();
+$aisle = array();
+$subAisle = array();
+$price = array();
+$weeklyDeal = array();
+$weight = array();
+$pricePerWeight = array();
+$subdes1 = array();
+$subdes2 = array();
+$subdes3 = array();
+$productNum = array();
+$quantity = array();
+$image = array();
+
+for($i = 0 ; $i<$saleNum ; $i++){
+    $temp = explode(";", $sales[$i]);
+
+    array_push($name, $temp[0]);
+    array_push($aisle, $temp[1]);
+    array_push($subAisle, $temp[2]);
+    array_push($price, $temp[3]);
+    array_push($weeklyDeal, $temp[4]);
+    array_push($weight, $temp[5]);
+    array_push($pricePerWeight, $temp[6]);
+    array_push($subdes1, $temp[7]);
+    array_push($subdes2, $temp[8]);
+    array_push($subdes3, $temp[9]);
+    array_push($productNum, $temp[10]);
+    array_push($quantity, $temp[11]);
+   //
+if($name[$i] == $item[$num-1]){
+
+        $lastImg = substr($temp[12], 0 ,-5);
+        array_push($image, $lastImg);
+}
+else{
+    array_push($image, $temp[12]);
+}   
+
+} 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +75,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html"><img src="../Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="index.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -36,7 +86,7 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -85,13 +135,9 @@
 
     </header>
 
-    <?php 
-        include 'products.php';
-    ?>
-
     <center>
-        <!--Making a table with bootstrap-->
-        <div id = "ProductList" class="col-md-11">
+    <!--Making a table with bootstrap-->
+    <div id = "ProductList" class="col-md-11">
             <h2 class="text-center" style="color:#334754;">Weekly Deals!</h2>
             <div class="table-responsive">
             <!--Table of products in the weekly deals-->
@@ -113,234 +159,28 @@
                     <td></td>
     
                 </tr>
-                <!--The first product (first row) with details-->
-                <tr>
-                    <th><a href="30eggs.html"><img class = "img-fluid" src = "../Images/<?php echo $products[377];?>"></a></th>
-                    <td><a href="30eggs.html">Large Eggs</a></td>
-                    <td>Dairy & Eggs</td>
-                    <td id = "sales"><span class = "bigger"> $4.77</span> ea.</td>
-                    <td>30 un.</td>
-                    <td>$0.25/un</td>
-                    <td id = "oldPrices">$7.49 ea.</td>
-                    <!--Add to cart button-->
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-                <!--The same concept for each products-->
-                <tr>
-                    <td><a href="0yogurt.html"><img class = "img-fluid" src = "../Images/yogurtcup.png"></img></a></td>
-                    <td><a href="0yogurt.html">Blueberry Yogurt Pack</a></td>
-                    <td>Dairy & Eggs</td>
-                    <td id = "sales"><span class="bigger">$5.99</span> ea.</td>
-                    <td>12 x 95g</td>
-                    <td>$0.53/100g</td>
-                    <td id = "oldPrices">$7.49 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Chicken.html"><img class = "img-fluid" src = "../Images/chickenbreast.png"></img></a></th>
-                    <td><a href="Chicken.html">Boneless Chicken Breast, 3 Pack</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class="bigger">$5.11</span> ea.</td>
-                    <td> approx. 600g</td>
-                    <td id = "oldPrices">$1.70/100g</td>
-                    <td id = "oldPrices">$10.21 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Pork.html"><img class = "img-fluid" src = "../Images/pork.png"></img></a></th>
-                    <td><a href="Pork.html">Butterfly Pork Chops, 3 Pack</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger">$4.30</span> avg. ea.</td>
-                    <td>600 avg. ea.</td>
-                    <td id = "oldPrices">$13.21/kg</td>
-                    <td id = "oldPrices">$8.59</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Duck.html"><img class = "img-fluid" src = "../Images/duckconfit.png"></img></a></th>
-                    <td><a href="Duck.html">Confit Duck Legs, 2 Pack</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger">$8.50</span> ea.</td>
-                    <td>500g avg.</td>
-                    <td id = "oldPrices">$3.40/100g</td>
-                    <td id = "oldPrices">$16.99 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to Cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Cucumber.html"><img class = "img-fluid" src = "../Images/cucumber.png"></img></a></th>
-                    <td><a href="Cucumber.html">English HH Seedless Cucumber</a></td>
-                    <td>Vegetables</td>
-                    <td id = "sales"><span class = "bigger">$1.50</span> ea.</td>
-                    <td>Sold individually</td>
-                    <td id = "oldPrices">$2.50/un</td>
-                    <td id = "oldPrices">$2.50</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="BreadRolls.html"><img class = "img-fluid" src = "../Images/Baguette.png"></img></a></th>
-                    <td><a href="BreadRolls.html">French Baguette</a></td>
-                    <td>Bakery</td>
-                    <td id = "sales"><span class = "bigger">$2.49</span> ea.</td>
-                    <td>250 g</td>
-                    <td>$1.28/100g</td>
-                    <td id = "oldPrices">$3.19</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Haddock.html"><img class = "img-fluid" src = "../Images/haddockfillet.png"></img></a></th>
-                    <td><a href="Haddock.html">Haddock Fillet</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger">$1.76</span> ea.</td>
-                    <td>200 g</td>
-                    <td id = "oldPrices">$17.61/kg</td>
-                    <td id = "oldPrices">$3.52</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Apple.html"><img class = "img-fluid" src = "../Images/apple.png"></img></a></th>
-                    <td><a href="Apple.html">Honeycrips Apple</a></td>
-                    <td>Fruits</td>
-                    <td id = "sales"><span class = "bigger">$1.05</span> avg. ea.</td>
-                    <td>160 g avg.</td>
-                    <td>$8.80/kg</td>
-                    <td id = "oldPrices">$1.41 avg. ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>
-    
-                <tr>
-                    <th><a href="Orange.html"><img class = "img-fluid" src = "../Images/orange.png"></img></a></th>
-                    <td><a href="Orange.html">Large Navel Orange</a></td>
-                    <td>Fruits</td>
-                    <td id = "sales"><span class = "bigger">$1.00</span> ea.</td>
-                    <td>Sold individually</td>
-                    <td id = "oldPrices">$1.49/un.</td>
-                    <td id = "oldPrices">$1.49</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
 
-                <tr>
-                    <th><a href="GroundBeef.html"><img class = "img-fluid" src = "../Images/groundbeef.png"></img></a></th>
-                    <td><a href="GroundBeef.html">Lean Ground Beef</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales">Approx.<span class = "bigger"> $3.87</span> ea.</td>
-                    <td>Approx. 500g</td>
-                    <td id = "oldPrices">$1.55/100g</td>
-                    <td id = "oldPrices">Approx. $7.73 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="Turkey.html"><img class = "img-fluid" src = "../Images/mincedturkey.png"></img></a></th>
-                    <td><a href="Turkey.html">Lean Minced Turkey</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger"> $2.99</span> ea.</td>
-                    <td>450g avg.</td>
-                    <td id = "oldPrices">$1.33/100g</td>
-                    <td id = "oldPrices">$5.99 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="Lobster.html"><img class = "img-fluid" src = "../Images/lobster.png"></img></a></th>
-                    <td><a href="Lobster.html">Live Lobster</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger"> $9.55</span> ea.</td>
-                    <td>520g avg</td>
-                    <td id = "oldPrices">$1.55/100g</td>
-                    <td id = "oldPrices">$19.55 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="FrozenPizza.html"><img class = "img-fluid" src = "../Images/FrozenPizza.png"></img></a></th>
-                    <td><a href="FrozenPizza.html">Frozen Pepperoni & Cheese Pizza</a></td>
-                    <td>Frozen</td>
-                    <td id = "sales"><span class = "bigger"> $6.99</span> ea.</td>
-                    <td>815g</td>
-                    <td>$0.86/100g</td>
-                    <td id = "oldPrices">$7.59 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="PlainBagel.html"><img class = "img-fluid" src = "../Images/plainbagel.png"></img></a></th>
-                    <td><a href="PlainBagel.html">Plain Bagels</a></td>
-                    <td>Bakery</td>
-                    <td id = "sales"><span class = "bigger"> 2.99</span> ea.</td>
-                    <td>6 un - 450g</td>
-                    <td>$0.67/un</td>
-                    <td id = "oldPrices">$3.99 avg. ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="RibSteak.html"><img class = "img-fluid" src = "../Images/steak.png"></img></a></th>
-                    <td><a href="RibSteak.html">Rib Steak</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger"> $5.29</span> avg. ea.</td>
-                    <td>300g avg.</td>
-                    <td id = "oldPrices">$35.25/kg</td>
-                    <td id = "oldPrices">Approx. $10.58 avg. ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="Salmon.html"><img class = "img-fluid" src = "../Images/salmonfillet.png"></img></a></th>
-                    <td><a href="Salmon.html">Salmon Fillet</a></td>
-                    <td>Butchery</td>
-                    <td id = "sales"><span class = "bigger"> $3.42</span> ea.</td>
-                    <td>200g</td>
-                    <td id = "oldPrices">$34.15/Kg</td>
-                    <td id = "oldPrices">$6.83 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr> 
-                
-                <tr>
-                    <th><a href="WhiteBread.html"><img class = "img-fluid" src = "../Images/whitebread.png"></img></a></th>
-                    <td><a href="WhiteBread.html">Sliced White Bread</a></td>
-                    <td>Bakery</td>
-                    <td id = "sales"><span class = "bigger">$2.50</span> ea.</td>
-                    <td>675g</td>
-                    <td >$0.38/100g</td>
-                    <td id = "oldPrices">$3.58 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="StrawberryYogurt.html"><img class = "img-fluid" src = "../Images/strawberryyogurt.png"></img></a></th>
-                    <td><a href="StrawberryYogurt.html">Strawberry Yogurt Pack</a></td>
-                    <td>Dairy & Eggs</td>
-                    <td id = "sales"><span class = "bigger"> $5.99</span> ea.</td>
-                    <td>12 x 95g</td>
-                    <td>$0.53/100g</td>
-                    <td id = "oldPrices">$7.49 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr>  
-
-                <tr>
-                    <th><a href="TomatoSoup.html"><img class = "img-fluid" src = "../Images/cannedsoup.png"></img></a></th>
-                    <td><a href="TomatoSoup.html">Tomato soup</a></td>
-                    <td>Pantry</td>
-                    <td id = "sales"><span class = "bigger"> $1.69</span> ea.</td>
-                    <td>540 ml</td>
-                    <td>$0.74/100ml</td>
-                    <td id = "oldPrices">$3.99 ea.</td>
-                   <td><button type="button"> <a1 href = "AddProduct.html">Add to cart</a1></button></td>
-                </tr> 
-
+                <?php
+                    for($i = 0; $i < $saleNum; $i++){
+                        echo "
+                        <tr>
+                            <th><a href='30eggs.html'><img class = 'img-fluid' src = '../Images/$image[$i]'></a></th>
+                            <td><a href='30eggs.html'>$name[$i]</a></td>
+                            <td>$aisle[$i]</td>
+                            <td id = 'sales'><span class = 'bigger'>$weeklyDeal[$i]</span> ea.</td>
+                            <td>$weight[$i]</td>
+                            <td>$pricePerWeight[$i]</td>
+                            <td id = 'oldPrices'>$price[$i] ea.</td>
+                            <!--Add to cart button-->
+                        <td><button type='button'> <a1 href = 'AddProduct.html'>Add to cart</a1></button></td>
+                        </tr>  
+                        ";
+                    }
+                ?>
             </table>
-
-    
-       
-    
-       </center> 
+            </div>
+    </div>
+    </center>
 
     <!--Footer-->
     <!--Boot Strap Website-->

@@ -24,12 +24,12 @@ Haddock Fillet;Butchery;Seafood;$3.52;$1.61;200g;$0.88/100g;Average price;Averag
 Live Lobster;Butchery;Seafood;$19.10;$9.55;510g;$1.87/100g;Average price;Average weight;Price per weight;423;150;lobster.png
 Shredded Mozzarella Cheese Bag;Dairy & Eggs;Cheese & Yogurt;$5.99;no deal;500g;$1.20/100g;Price;Weight;Price per weight;131;150;shreddedcheese.png
 Cheddar Cheese;Dairy & Eggs;Cheese & Yogurt;$4.49;no deal;270g;$1.66/100g;Price;Weight;Price per weight;132;150;cheddarcheese.png
-Strawberry Yogurt Pack;Dairy & Eggs;Cheese & Yogurt;$7.49;$5.99;(12x95)g;$0.53/100g;Price;Weight;Price per weight;117;150;strawberryyogurt.png
-Blueberry Yogurt Pack;Dairy & Eggs;Cheese & Yogurt;$7.49;$5.99;(12x95)g;$0.53/100g;Price;Weight;Price per weight;133;150;yogurtcup.png
-Mixed Fruit Flavoured Yogurt Pack;Dairy & Eggs;Cheese & Yogurt;$5.99;no deal;(16x100)g;$0.37/100g;Price;Weight;Price per weight;134;150;yogurtpack.png
+Strawberry Yogurt Pack;Dairy & Eggs;Cheese & Yogurt;$7.49;$5.99;(12x95g);$0.53/100g;Price;Weight;Price per weight;117;150;strawberryyogurt.png
+Blueberry Yogurt Pack;Dairy & Eggs;Cheese & Yogurt;$7.49;$5.99;(12x95g);$0.53/100g;Price;Weight;Price per weight;133;150;yogurtcup.png
+Mixed Fruit Flavoured Yogurt Pack;Dairy & Eggs;Cheese & Yogurt;$5.99;no deal;(16x100g);$0.37/100g;Price;Weight;Price per weight;134;150;yogurtpack.png
 30 Large Eggs;Dairy & Eggs;Eggs;$7.49;$4.77;30 un.;$0.25/egg;Price;Quantity;Price per egg;121;150;30eggs.png
 10 Large White Eggs;Dairy & Eggs;Eggs;$2.99;no deal;10 un.;$0.30/egg;Price;Quantity;Price per egg;122;150;10whiteeggs.png
-10 Large Brown Eggs;Dairy & Eggs;Eggs;$4.69;no deal;10 un.;$0.39/egg;Price;Quantity;Price per egg;123;150;10browneggs.png
+10 Large Brown Eggs;Dairy & Eggs;Eggs;$4.69;no deal;10 un.;$0.39/egg;Price;Quantity;Price per egg;123;150;12browneggs.png
 1% Milk;Dairy & Eggs;Milk, Cream & Butter;$6.38;no deal;4L;$0.16/100ml;Price;Volume;Price per volume;111;30;1milk4L.png
 1% Milk;Dairy & Eggs;Milk, Cream & Butter;$1.85;no deal;1L;$0.19/100ml;Price;Volume;Price per volume;112;30;1milk1L.png
 2% Milk;Dairy & Eggs;Milk, Cream & Butter;$6.68;no deal;4L;$0.17/100ml;Price;Volume;Price per volume;113;30;2milk4L.png
