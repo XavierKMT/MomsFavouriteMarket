@@ -2,6 +2,7 @@
 
     function findImg($item)
     {
+        
         if($item=="Strawberries")
         {
            return "../Images/strawberry.jpg";
@@ -87,7 +88,7 @@
             return "../Images/unsaltedbutter.png";
         }
 
-        else if($item==("Honeycrips Apple"))
+        else if($item==("Honeycrisp Apple"))
         {
             return "../Images/apple1.png";
         }
@@ -354,7 +355,7 @@
             return "Dairy & Eggs";
         }
 
-        else if($item==("Honeycrips Apple"))
+        else if($item==("Honeycrisp Apple"))
         {
             return "Fruits & Vegetables";
         }
@@ -621,7 +622,7 @@
             return 4.89;
         }
 
-        else if($item==("Honeycrips Apple"))
+        else if($item==("Honeycrisp Apple"))
         {
             return 1.05;
         }
@@ -888,7 +889,7 @@
             return true;
         }
 
-        else if($item==("Honeycrips Apple"))
+        else if($item==("Honeycrisp Apple"))
         {
             return true;
         }

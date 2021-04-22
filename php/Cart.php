@@ -390,7 +390,7 @@ for($x=0; $x<$num;$x++)
                     ?>
 
                     <a href="CheckoutSuccess.php"><button type="button">CHECKOUT</button></a>
-                    <a href="index.html">
+                    <a href="../index.php">
                         <button type="button" id="specialButton" style="margin-bottom: 10px;">CONTINUE SHOPPING</button>
                     </a>
                 </div>

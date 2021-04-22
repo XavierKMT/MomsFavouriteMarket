@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("test.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,8 +88,16 @@
 <div class="card bg-dark text-white">
 <img src="../Images/cartS.jpg" class="card-img" style="max-width:150vh;max-height:100vh; display: block; margin-left: auto;margin-right: auto;">
 <div class="card-img-overlay">
-  <h1 class="card-title" style="margin-top:25vh;text-align:center;font-size:100px;">Order Confirmed</h1>
-  <p class="card-text" style="text-align:center;font-size:35px;">Thank You for Shopping With Us</p>
+    <div class="card text-center" style="max-width:100vh;max-height:40vh;display: block; margin-left: auto;margin-right: auto;margin-top:25vh;opacity: 0.8;box-shadow: 0em 0.8em 2em -0.3em;">
+        <div class="card-body">
+            <h2 class="card-title" style="text-align:center;font-size:90px; color:black;">Order Confirmed</h2>
+            <p class="card-text" style="text-align:center;font-size:35px;color:black;">Thank You for Shopping With Us</p>
+            <a href="../index.php" class="btn" style="background-color:#e04362;">Continue Shopping</a>
+            <?php emptyCart() ?>
+        </div>
+    </div>
+  <!-- <h1 class="card-title" style="margin-top:25vh;text-align:center;font-size:100px;">Order Confirmed</h1>
+  <p class="card-text" style="text-align:center;font-size:35px;">Thank You for Shopping With Us</p> -->
 </div>
 </div>
 

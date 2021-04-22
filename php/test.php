@@ -142,8 +142,9 @@ function emptyCart()
 {
     $file=fopen("../data/cartOrder.txt","w"); 
     fwrite($file,"");
-
-
+  
+    session_unset();
+    session_destroy();
 }
 
 

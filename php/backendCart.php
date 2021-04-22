@@ -74,29 +74,64 @@ if(isset($_POST['deleItem']))
 // -------------------
 function addItem($itemName)
 {
-    if(itemExists($itemName))
+    if(alreadyInCart($itemName)==false)
     {
-        $file=fopen("../data/bCart.txt","a");
-        $pr=findPrice($itemName);
-        $productAdd="\n$itemName,$pr,1";
-        fwrite($file,$productAdd);
-        header('location:order12345AC.php');
+        if(itemExists($itemName))
+        {
+            $file=fopen("../data/bCart.txt","a");
+            $pr=findPrice($itemName);
+            $productAdd="\n$itemName,$pr,1";
+            fwrite($file,$productAdd);
+            header('location:order12345AC.php');
+        }
+
+        else
+        {
+
+            echo "<script type='text/javascript'>
+                        alert('INCORRECT ITEM NAME!');
+                        window.location.href='order12345AC.php';
+                </script>";
+                
+        }
     }
 
     else
     {
-
         echo "<script type='text/javascript'>
-                    alert('INCORRECT ITEM NAME!');
+                    alert('ITEM ALREADY IN CART');
                     window.location.href='order12345AC.php';
-              </script>";
-              
+             </script>";
     }
 }
 
 if(isset($_POST['add']))
 {
     addItem($_POST['enter']);
+}
+
+function alreadyInCart($itemName)
+{
+    $content= file_get_contents("../data/bCart.txt");
+    $content=explode("\n",$content);
+    $orderNumber=$content[0];
+    $num= sizeof($content);
+
+    $items=array();
+    $price=array();
+    $qty=array();
+
+    for($x=1; $x<$num;$x++)
+ {
+     $temp= explode(",",$content[$x]);
+     
+     if($temp[0]==$itemName)
+     {
+        return true;
+     }
+ }
+
+ return false;
 }
 
 ?>
