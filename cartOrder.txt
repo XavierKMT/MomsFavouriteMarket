@@ -1,0 +1,6 @@
+Milk;8;3
+Bagel;4;8
+Shredded Mozzarella Cheese Bag;5.99;8
+All Purpose Flour;8.29;16
+Whole Wheat Bagels;10;40
+1% Milk Small;2;30
