@@ -46,6 +46,8 @@ else{
 
 } 
 
+include("findFile.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -162,10 +164,13 @@ else{
 
                 <?php
                     for($i = 0; $i < $saleNum; $i++){
+
+                        $file = findProdFile($productNum[$i]); 
+
                         echo "
                         <tr>
-                            <th><a href='30eggs.html'><img class = 'img-fluid' src = '../Images/$image[$i]'></a></th>
-                            <td><a href='30eggs.html'>$name[$i]</a></td>
+                            <th><a href='$file'><img class = 'img-fluid' src = '../Images/$image[$i]'></a></th>
+                            <td><a href='$file'>$name[$i]</a></td>
                             <td>$aisle[$i]</td>
                             <td id = 'sales'><span class = 'bigger'>$weeklyDeal[$i]</span> ea.</td>
                             <td>$weight[$i]</td>
