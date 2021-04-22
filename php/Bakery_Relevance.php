@@ -1,5 +1,5 @@
-<!--The header-->
 <?php 
+    //The header
     include("headerForAisles.php");
     include("organizingProduct_FE.php");
 
