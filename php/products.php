@@ -62,7 +62,7 @@
             return "../Images/1milk4L.png";
         }
 
-        else if($item==("1% Milk small"))
+        else if($item==("1% Milk Small"))
         {
             return"../Images/1milk1L.png";
         }
@@ -72,7 +72,7 @@
             return "../Images/2milk4L.png";
         }
 
-        else if($item==("2% Milk small"))
+        else if($item==("2% Milk Small"))
         {
             return "../Images/2milk1L.png";
         }
@@ -596,7 +596,7 @@
             return 6.38;
         }
 
-        else if($item==("1% Milk small"))
+        else if($item==("1% Milk Small"))
         {
             return 1.85;
         }
@@ -606,7 +606,7 @@
             return 6.68;
         }
 
-        else if($item==("2% Milk small"))
+        else if($item==("2% Milk Small"))
         {
             return 1.93;
         }
