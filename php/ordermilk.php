@@ -208,7 +208,7 @@ style="box-shadow: 0 0.8em 0.8em -0.4em; margin-top: 50px; padding-left: 30px; b
                     <button     type="submit"  style="margin-left: -13.5%; " id="minus" name="re"  ><i  class="fas fa-minus-circle">  </i>   </button> 
                     </td>
                     
-                    <td  id= "part4"style="vertical-align: middle; color:#334754; font-size:20px;">$6.65</td>
+                    <td  id= "part4"style="vertical-align: middle; color:#334754; font-size:20px;">$6.56</td>
                      <!--Delete button deltes the item completely -->
                     <td   id= "part5"  style="vertical-align: middle; font-size:17px;"><button type="submit"  name="del" ><i class=" far
                             fa-times-circle"></i></button></td>
