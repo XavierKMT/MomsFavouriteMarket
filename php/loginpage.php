@@ -1,30 +1,33 @@
 
-<html>
-
-<!--Name: Divleen Kaur Ahluwalia, Student ID: 40116121-->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/t&c.css">
     <title>Mom's Favourite Market</title>
     <link rel="shortcut icon" href="../Images/logo.png">
-    <link rel="stylesheet" href="../CSS/main.css">
 
+    <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/cartStyle.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/cssforsignup.css">
+
 </head>
 
 <body>
-    <!--HEADER-->
-    <header>
+
+<header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="../index.php"><img src="../Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="index.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -35,7 +38,7 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link">Home</a>
+                        <a href="../index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -83,71 +86,52 @@
         </div>
 
     </header>
+   
+    <main>
+        <div class="shadow-lg p-3 mb-5 bg-white rounded"
+            style="margin-left: 60px; margin-right:60px; margin-bottom: 30px; margin-top: 20px;">
 
+            <h1 style="text-align:center; color: grey">Please Sign In Below</h1>
+            <?php
+                if(isset($_GET['Message'])){
+                    ?>
+                     <span style="color:red;font-size:21px;margin-left: 34em;"> <?php echo $_GET['Message'] ?> </span>   
+                    <?php }?>
+            <hr style="margin-bottom:4%">
+            <div class="container">
+                <form method = "post" action = "loginprocess.php" >
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Please enter your email" required/>
+                </br>
+                </br>
+                    <label>Password:</label>
+                    <input type="password" name="pass" placeholder="Password" required/>
+                    <!--log in button-->
+                    <button type="submit"  name="login"
+                    style="margin-left: 160px   ; margin-right: 60px;margin-top: 30px;color: white" >Log In</button>
 
-    <!--MAIN BODY CONTENT-->
-    <div class="container">
-        <h1 style="margin-left: 60px; margin-right:60px; text-align: center; color:grey">Terms and Conditions</h1>
-        <div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 60px; margin-right:60px">
-            <div class="content">
-                <dt>Protection of Children
-                <dt>
-                <dd>All users of this site should be of legal age in their respective province.
-                    Mom's Favourite Market abides by legal restrictions with respect to advertising to children.</dd>
-
-                <dt>Copyright</dt>
-                <dd>All content of the website is protected in accordance with the <em>Canadian Copyright Act.</em>
-                    Unauthorized use is prohibited unless prior authorization is given.</dd>
-
-                <dt>Termination</dt>
-                <dd>Mom's Favorite Market reserves the right to limit or terminate access to the Services (or any
-                    portion, aspect or feature of the Services),
-                    delete any content or information that you have posted on the Services and/or prohibit you from
-                    using or accessing the Services
-                    for any reason at any time with or without notice.</dd>
-
-                <dt>Additional Conditions of Use</dt>
-                <dd>You may be required to comply with additional conditions of use specific to certain programs,
-                    offers, promotions,
-                    and/or third party content that will be disclosed to you once you access such programs, offers,
-                    promotions and services.</dd>
-
-                <dt>Security</dt>
-                <!--Reference for Terms and Conditions text: https://www.groupeadonis.ca/en/accessibility-->
-                <dd>Despite best efforts to ensure third parties will not acquire personal information
-                    about you through this site,
-                    we cannot guarantee complete confidentiality. Interaction
-                    via the Internet is subject
-                    to loss or alteration. You acknowledge and agree that Mom's Favourite Market cannot be
-                    held responsible for damages resulting from
-                    the transmission of personal information over the Internet and that such
-                    communications are at your
-                    own risk. You alone are responsible for protecting the confidentiality of your user ID and password
-                    as well as the confidentiality
-                    of any actions undertaken using your identification. Moreover, you are responsible for immediately
-                    notifying Mom's Favourite Market about any unauthorized
-                    use of your user ID or passwords and any other security breach, as well as for taking
-                    precaution to ensure that you use the Site
-                    under optimal security conditions.
-                </dd>
-
-                <dt>Cookies</dt>
-                <dd>By using this Site, you consent to Mom's Favourite Market using "Cookies", which enables Mom's
-                    Favourite Market,
-                    to recognize you when you visit the Site so as to customize your browsing experience based on your
-                    preferences and provide a customized offering of services, products, promotions
-                    and advertising on our Site. You may choose, at any time, to block "cookies" by changing your
-                    browser settings,
-                    following which, your Site browsing experience will no longer be optimized.</dd>
+                     <!--Admin log in link-->
+                    <button type="button"  name="forgot-password"
+                    style="margin-left: 128px   ; margin-right: 61px; margin-top: 30px;">
+                    <a href="loginpage2.php"
+                    style="text-decoration: none; color: white;">ADMIN
+                    Login In</a></button>
+                
+                        <button type="button" name="forgot-password"
+                    style="margin-left: 123px   ; margin-right: 60px; margin-top: 30px;"><a href="passwordreset.php" style="text-decoration: none; color: white;"> Forgot Password</a></button>
+                </form>
+                <p>
+                <h5>If you don't have an account, join the family <a href="signuppageHF.php"> here!</a></h5>
+                </p>
             </div>
+
         </div>
-    </div>
+    </main>
 
-
-    <!--FOOTER-->
+  <!--FOOTER-->
     <!--Using Boot Strap Website as well as W3school for reference -->
     <footer class="container-fluid"
-        style="background-color:#334754; margin-top: 60px; padding-bottom: 20px; padding-top:40px;">
+        style="background-color:#334754; margin-top: 500px; padding-bottom: 20px; padding-top:40px;">
         <div class="row">
             <div class="col-lg-4">
                 <h5 class="text-center">Follow Us</h5>
@@ -164,7 +148,9 @@
             <div class=" col-lg-4">
                 <h5 class="text-center">Resources</h5>
                 <ul class="list-unstyled text-small text-center">
-                    <li><a class="text-muted" href="mailto: abc@example.com"><span style="color: white;">Contact Us
+                        <!--has the link to go and complete the form-->
+                    <li><a class="text-muted"   href="contact_us.php"  ><span style="color: white;">Contact Us</span></a></li>
+
                     <li><a class="text-muted" href="#"><span style="color: white;">About Us</span></a></li>
                     <!--IGA 5600 Boul Henri-Bourassa O, Montréal, QC H4R 0B8-->
                     <li><a class="text-muted"
@@ -192,10 +178,12 @@
         </div>
     </footer>
 
-
     <!--CDN import for header & footer-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -206,6 +194,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+
 
 </body>
 

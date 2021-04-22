@@ -31,12 +31,15 @@
     function fields(){
         var ok = document.getElementById("ordernumber");
         var ok2 = document.getElementById("last_name");
-        var ok3 = document.getElementById("inputEmail");  
+        var ok3 = document.getElementById("inputEmail");
+        
         var ok5 = document.getElementById("phone");
         var ok6 = document.getElementById("text");
         var ok7 = document.getElementById("first_name");
        
- //    document.write(ok7.value);
+       
+
+    //    document.write(ok7.value);
        
 
         // the variable ok1 is the variable that has the correct format of the order box and it is checked againts all the other boxes that exist in the page
@@ -131,74 +134,101 @@
                 </ul>
             </div>
         </nav>
-        </header>
 
-<form   action= "display.php" method="POST" >
+
+
+    <form   action= "display.php" method="POST" >
+        
         <div class="container">
-<hr style="margin-bottom:4%">
-<!--it starts the begining of the form where it asks the user to fill it out-->
-<p style="margin-left: 60px; color: grey; font-size: large;" >Submit this form and we will be able to assist you with all your questions regarding your online order.</p>
-<div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 60px; margin-right:60px">
-<div class="form-row justify-content-center">
-<div class="form-group col-sm-5">
-<!-- Asks the user to enter their first name and it mentioned that it is required-->
-<label for="first_name">First Name(Required).</label>
-<input type="text" name= "first" class="form-control"   id="first_name"  placeholder="First name" >
-</div>
-<div class="form-group col-sm-5">
-<!--Asks the user for their family name-->
-<label for="last_name">Last Name(Required).</label>
-<input type="text" name="last" class="form-control" id="last_name" placeholder=" Last Name">
+            <hr style="margin-bottom:4%">
+               <!--it starts the begining of the form where it asks the user to fill it out-->
+            <p style="margin-left: 60px; color: grey; font-size: large;" >Submit this form and we will be able to assist you with all your questions regarding your online order.</p>
 
-</div>
-</div>
+            <div class="shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 60px; margin-right:60px">
 
-<div class="form-row justify-content-center">
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-sm-5">
+                   
+                           <!-- Asks the user to enter their first name and it mentioned that it is required-->
+                        <label for="first_name">First Name(Required).</label>
+                        <input type="text" name= "first" class="form-control"   id="first_name"  placeholder="First name" >
+                    </div>
+                 
+                    <div class="form-group col-sm-5">
+                           <!--Asks the user for their family name-->
+                        <label for="last_name">Last Name(Required).</label>
+                        <input type="text" name="last" class="form-control" id="last_name" placeholder=" Last Name">
+                    </div>
+                </div>
 
-<div class="form-group col-sm-5">
-<!--Asks the user for their email address-->
-<label for="inputEmail"> Your acccount related Email Address(Required).</label>
-<input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
-</div>
-<div class="form-group col-sm-5" id="ordernum">
-<!--Asks the user for their order number-->
-<label for="confEmail"> Order number(Required). </label>
-<input type="item" name="onumber" class="form-control"   id="ordernumber"  placeholder="order  number" >
-</div>
-</div>
-<div class="form-row justify-content">
-<div class="form-group col-sm-5" style= "margin-left:8%;">
-<label for="inputPassword">Telephone number(Required). </label>
-<input type="text" name = "tel" class="form-control" id="phone" placeholder="# Telephone">
+                <div class="form-row justify-content-center">
 
-</div>
-<div class="form-row justify-content-center">
-<div class="form-group col-sm-10">
-<label for="exampleFormControlTextarea1" class="form-label" id= "text">Type your question(s) here(Required).</label>
-<textarea class="form-control" name="question" id="exampleFormControlTextarea1" rows="8"></textarea>
-</div><br><br><br>
-</div>
-<br><br><br>
-<div class="form-row justify-content-center">
-<div class="form-group col-sm-1">
-<!--Ask the user to submit after they are done with the form-->
-<a href="#"  class="editButton"    style = "color:blue;text-align: center; padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
-style="text-decoration: none;
-color: white;font-size:16px; " ><input type="submit"  class="btn btn-primary"  onsubmit="return fields()" onclick="fields()" name="submit"> Submit
-</button ></a>
+                    <div class="form-group col-sm-5">
+                           <!--Asks the user for their email address-->
+                        <label for="inputEmail"> Your acccount related Email Address(Required).</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    
+                    <div class="form-group col-sm-5" id="ordernum">
+                           <!--Asks the user for their order number-->
+                        <label for="confEmail"> Order number(Required). </label>
+                       
+                        <input type="item" name="onumber" class="form-control"  name= "order" id="ordernumber"  placeholder="order  number" >
+                    </div>
+
+                </div>
+
+                <div class="form-row justify-content">
+                    <div class="form-group col-sm-5" style= "margin-left:8%;">
+                        <label for="inputPassword">Telephone number(Required). </label>
+                        <input type="text" name = "tel" class="form-control" id="phone" placeholder="# Telephone">
+                    </div>
+                   
+
+
+            
+                   
+                </div>
+                <div class="form-row justify-content-center">
+                <div class="form-group col-sm-10">
+               
+                      <label for="exampleFormControlTextarea1" class="form-label" id= "text">Type your question(s) here(Required).</label>
+                        <textarea class="form-control" name="question" id="exampleFormControlTextarea1" rows="8"></textarea>
+                      
+                </div>
+
+
+                <br><br><br>
+                    </div>
+                    <br><br><br>
+                    <div class="form-row justify-content-center">
+                    <div class="form-group col-sm-1">
+                    <!--Ask the user to submit after they are done with the form-->
+                    <a href="#"  class="editButton"    style = "color:blue;text-align: center; padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
+                        style="text-decoration: none;
+                        color: white;font-size:16px; " ><input type="submit"  class="btn btn-primary"  onsubmit="return fields()" onclick="fields()" name="submit"> 
+                    </button ></a>
+               
+
                     <br /><br />
-</div>
-</div>
-<button type="button" 
-style="  padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
-style="text-decoration: none;
-color: white;font-size:16px;" href="../index.php">BACK </a></button>
+                        
+                    </div>
+
+                    </div>
+                    <button type="button" 
+                    style="  padding-bottom:1mm; padding-left:1mm; ;padding-right:1mm;padding-top:0mm;margin-top:50px; margin-bottom: 30px;margin-left: 3% "><a
+                        style="text-decoration: none;
+                        color: white;font-size:16px;" href="../index.php">BACK </a></button>
         </div>
         </div> 
 
         </form>
                       
-<footer class="container-fluid"
+
+
+        
+
+        <footer class="container-fluid"
         style="background-color:#334754; margin-top: 400px; padding-bottom: 20px; padding-top:40px;">
         <div class="row">
             <div class="col-lg-4">
