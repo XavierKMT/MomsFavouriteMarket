@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mom's Favourite Market</title>
-    <link rel="shortcut icon" href="Images/logo.png">
+    <link rel="shortcut icon" href="../Images/logo.png">
 
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -19,10 +19,10 @@
     <!--Icons from fontawesome website is implemented-->
     <script src="https://kit.fontawesome.com/9cec6e31d9.js" crossorigin="anonymous"></script>
 
-    <script src="JS/cartScript.js"></script>
+    <script src="../JS/cartScript.js"></script>
     
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/cartStyle.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/cartStyle.css">
 
 
 </head>
@@ -33,7 +33,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="backPage.html"><img src="Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="successadmin.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market (ADMIN)</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -45,19 +45,19 @@
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="ProductList.html" class="nav-link">Product List</a>
+                        <a href="ProductList.php" class="nav-link">Product List</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="backstoreUserAccounts.html" class="nav-link">User List</a>
+                        <a href="backstoreUserAccounts.php" class="nav-link">User List</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="orderLists.html" class="nav-link">Order List</a>
+                        <a href="orderLists.php" class="nav-link">Order List</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="loginpage2.html" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
+                        <a href="loginpage2.php" class="nav-link"><i class="far fa-user-circle fa-lg"></i> Sign in</a>
                     </li>
 
                 </ul>
