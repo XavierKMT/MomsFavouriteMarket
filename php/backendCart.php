@@ -1,10 +1,9 @@
-
-
 <?php 
+include ("products.php");
 
 function deleteI($itemName)
 {
-    $content= file_get_contents("cartOrder.txt");
+    $content= file_get_contents("../data/cartOrder.txt");
     $content=explode("\n",$content);
     $orderNumber=$content[0];
     $num= sizeof($content);
@@ -30,8 +29,17 @@ function deleteI($itemName)
         array_push($qty,$temp[2]);
      }
  }
+
 $info=array();
-array_push($info,"$orderNumber\n");
+if(sizeof($items)!=0)
+{
+    array_push($info,"$orderNumber\n");
+}
+
+else
+{
+    array_push($info,"$orderNumber");
+}
   for($x=0;$x<sizeof($items);$x++)
   {
       
@@ -45,33 +53,51 @@ array_push($info,"$orderNumber\n");
         array_push($info,"$items[$x],$price[$x],$qty[$x]");
       }
 
-  }
+}
 
-  $file=fopen("cartOrder.txt","w");
+  $file=fopen("../data/cartOrder.txt","w");
 
     for($x=0; $x<sizeof($info);$x++)
     {   
         fwrite($file,$info[$x]);
     }
-               
+    
+    fclose($file);
 }
 
 if(isset($_POST['deleItem']))
 {
     deleteI($_POST['it']);
+    header('location:order12345AC.php');
 }
 
-
-
-function addItem($itemName,$qty,$price,$img)
+// -------------------
+function addItem($itemName)
 {
-    echo "<img src=$img>";
+    if(itemExists($itemName))
+    {
+        $file=fopen("../data/cartOrder.txt","a");
+        $pr=findPrice($itemName);
+        $productAdd="\n$itemName,$pr,1";
+        fwrite($file,$productAdd);
+        header('location:order12345AC.php');
+    }
 
+    else
+    {
+
+        echo "<script type='text/javascript'>
+                    alert('INCORRECT ITEM NAME!');
+                    window.location.href='order12345AC.php';
+              </script>";
+              
+    }
 }
 
 if(isset($_POST['add']))
 {
-    addItem($_POST['enter'],1,findPrice($_POST['enter']),findImg($_POST['enter']));
+    addItem($_POST['enter']);
 }
+
 ?>
 

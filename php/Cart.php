@@ -1,39 +1,37 @@
 <?php
  include("products.php");
  include("cartHeader.php");
-    //Contents of the whole text file
-    $content= file_get_contents("cartOrder.txt")."<br/>";           //Saves As a String
 
-    //----------------------------------------------
+ 
 
-    //Collect the information from the order
-    $data=explode("\n",$content);
+    // //Contents of the whole text file
+$content= file_get_contents("../data/frontCart.txt")."<br/>";           //Saves As a String
 
-    $orderNumber=$data[0];
-    $num= sizeof($data);
+$data=explode("\n",$content);
 
-    $items=array();
-    $price=array();
-    $qty=array();
+$num= sizeof($data);
 
-    for($x=1; $x<$num;$x++)
+$items=array();
+$price=array();
+$qty=array();
+
+for($x=0; $x<$num;$x++)
+{
+    $temp= explode(";",$data[$x]);
+    array_push($items,$temp[0]);
+    array_push($price,$temp[1]);
+        
+    if($x<$num-1)
     {
-        $temp= explode(",",$data[$x]);
-        array_push($items,$temp[0]);
-        array_push($price,$temp[1]);
-        
-        if($x<$num-1)
-        {
-            array_push($qty,$temp[2]);
-        }
-        
-        else
-        {
-            $temp= explode("<br/>",$temp[2]);
-            array_push($qty,$temp[0]);
-        }
+         array_push($qty,$temp[2]);
     }
-    $num=sizeof($items);
+        
+    else
+    {
+        $temp= explode("<br/>",$temp[2]);
+        array_push($qty,$temp[0]);
+    }
+}
 
 ?>
 
@@ -41,8 +39,8 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-7" style="margin-top: 50px;">
-                <h2 class="text-center" style="margin-bottom:-16px; color:#334754;">My Cart</h2>
+            <div class="col-md-8" style="margin-top: 50px;">
+                <h2 class="text-center" style="color:#334754;">My Cart</h2>
                 <div class="table-responsive">
                 <?php
                     echo "<table class='table' id='myTableCart'>";
@@ -64,7 +62,8 @@
                             if(category($items[$x])=="Bread & Bakery")
                             {
                                 $img=findImg($items[$x]);
-                                $subtotal+=$price[$x];   
+                                $subtotal+=$price[$x]*$qty[$x];   
+                                $unitPrice= $price[$x]*$qty[$x]; 
                                 
                                 if($bbp<1)
                                 {
@@ -80,22 +79,26 @@
                                 }
 
                                 echo "
+                        
                                 <tr style='border-color: white;'>
-                                    <td><img src=$img> </td>
+                                    <td><img src='$img'> </td>
                                     <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
                                     <td style='vertical-align: middle;'>
-
-                                        <form>
-                                            <button type='button' onclick='updateQ(this,true)'><i class=' fas fa-plus-circle'></i></button>
-                                            <input type='text' disabled='disabled' value=$qty[$x]>
-                                            <button type='button' onclick='updateQ(this,false)'><i class='fas fa-minus-circle'></i></button>
+                                        <form action='test.php' method='post'>
+                                            <input type='text' name='it' value='$items[$x]' hidden>
+                                            <button type='submit' name='add'><i class=' fas fa-plus-circle'></i></button>
+                                            <input type='text' value=$qty[$x] disabled>
+                                            <button type='submit' name='sub'><i class='fas fa-minus-circle'></i></button>
                                         </form>
                                     </td>
 
-                                    <td style='vertical-align: middle;'>$$price[$x]</td>
+                                    <td style='vertical-align: middle;'>$$unitPrice</td>
                         
                                     <td style='vertical-align: middle;'>
-                                        <button type='button' onclick='del(this)'><i class='far fa-trash-alt'></i></i></button>
+                                        <form action='test.php' method='post'>
+                                            <input type='text' name='it' value='$items[$x]' hidden>
+                                            <button type='submit' name='d'><i class='far fa-trash-alt'></i></i></button>
+                                        </form>
                                     </td>
 
                                 </tr>";
@@ -108,7 +111,8 @@
                          if(category($items[$x])=="Dairy & Eggs")
                          {
                             $img=findImg($items[$x]);
-                            $subtotal+=$price[$x];   
+                            $subtotal+=$price[$x]*$qty[$x];  
+                            $unitPrice= $price[$x]*$qty[$x];  
 
                              if($dep<1)
                              {
@@ -128,20 +132,22 @@
                                  <td><img src=$img> </td>
                                  <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
                                  <td style='vertical-align: middle;'>
- 
-                                     <form>
-                                         <button type='button' onclick='updateQ(this,true)'><i class=' fas fa-plus-circle'></i></button>
-                                         <input type='text' disabled='disabled' value=$qty[$x]>
-                                         <button type='button' onclick='updateQ(this,false)'><i class='fas fa-minus-circle'></i></button>
-                                     </form>
+                                    <form action='test.php' method='post'>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
+                                        <button type='submit' name='add'><i class=' fas fa-plus-circle'></i></button>
+                                        <input type='text' value=$qty[$x] disabled>
+                                        <button type='submit' name='sub'><i class='fas fa-minus-circle'></i></button>
+                                    </form>
                                  </td>
  
-                                 <td style='vertical-align: middle;'>$$price[$x]</td>
+                                 <td style='vertical-align: middle;'>$$unitPrice</td>
                      
                                  <td style='vertical-align: middle;'>
-                                     <button type='button' onclick='del(this)'><i class='far fa-trash-alt'></i></i></button>
+                                    <form action='test.php' method='post'>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
+                                        <button type='submit' name='d'><i class='far fa-trash-alt'></i></i></button>
+                                    </form>
                                  </td>
- 
                              </tr>";
                           }
 
@@ -152,7 +158,8 @@
                           if(category($items[$x])=="Fruits & Vegetables")
                           {
                             $img=findImg($items[$x]);
-                            $subtotal+=$price[$x];   
+                            $subtotal+=$price[$x]*$qty[$x]; 
+                            $unitPrice= $price[$x]*$qty[$x];   
 
                               if($fvp<1)
                               {
@@ -169,24 +176,26 @@
   
                               echo "
                               <tr style='border-color: white;'>
-                                  <td><img src=$img> </td>
-                                  <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
-                                  <td style='vertical-align: middle;'>
-  
-                                      <form>
-                                          <button type='button' onclick='updateQ(this,true)'><i class=' fas fa-plus-circle'></i></button>
-                                          <input type='text' disabled='disabled' value=$qty[$x]>
-                                          <button type='button' onclick='updateQ(this,false)'><i class='fas fa-minus-circle'></i></button>
-                                      </form>
-                                  </td>
-  
-                                  <td style='vertical-align: middle;'>$$price[$x]</td>
-                      
-                                  <td style='vertical-align: middle;'>
-                                      <button type='button' onclick='del(this)'><i class='far fa-trash-alt'></i></i></button>
-                                  </td>
-  
-                              </tr>";
+                                <td><img src=$img> </td>
+                                <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
+                                <td style='vertical-align: middle;'>
+                                    <form action='test.php' method='post'>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
+                                        <button type='submit' name='add'><i class=' fas fa-plus-circle'></i></button>
+                                        <input type='text' value=$qty[$x] disabled>
+                                        <button type='submit' name='sub'><i class='fas fa-minus-circle'></i></button>
+                                    </form>
+                                </td>
+
+                                <td style='vertical-align: middle;'>$$unitPrice</td>
+                    
+                                <td style='vertical-align: middle;'>
+                                    <form action='test.php' method='post'>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
+                                        <button type='submit' name='d'><i class='far fa-trash-alt'></i></i></button>
+                                    </form>
+                                </td>
+                             </tr>";
                            }
                         }
 
@@ -195,7 +204,8 @@
                            if(category($items[$x])=="Butchery")
                            {
                             $img=findImg($items[$x]);
-                            $subtotal+=$price[$x];   
+                            $subtotal+=$price[$x]*$qty[$x]; 
+                            $unitPrice= $price[$x]*$qty[$x];   
 
                                if($bp<1)
                                {
@@ -212,24 +222,26 @@
    
                                echo "
                                <tr style='border-color: white;'>
-                                   <td><img src=$img> </td>
-                                   <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
-                                   <td style='vertical-align: middle;'>
-   
-                                       <form>
-                                           <button type='button' onclick='updateQ(this,true)'><i class=' fas fa-plus-circle'></i></button>
-                                           <input type='text' disabled='disabled' value=$qty[$x]>
-                                           <button type='button' onclick='updateQ(this,false)'><i class='fas fa-minus-circle'></i></button>
-                                       </form>
-                                   </td>
-   
-                                   <td style='vertical-align: middle;'>$$price[$x]</td>
-                       
-                                   <td style='vertical-align: middle;'>
-                                       <button type='button' onclick='del(this)'><i class='far fa-trash-alt'></i></i></button>
-                                   </td>
-   
-                               </tr>";
+                                    <td><img src=$img> </td>
+                                    <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
+                                    <td style='vertical-align: middle;'>
+                                        <form action='test.php' method='post'>
+                                            <input type='text' name='it' value='$items[$x]' hidden>
+                                            <button type='submit' name='add'><i class=' fas fa-plus-circle'></i></button>
+                                            <input type='text' value=$qty[$x] disabled>
+                                            <button type='submit' name='sub'><i class='fas fa-minus-circle'></i></button>
+                                        </form>
+                                    </td>
+
+                                    <td style='vertical-align: middle;'>$$unitPrice</td>
+                        
+                                    <td style='vertical-align: middle;'>
+                                        <form action='test.php' method='post'>
+                                            <input type='text' name='it' value='$items[$x]' hidden>
+                                            <button type='submit' name='d'><i class='far fa-trash-alt'></i></i></button>
+                                        </form>
+                                    </td>
+                              </tr>"; 
                             }
                         }
 
@@ -239,7 +251,8 @@
                             if(category($items[$x])=="Non-Perishable Food")
                             {
                                 $img=findImg($items[$x]);
-                                $subtotal+=$price[$x];   
+                                $subtotal+=$price[$x]*$qty[$x];  
+                                $unitPrice= $price[$x]*$qty[$x];  
 
                                 if($npfp<1)
                                 {
@@ -260,20 +273,22 @@
                                     <td><img src=$img> </td>
                                     <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
                                     <td style='vertical-align: middle;'>
-    
-                                        <form>
-                                            <button type='button' onclick='updateQ(this,true)'><i class=' fas fa-plus-circle'></i></button>
-                                            <input type='text' disabled='disabled' value=$qty[$x]>
-                                            <button type='button' onclick='updateQ(this,false)'><i class='fas fa-minus-circle'></i></button>
-                                        </form>
+                                    <form action='test.php' method='post'>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
+                                        <button type='submit' name='add'><i class=' fas fa-plus-circle'></i></button>
+                                        <input type='text' value=$qty[$x] disabled>
+                                        <button type='submit' name='sub'><i class='fas fa-minus-circle'></i></button>
+                                    </form>
                                     </td>
-    
-                                    <td style='vertical-align: middle;'>$$price[$x]</td>
+
+                                    <td style='vertical-align: middle;'>$$unitPrice</td>
                         
                                     <td style='vertical-align: middle;'>
-                                        <button type='button' onclick='del(this)'><i class='far fa-trash-alt'></i></i></button>
+                                    <form action='test.php' method='post'>
+                                        <input type='text' name='it' value='$items[$x]' hidden>
+                                        <button type='submit' name='d'><i class='far fa-trash-alt'></i></i></button>
+                                    </form>
                                     </td>
-    
                                 </tr>";
                              }
                         }
@@ -283,7 +298,8 @@
                              if(category($items[$x])=="Frozen Food")
                              {
                                 $img=findImg($items[$x]);
-                                $subtotal+=$price[$x];   
+                                $subtotal+=$price[$x]*$qty[$x]; 
+                                $unitPrice= $price[$x]*$qty[$x];   
 
                                  if($ff<1)
                                  {
@@ -300,38 +316,41 @@
      
                                  echo "
                                  <tr style='border-color: white;'>
-                                     <td><img src=$img> </td>
-                                     <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
-                                     <td style='vertical-align: middle;'>
-     
-                                         <form>
-                                             <button type='button' onclick='updateQ(this,true)'><i class=' fas fa-plus-circle'></i></button>
-                                             <input type='text' disabled='disabled' value=$qty[$x]>
-                                             <button type='button' onclick='updateQ(this,false)'><i class='fas fa-minus-circle'></i></button>
-                                         </form>
-                                     </td>
-     
-                                     <td style='vertical-align: middle;'>$$price[$x]</td>
-                         
-                                     <td style='vertical-align: middle;'>
-                                         <button type='button' onclick='del(this)'><i class='far fa-trash-alt'></i></i></button>
-                                     </td>
-     
-                                 </tr>";
+                                    <td><img src=$img> </td>
+                                    <td style='vertical-align: middle; font-size:23px; color:#334754;'>$items[$x]</td>
+                                    <td style='vertical-align: middle;'>
+                                        <form action='test.php' method='post'>
+                                            <input type='text' name='it' value='$items[$x]' hidden>
+                                            <button type='submit' name='add'><i class=' fas fa-plus-circle'></i></button>
+                                            <input type='text' value=$qty[$x] disabled>
+                                            <button type='submit' name='sub'><i class='fas fa-minus-circle'></i></button>
+                                        </form>
+                                    </td>
+    
+                                    <td style='vertical-align: middle;'>$$unitPrice</td>
+                        
+                                    <td style='vertical-align: middle;'>
+                                        <form action='test.php' method='post'>
+                                            <input type='text' name='it' value='$items[$x]' hidden>
+                                            <button type='submit' name='d'><i class='far fa-trash-alt'></i></i></button>
+                                        </form>
+                                    </td>
+                                </tr>";
                               }
                         }
     
                 echo 
                 "</table>
-                <div style='text-align: center;'>
-                    <button type='button'onclick='emptyCart()'><i class='fas fa-shopping-cart'></i> EMPTY CART</i></button>
-                </div>";
+                <form action='test.php' method='POST'>
+                    <div style='text-align: center;'>
+                        <button type='submit' name='delAll'><i class='fas fa-shopping-cart'></i> EMPTY CART</i></button>
+                    </div>
+                </form>";
                 ?>
                 </div>
             </div>
 
 
-            <div class="col-md-1"></div>
 
             <div style="margin-top: 50px; box-shadow: 0 0.8em 0.8em -0.4em;" class="col-md-4">
                 <h2 class="text-center" style="color:#334754;">Cart Summary</h2>

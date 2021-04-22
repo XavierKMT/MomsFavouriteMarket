@@ -1,4 +1,5 @@
 <?php
+
     function findImg($item)
     {
         if($item=="Strawberries")
@@ -537,266 +538,537 @@
     {
         if($item=="Strawberries")
         {
-           return "3";
+           return 3;
         }
             //Dairy Section
         else if($item==("Shredded Mozzarella Cheese Bag"))
         {
-            return "5.99";
+            return 5.99;
         }
 
         else if($item==("Bagel"))
         {
-            return "4";
+            return 4;
         }
 
         else if($item==("Milk"))
         {
-            return "6.56";
+            return 6.56;
         }
 
         else if($item==("Cheddar Cheese"))
         {
-            return "4.49";
+            return 4.49;
         }
 
         else if($item==("Strawberry Yogurt Pack"))
         {
-            return "5.99";
+            return 5.99;
         }
 
         else if($item==("Blueberry Yogurt Pack"))
         {
-           return "5.99";
+           return 5.99;
         }
 
         else if($item==("Mixed Fruit Flavored Yogurt Pack"))
         {
-            return "5.99";
+            return 5.99;
         }
 
         else if($item==("Large Eggs"))
         {
-            return "4.77";
+            return 4.77;
         }
 
         else if($item==("Large White Eggs"))
         {
-            return "2.99";
+            return 2.99;
         }
 
         else if($item==("Large Brown Eggs"))
         {
-            return "4.69";
+            return 4.69;
         }
 
         else if($item==("1% Milk Large"))
         {
-            return "6.38";
+            return 6.38;
         }
 
         else if($item==("1% Milk small"))
         {
-            return"1.85";
+            return 1.85;
         }
 
         else if($item==("2% Milk Large"))
         {
-            return "6.68";
+            return 6.68;
         }
 
         else if($item==("2% Milk small"))
         {
-            return "1.93";
+            return 1.93;
         }
 
         else if($item==("Salted Butter"))
         {
-            return "4.69";
+            return 4.69;
         }
 
         else if($item==("Unsalted Butter"))
         {
-            return "4.89";
+            return 4.89;
         }
 
         else if($item==("Honeycrips Apple"))
         {
-            return "1.05";
+            return 1.05;
         }
 
         else if($item==("Banana"))
         {
-            return "0.33";
+            return 0.33;
         }
 
         else if($item==("Large Navel Orange"))
         {
-            return "1";
+            return 1;
         }
 
         else if($item==("Bartlett Pear"))
         {
-             return "0.88";
+             return 0.88;
         }
 
         else if($item==("Celery"))
         {
-            return "3.69";
+            return 3.69;
         }
 
         else if($item==("English HH Seedless Cucumber"))
         {
-            return "1.50";
+            return 1.50;
         }
 
         else if($item==("Romaine Lettuce"))
         {
-            return "2.99";
+            return 2.99;
         }
 
         else if($item==("Red Pepper"))
         {
-            return "3.96";
+            return 3.96;
         }
 
         //--------------------------------------------------------
 
         else if($item==("Plain Bagels"))
         {
-            return "2.99";
+            return 2.99;
         }
 
         else if($item==("Whole Wheat Bagels"))
         {
-            return "5.89";
+            return 5.89;
         }
 
         else if($item==("Sliced White Bread"))
         {
-            return "2.50";
+            return 2.50;
         }
 
         else if($item==("Sliced Whole Wheat Bread"))
         {
-            return "4.19";
+            return 4.19;
         }
 
         else if($item==("French Baguette"))
         {
-            return "2.49";
+            return 2.49;
         }
 
         else if($item==("Maple Pastry Bites"))
         {
-            return "4.99";
+            return 4.99;
         }
 
         else if($item==("Palm Leaf Pastries"))
         {
-            return "6.99";
+            return 6.99;
         }
 
         //--------------------------------------------------------------------------------------
 
         else if($item==("Lean Ground Beef"))
         {
-            return "3.87";
+            return 3.87;
         }
 
         else if($item==("Rib Steak"))
         {
-            return "5.29";
+            return 5.29;
         }
 
         else if($item==("Butterfly Pork Chops"))
         {
-            return "4.30";
+            return 4.30;
         }
 
         else if($item==("Boneless Chicken Breast"))
         {
-            return "5.11";
+            return 5.11;
         }
 
         else if($item==("Lean Minced Turkey"))
         {
-            return "2.99";
+            return 2.99;
         }
 
         else if($item==("Confit Duck Legs"))
         {
-            return "8.50";
+            return 8.50;
         }
 
         else if($item==("Salmon Fillet"))
         {
-            return "3.42";
+            return 3.42;
         }
 
         else if($item==("Haddock Fillet"))
         {
-            return "1.61";
+            return 1.61;
         }
 
         else if($item==("Live Lobster"))
         {
-            return "9.55";
+            return 9.55;
         }
 
         //------------------------------------------------------------------------------------------
 
         else if($item==("All Purpose Flour"))
         {
-            return "8.29";
+            return 8.29;
         }
 
         else if($item==("Sugar"))
         {
-            return "4.49";
+            return 4.49;
         }
 
         else if($item==("Table Salt"))
         {
-            return "1.79";
+            return 1.79;
         }
 
         else if($item==("Chocolate Chips"))
         {
-            return "16.99";
+            return 16.99;
         }
 
 
         else if($item==("Canned Peas"))
         {
-            return "1.69";
+            return 1.69;
     
         }
 
         else if($item==("Canned Tuna Chunks"))
         {
-            return "1.49";
+            return 1.49;
         }
 
         else if($item==("Diced Tomatoes"))
         {
-            return "0.99";
+            return 0.99;
         }
 
         else if($item==("Tomato Soup"))
         {
-            return "1.69";
+            return 1.69;
         }
 
         else if($item==("Cream of Mushroom Soup"))
         {
-            return "3.29";
+            return 3.29;
         }
 
         else if($item==("Pea and Ham Soup"))
         {
-            return "1.99";
+            return 1.99;
+        }   
+    }
+
+
+    function itemExists($item)
+    {
+        if($item=="Strawberries")
+        {
+           return true;
         }
+            //Dairy Section
+        else if($item==("Shredded Mozzarella Cheese Bag"))
+        {
+            return true;
+        }
+
+        else if($item==("Bagel"))
+        {
+            return true;
+        }
+
+        else if($item==("Milk"))
+        {
+            return true;
+        }
+
+        else if($item==("Cheddar Cheese"))
+        {
+            return true;
+        }
+
+        else if($item==("Strawberry Yogurt Pack"))
+        {
+            return true;
+        }
+
+        else if($item==("Blueberry Yogurt Pack"))
+        {
+           return true;
+        }
+
+        else if($item==("Mixed Fruit Flavored Yogurt Pack"))
+        {
+            return true;
+        }
+
+        else if($item==("Large Eggs"))
+        {
+            return true;
+        }
+
+        else if($item==("Large White Eggs"))
+        {
+            return true;
+        }
+
+        else if($item==("Large Brown Eggs"))
+        {
+            return true;
+        }
+
+        else if($item==("1% Milk Large"))
+        {
+            return true;
+        }
+
+        else if($item==("1% Milk small"))
+        {
+            return true;
+        }
+
+        else if($item==("2% Milk Large"))
+        {
+            return true;
+        }
+
+        else if($item==("2% Milk small"))
+        {
+            return true;
+        }
+
+        else if($item==("Salted Butter"))
+        {
+            return true;
+        }
+
+        else if($item==("Unsalted Butter"))
+        {
+            return true;
+        }
+
+        else if($item==("Honeycrips Apple"))
+        {
+            return true;
+        }
+
+        else if($item==("Banana"))
+        {
+            return true;
+        }
+
+        else if($item==("Large Navel Orange"))
+        {
+            return true;
+        }
+
+        else if($item==("Bartlett Pear"))
+        {
+             return true;
+        }
+
+        else if($item==("Celery"))
+        {
+            return true;
+        }
+
+        else if($item==("English HH Seedless Cucumber"))
+        {
+            return true;
+        }
+
+        else if($item==("Romaine Lettuce"))
+        {
+            return true;
+        }
+
+        else if($item==("Red Pepper"))
+        {
+            return true;
+        }
+
+        //--------------------------------------------------------
+
+        else if($item==("Plain Bagels"))
+        {
+            return true;
+        }
+
+        else if($item==("Whole Wheat Bagels"))
+        {
+            return true;
+        }
+
+        else if($item==("Sliced White Bread"))
+        {
+            return true;
+        }
+
+        else if($item==("Sliced Whole Wheat Bread"))
+        {
+            return true;
+        }
+
+        else if($item==("French Baguette"))
+        {
+            return true;
+        }
+
+        else if($item==("Maple Pastry Bites"))
+        {
+            return true;
+        }
+
+        else if($item==("Palm Leaf Pastries"))
+        {
+            return true;
+        }
+
+        //--------------------------------------------------------------------------------------
+
+        else if($item==("Lean Ground Beef"))
+        {
+            return true;
+        }
+
+        else if($item==("Rib Steak"))
+        {
+            return true;
+        }
+
+        else if($item==("Butterfly Pork Chops"))
+        {
+            return true;
+        }
+
+        else if($item==("Boneless Chicken Breast"))
+        {
+            return true;
+        }
+
+        else if($item==("Lean Minced Turkey"))
+        {
+            return true;
+        }
+
+        else if($item==("Confit Duck Legs"))
+        {
+            return true;
+        }
+
+        else if($item==("Salmon Fillet"))
+        {
+            return true;
+        }
+
+        else if($item==("Haddock Fillet"))
+        {
+            return true;
+        }
+
+        else if($item==("Live Lobster"))
+        {
+            return true;
+        }
+
+        //------------------------------------------------------------------------------------------
+
+        else if($item==("All Purpose Flour"))
+        {
+            return true;
+        }
+
+        else if($item==("Sugar"))
+        {
+            return true;
+        }
+
+        else if($item==("Table Salt"))
+        {
+            return true;
+        }
+
+        else if($item==("Chocolate Chips"))
+        {
+            return true;
+        }
+
+
+        else if($item==("Canned Peas"))
+        {
+            return true;
+    
+        }
+
+        else if($item==("Canned Tuna Chunks"))
+        {
+            return true;
+        }
+
+        else if($item==("Diced Tomatoes"))
+        {
+            return true;
+        }
+
+        else if($item==("Tomato Soup"))
+        {
+            return true;
+        }
+
+        else if($item==("Cream of Mushroom Soup"))
+        {
+            return true;
+        }
+
+        else if($item==("Pea and Ham Soup"))
+        {
+            return true;
+        }  
         
+        else 
+        {
+            return false;
+        }
     }
 ?>
