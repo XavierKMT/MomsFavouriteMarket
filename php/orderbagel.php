@@ -27,19 +27,21 @@
     function up()
         {
             alert("New modifcations were inserted and updates were saved successfully. You will receive a confirmation email.")
-           Email.send({
-               
+            Email.send({
+            // client.UseDefaultCredentials = true;
                 Host : "smtp.gmail.com",
-                Username : " soen287chris@gmail.com  ",
-                Password : " soen287soen287winter2021zixi ",
-                To : "  xavierkmt@gmail.com  ",
-                //  To : "  soen287chris@gmail.com ",
-                From : "  soen287chris@gmail.com  ",
+               
+                Username : " 	yeskhentatsa12.17.schizophrenia@gmail.com ",
+                Password : "  yeskhentatsa12345 ",
+                // To : "  xavierkmt@gmail.com ",
+                 To : "  yeskhentatsa12.17.schizophrenia@gmail.com ",
+                From : "  yeskhentatsa12.17.schizophrenia@gmail.com  ",
                 Subject : "Confirmation: (Mom's Favorite Market) ONLINE ORDER  UPDATED SUCCESSFULY ! ",
                 Body : "Dear Customer, <br><br>  This email is to confirm that a new modification has been added to   your online order  at Mom's Favourite Market. <br><br>If you have any questions regarding your online order please don't hestate to contact us. <br><br>Sincerely, <br> <br> 514-848-2424. <br>Mom's Favorite Market Customer Service Team."
             }).then(
             message => alert(message)
             ).catch(err => { console.log(err) });
+
 
 
         }
