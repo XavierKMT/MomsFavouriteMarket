@@ -329,7 +329,7 @@
             return "Dairy & Eggs";
         }
 
-        else if($item==("1% Milk small"))
+        else if($item==("1% Milk Small"))
         {
             return"Dairy & Eggs";
         }
@@ -339,7 +339,7 @@
             return "Dairy & Eggs";
         }
 
-        else if($item==("2% Milk small"))
+        else if($item==("2% Milk Small"))
         {
             return "Dairy & Eggs";
         }
