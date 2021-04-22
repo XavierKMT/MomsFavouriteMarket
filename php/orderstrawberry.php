@@ -30,8 +30,8 @@
                
                 Host : "smtp.gmail.com",
                 Username : " soen287chris@gmail.com  ",
-                Password : "  christinasoen287  ",
-                To : "  leo.williams.1122@gmail.com  ",
+                Password : "  soen287soen287winter2021zixi ",
+                To : "  xavierkmt@gmail.com ",
                 //  To : "  soen287chris@gmail.com ",
                 From : "  soen287chris@gmail.com  ",
                 Subject : "Confirmation: (Mom's Favorite Market) ONLINE ORDER  UPDATED SUCCESSFULY ! ",

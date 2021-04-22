@@ -30,9 +30,9 @@
                
                 Host : "smtp.gmail.com",
                 Username : " soen287chris@gmail.com  ",
-                Password : "  christinasoen287  ",
-                To : "leo.williams.1122@gmail.com  ",
-                //  To : "  soen287chris@gmail.com ",
+                Password : "  soen287soen287winter2021zixi  ",
+                To : "xavierkmt@gmail.com  ",
+                
                 From : "  soen287chris@gmail.com  ",
                 Subject : "Confirmation: (Mom's Favorite Market) ONLINE ORDER  UPDATED SUCCESSFULY ! ",
                 Body : "Dear Customer, <br><br>  This email is to confirm that a new modification has been added to   your online order  at Mom's Favourite Market. <br><br>If you have any questions regarding your online order please don't hestate to contact us. <br><br>Sincerely, <br> <br> 514-848-2424. <br>Mom's Favorite Market Customer Service Team."
