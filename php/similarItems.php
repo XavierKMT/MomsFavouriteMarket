@@ -1,9 +1,9 @@
 <?php
-combineItems();
+include("test.php");
 function combineItems()
 {
     //Contents of the whole text file
-    $content= file_get_contents("../data/frontCart.txt")."<br/>";           //Saves As a String
+    $content= file_get_contents("../data/cartOrder.txt")."<br/>";           //Saves As a String
 
     $data=explode("\n",$content);
 
@@ -31,20 +31,39 @@ function combineItems()
         }
     }
 
-    for($x=0; $x<sizeof($items);$x++)
+
+    $newSize=sizeof($items)+1;
+    $madeChanges=false;
+    $size=sizeof($items);
+
+    for($x=0; $x<$size;$x++)
     {
-        for($y=$x+1;$y<sizeof($items)-1;$y++)
+        for($y=$x+1;$y<$size-1;$y++)
         {
             if($items[$x]==$items[$y])
             {
-                echo "yesss\n";
-            }
-
-            else
-            {
-                echo $items[$x].",".$items[$y]."<br/>";
+                 $combineQty=$qty[$x]+$qty[$y];
+                 $qty[$x]=$combineQty;
+                 unset($items[$y]);
+                 unset($price[$y]);
+                 unset($qty[$y]);
+                 $newSize--;
+                 $madeChanges=true;
             }
         }
     }
+
+    if($madeChanges==true)
+    {
+        $file=fopen("../data/cartOrder.txt","w");
+
+        for($x=0; $x<$newSize;$x++)
+        {
+            fwrite($file,"$items[$x];$price[$x];$qty[$x]\n");
+        }
+
+        fclose($file);
+    }
+
 }
 ?>

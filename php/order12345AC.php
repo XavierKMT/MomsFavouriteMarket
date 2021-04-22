@@ -6,7 +6,7 @@
 <?php 
 
  //Contents of the whole text file
- $content= file_get_contents("../data/cartOrder.txt")."<br/>";           //Saves As a String
+ $content= file_get_contents("../data/bCart.txt")."<br/>";           //Saves As a String
 
  //----------------------------------------------
 

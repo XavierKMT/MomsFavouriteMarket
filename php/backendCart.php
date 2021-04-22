@@ -3,7 +3,7 @@ include ("products.php");
 
 function deleteI($itemName)
 {
-    $content= file_get_contents("../data/cartOrder.txt");
+    $content= file_get_contents("../data/bCart.txt");
     $content=explode("\n",$content);
     $orderNumber=$content[0];
     $num= sizeof($content);
@@ -55,7 +55,7 @@ else
 
 }
 
-  $file=fopen("../data/cartOrder.txt","w");
+  $file=fopen("../data/bCart.txt","w");
 
     for($x=0; $x<sizeof($info);$x++)
     {   
@@ -76,7 +76,7 @@ function addItem($itemName)
 {
     if(itemExists($itemName))
     {
-        $file=fopen("../data/cartOrder.txt","a");
+        $file=fopen("../data/bCart.txt","a");
         $pr=findPrice($itemName);
         $productAdd="\n$itemName,$pr,1";
         fwrite($file,$productAdd);

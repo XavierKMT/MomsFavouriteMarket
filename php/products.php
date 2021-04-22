@@ -37,22 +37,22 @@
            return "../Images/yogurtcup.png";
         }
 
-        else if($item==("Mixed Fruit Flavored Yogurt Pack"))
+        else if($item==("Mixed Fruit Flavoured Yogurt Pack"))
         {
             return "../Images/yogurtpack.png";
         }
 
-        else if($item==("Large Eggs"))
+        else if($item==("Large Eggs")||$item==("30 Large Eggs"))
         {
             return "../Images/30eggs.png";
         }
 
-        else if($item==("Large White Eggs"))
+        else if($item==("Large White Eggs")||$item==("10 Large White"))
         {
             return "../Images/10whiteeggs.png";
         }
 
-        else if($item==("Large Brown Eggs"))
+        else if($item==("Large Brown Eggs")||$item==("10 Large Brown Eggs"))
         {
             return "../Images/12browneggs.png";
         }
@@ -176,12 +176,12 @@
             return "../Images/steak.png";
         }
 
-        else if($item==("Butterfly Pork Chops"))
+        else if($item==("Butterfly Pork Chops")||$item==("Butterfly Pork Chops, 3 Pack"))
         {
             return "../Images/pork.png";
         }
 
-        else if($item==("Boneless Chicken Breast"))
+        else if($item==("Boneless Chicken Breast")||$item==("Boneless Chicken Breast, 3 Pack"))
         {
             return "../Images/chickenbreast.png";
         }
@@ -191,7 +191,7 @@
             return "../Images/mincedturkey.png";
         }
 
-        else if($item==("Confit Duck Legs"))
+        else if($item==("Confit Duck Legs")||$item==("Confit Duck Legs, 2 pack"))
         {
             return "../Images/duckconfit.png";
         }
@@ -304,22 +304,22 @@
            return "Dairy & Eggs";
         }
 
-        else if($item==("Mixed Fruit Flavored Yogurt Pack"))
+        else if($item==("Mixed Fruit Flavoured Yogurt Pack"))
         {
             return "Dairy & Eggs";
         }
 
-        else if($item==("Large Eggs"))
+        else if($item==("Large Eggs") ||$item==("30 Large Eggs"))
         {
             return "Dairy & Eggs";
         }
 
-        else if($item==("Large White Eggs"))
+        else if($item==("Large White Eggs")||$item==("10 Large White"))
         {
             return "Dairy & Eggs";
         }
 
-        else if($item==("Large Brown Eggs"))
+        else if($item==("Large Brown Eggs")||$item==("10 Large Brown Eggs"))
         {
             return "Dairy & Eggs";
         }
@@ -443,12 +443,12 @@
             return "Butchery";
         }
 
-        else if($item==("Butterfly Pork Chops"))
+        else if($item==("Butterfly Pork Chops")|| $item==("Butterfly Pork Chops, 3 Pack"))
         {
             return "Butchery";
         }
 
-        else if($item==("Boneless Chicken Breast"))
+        else if($item==("Boneless Chicken Breast")||$item==("Boneless Chicken Breast, 3 Pack"))
         {
             return "Butchery";
         }
@@ -458,7 +458,7 @@
             return "Butchery";
         }
 
-        else if($item==("Confit Duck Legs"))
+        else if($item==("Confit Duck Legs")||$item==("Confit Duck Legs, 2 pack"))
         {
             return "Butchery";
         }
@@ -571,22 +571,22 @@
            return 5.99;
         }
 
-        else if($item==("Mixed Fruit Flavored Yogurt Pack"))
+        else if($item==("Mixed Fruit Flavoured Yogurt Pack"))
         {
             return 5.99;
         }
 
-        else if($item==("Large Eggs"))
+        else if($item==("Large Eggs")||$item==("30 Large Eggs"))
         {
             return 4.77;
         }
 
-        else if($item==("Large White Eggs"))
+        else if($item==("Large White Eggs")||$item==("10 Large White"))
         {
             return 2.99;
         }
 
-        else if($item==("Large Brown Eggs"))
+        else if($item==("Large Brown Eggs")||$item==("10 Large Brown Eggs"))
         {
             return 4.69;
         }
@@ -710,12 +710,12 @@
             return 5.29;
         }
 
-        else if($item==("Butterfly Pork Chops"))
+        else if($item==("Butterfly Pork Chops") || $item==("Butterfly Pork Chops, 3 Pack"))
         {
             return 4.30;
         }
 
-        else if($item==("Boneless Chicken Breast"))
+        else if($item==("Boneless Chicken Breast")||$item==("Boneless Chicken Breast, 3 Pack"))
         {
             return 5.11;
         }
@@ -725,7 +725,7 @@
             return 2.99;
         }
 
-        else if($item==("Confit Duck Legs"))
+        else if($item==("Confit Duck Legs")||$item==("Confit Duck Legs, 2 pack"))
         {
             return 8.50;
         }
@@ -838,22 +838,22 @@
            return true;
         }
 
-        else if($item==("Mixed Fruit Flavored Yogurt Pack"))
+        else if($item==("Mixed Fruit Flavoured Yogurt Pack"))
         {
             return true;
         }
 
-        else if($item==("Large Eggs"))
+        else if($item==("Large Eggs")||$item==("30 Large Eggs"))
         {
             return true;
         }
 
-        else if($item==("Large White Eggs"))
+        else if($item==("Large White Eggs")||$item==("10 Large White"))
         {
             return true;
         }
 
-        else if($item==("Large Brown Eggs"))
+        else if($item==("Large Brown Eggs")||$item==("10 Large Brown Eggs"))
         {
             return true;
         }
@@ -863,7 +863,7 @@
             return true;
         }
 
-        else if($item==("1% Milk small"))
+        else if($item==("1% Milk Small"))
         {
             return true;
         }
@@ -873,7 +873,7 @@
             return true;
         }
 
-        else if($item==("2% Milk small"))
+        else if($item==("2% Milk Small"))
         {
             return true;
         }
@@ -977,12 +977,12 @@
             return true;
         }
 
-        else if($item==("Butterfly Pork Chops"))
+        else if($item==("Butterfly Pork Chops")|| $item==("Butterfly Pork Chops, 3 Pack"))
         {
             return true;
         }
 
-        else if($item==("Boneless Chicken Breast"))
+        else if($item==("Boneless Chicken Breast")||$item==("Boneless Chicken Breast, 3 Pack"))
         {
             return true;
         }
@@ -992,7 +992,7 @@
             return true;
         }
 
-        else if($item==("Confit Duck Legs"))
+        else if($item==("Confit Duck Legs")||$item==("Confit Duck Legs, 2 pack"))
         {
             return true;
         }
@@ -1065,6 +1065,7 @@
         {
             return true;
         }  
+        
         
         else 
         {
