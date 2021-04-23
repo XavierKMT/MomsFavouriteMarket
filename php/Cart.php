@@ -1,12 +1,6 @@
 <?php
- include("products.php");
- include("cartHeader.php");
-//  include("similarItems.php");
- 
-
-    // //Contents of the whole text file
-
-// combineItems();
+ include ("products.php");
+ include ("cartHeader.php");
 
 $content= file_get_contents("../data/cartOrder.txt")."<br/>";           //Saves As a String
 
