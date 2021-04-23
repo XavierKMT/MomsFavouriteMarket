@@ -90,7 +90,7 @@
 
         <?php
            
-        for($i = 0 ; $i<$num; $i++){
+        for($i = 0 ; $i<$num-1; $i++){
 
             echo " 
                 <form action='deleteProductList.php' method='POST'>
