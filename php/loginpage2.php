@@ -28,7 +28,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="backPage.html"><img src="../Images/logo.png"><span id="title">Mom's Favourite
+            <a class="navbar-brand" href="successadmin.php"><img src="../Images/logo.png"><span id="title">Mom's Favourite
                     Market (ADMIN)</span></a></a>
             <!--LINK TO MAIN PAGE-->
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
@@ -84,7 +84,7 @@
                     style="margin-left: 123px   ; margin-right: 60px; margin-top: 30px;"><a href="passwordreset.php" style="text-decoration: none; color: white;"> Forgot Password</a></button>
                 </form>
                 <p>
-                <h5>If you don't have an account, join the family <a href="signuppageHF.html"> here!</a></h5>
+                <h5>If you don't have an account, join the family <a href="signuppageHF.php"> here!</a></h5>
                 </p>
             </div>
 
