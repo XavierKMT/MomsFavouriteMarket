@@ -47,7 +47,7 @@ $productList = file_get_contents("../data/newProdList.txt")."</br>";
 $sales = array();
 $noSales = array();
     
-for($i = 0; $i<$num; $i++){
+for($i = 0; $i<$num-1; $i++){
     if($weeklyDeal[$i] == "no deal"){
         array_push($noSales, $products[$i]);
         }
