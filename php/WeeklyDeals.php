@@ -77,7 +77,7 @@ include("findFile.php");
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="../Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="../index.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -88,7 +88,7 @@ include("findFile.php");
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link">Home</a>
+                        <a href="../index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
