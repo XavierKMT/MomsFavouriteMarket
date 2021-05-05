@@ -1,15 +1,54 @@
-<!--The header-->
 <?php 
+    //The header
     include("headerForAisles.php");
+    include("organizingProduct_FE.php");
+
+$numProd = count($FV);
+
+$name = array();
+$price = array();
+$weeklyDeal = array();
+$weight = array();
+$pricePerWeight = array();
+$productNum = array();
+$image = array();
+
+for($i = 0 ; $i<$numProd ; $i++){
+    $temp = explode(";", $FV[$i]);
+
+    array_push($name, $temp[0]);
+    array_push($price, $temp[3]);
+    array_push($weeklyDeal, $temp[4]);
+    array_push($weight, $temp[5]);
+    array_push($productNum, $temp[10]);
+    array_push($pricePerWeight, $temp[6]);
+
+if($name[$i] == $item[$num-1]){
+
+        $lastImg = substr($temp[12], 0 ,-5);
+        array_push($image, $lastImg);
+    }
+
+else{
+    array_push($image, $temp[12]);
+    }   
+
+} 
+
+include("findFile.php");
+$file = array();
+for($i = 0 ; $i < $numProd ; $i++){
+    array_push($file, findProdFile($productNum[$i]));
+}
 ?>
 
-    <!--The banner-->
-    <br></br>
-    <center> <img class="img-fluid" src="../Images/Fruits&Veggies.jpg " alt="banner for Fruits & Vegetables"> </center>
-    <br></br>
+<!--The banner-->
+<br></br>
+<center> <img class="img-fluid" src="../Images/Fruits&Veggies.jpg " alt="banner for Fruits & Vegetables"> </center>
+<br></br>
 
-   <!--buttons on top-->
-   <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+<!--buttons on top-->
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
         <!--The shop by category button-->
         <div class="btn-group mr-2" role="group" aria-label="First group">
             <div class="dropdown">
@@ -35,212 +74,299 @@
                     Sort by
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="F&V_Relevance.html">Relevance</a>
-                    <a class="dropdown-item" href="F&V_AZ.html">Alphabetical order (A-Z)</a>
-                    <a class="dropdown-item" href="F&V_ZA.html">Alphabetical order (Z-A)</a>
-                    <a class="dropdown-item" href="F&V_PriceLH.html">Price (low to high)</a>
-                    <a class="dropdown-item" href="F&V_PriceHL.html">Price (high to low)</a>
+                    <a class="dropdown-item" href="F&V_Relevance.php">Relevance</a>
+                    <a class="dropdown-item" href="F&V_AZ.php">Alphabetical order (A-Z)</a>
+                    <a class="dropdown-item" href="F&V_ZA.php">Alphabetical order (Z-A)</a>
+                    <a class="dropdown-item" href="F&V_PriceLH.php">Price (low to high)</a>
+                    <a class="dropdown-item" href="F&V_PriceHL.php">Price (high to low)</a>
                 </div>
             </div>
         </div>
   </div>
 
-  <div class = "container" style =  "width: 85%; margin-top: 2%; border-left:2px solid black;">
+<div class = "container" style =  "width: 85%; margin-top: 2%; border-left:2px solid black;">
     <div class="row">
-		<!--The menu on the side-->
-		<div class="col-sm-2 d-none d-md-block"  style = "border-right:2px solid black;">
-			<table class="table">
-					<thead>
-					<tr>
-						<th scope="col">Fruits & Vegetables</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td scope="row">Fruits</td>
-					</tr>
-					<tr>
-						<td scope="row">Vegetables</td>
-					</tr>
-					</tbody>
-			</table>
-		</div>
+    <div class="col-sm-2 d-none d-md-block"  style = "border-right:2px solid black;">
+		<table class="table">
+			<thead>
+			<tr>
+				<th scope="col">Fruits & Vegetables</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td scope="row">Fruits</td>
+			</tr>
+			<tr>
+				<td scope="row">Vegetables</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
 
-        <div class = "col-md-10"> 
-              <!--The fruits header-->
-    <div>
-        <h4>Fruits</h4>
-    </div>
-    <!--The grid for the product (bootstrap)-->
+    <div class = "col-md-10"> 
+        <div>
+            <h4>Fruits</h4>
+        </div>
 
-    <?php 
-        include 'products.php';
-    ?>
-
-    <div class="container">
-        <!--First row-->
-        <div class="row" >
-            <!--First Product-->
-            <div class="col-sm" id="slots">
+        <!--The grid for the product (bootstrap)-->
+        <div class="container">
+            <div class="row" >
+            <?php 
+            //First product
+            echo "
+                <div class='col-sm' id='slots'>
                 <center>
-                    <a href="Apple.html"><img class="img-fluid" src="../Images/<?php echo $products[12];?>" alt="apple"></imag></a>
+                    <a href='$file[0]'><img class='img-fluid' src='../Images/$image[0]' alt='$name[0]'></imag></a>
                 </center>
-                <a href="Apple.html"><?php echo $products[0];?></a>
+                <a href='$file[0]'>$name[0]</a>
                 <br></br>
-                <b id="p2"><span class="bigger"><?php echo $products[4];?></span> avg. ea.</b>
-                <p id="oldPrices"><?php echo $products[3];?> avg. ea.</p>
-                <p id="p1">(<?php echo $products[5];?> avg.)</p>
-                <p id="p1"><?php echo $products[6];?></p>
+            ";
+            if($weeklyDeal[0] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[0]</span> avg. ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[0]</span> avg. ea.</b>
+                    <p id='oldPrices'>$price[0] avg. ea.</p>";
+                } 
+  
+            echo "
+                <p id='p1'>($weight[0] avg.)</p>
+                <p id='p1'>$pricePerWeight[0]</p>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
             </div>
-            <!--Second Product-->
-            <div class="col-sm" id="slots">
+            ";
+            
+            //Second product
+            echo "
+                <div class='col-sm' id='slots'>
                 <center>
-                    <a href="Banana.html"><img class="img-fluid" src="../Images/<?php echo $products[25];?>" alt="banana"> </img></a>
+                    <a href='$file[1]'><img class='img-fluid' src='../Images/$image[1]' alt='$name[1]'></imag></a>
                 </center>
-                <a href="Banana.html"><?php echo $products[13];?></a>
+                <a href='$file[1]'>$name[1]</a>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[16];?></span> avg. ea.</b>
-                <p id="p1">(<?php echo $products[18];?> avg.)</p>
-                <p id="p1"><?php echo $products[19];?></p>
+            ";
+            if($weeklyDeal[1] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[1]</span> avg. ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[1]</span> avg. ea.</b>
+                    <p id='oldPrices'>$price[1] avg. ea.</p>";
+                } 
+  
+            echo "
+                <p id='p1'>($weight[1] avg.)</p>
+                <p id='p1'>$pricePerWeight[1]</p>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
             </div>
-            <!--Third Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="Orange.html"><img class="img-fluid" src="../Images/<?php echo $products[51];?>" alt="oranges"></img></a>
-                </center>
-                <a href="Orange.html"><?php echo $products[39];?></a>
-                <br></br>
-                <p id="p1"><?php echo $products[44];?></p>
-                <b id="p1"><span class="bigger"><?php echo $products[42];?></span> ea.</b>
-                <p id="p1"><?php echo $products[44];?>/un.</p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
+            ";
+            //Third product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[2]'><img class='img-fluid' src='../Images/$image[2]' alt='$name[2]'></imag></a>
+            </center>
+            <a href='$file[2]'>$name[2]</a>
+            <br></br>
+        ";
+        if($weeklyDeal[2] == 'no deal')
+            echo " <b id='p1'><span class='bigger'>$price[2]</span> avg. ea.</b>";
+        else{
+            echo "<b id='p2'><span class='bigger'>$weeklyDeal[2]</span> avg. ea.</b>
+                <p id='oldPrices'>$price[2] avg. ea.</p>";
+            } 
+
+        echo "
+            <p id='p1'>($weight[2] avg.)</p>
+            <p id='p1'>$pricePerWeight[2]</p>
+            <br></br>
+            <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
+            <br></br>
+        </div>
+        "; 
+            ?>
             </div>
         </div>
-    </div>
-    <!--Second row-->
-    <div class="container">
-        <div class="row" >
-            <!--First Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="Pear.html"><img class="img-fluid" src="../Images/<?php echo $products[38];?>" alt="pear"></img></a>
-                </center>
-                <a href="Pear.html"><?php echo $products[26];?></a>
-                <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[29];?></span> avg. ea.</b>
-                <p id="p1">(<?php echo $products[31];?> avg.)</p>
-                <p id="p1"><?php echo $products[32];?></p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+
+        <!--Second row-->
+        <div class="container">
+            <div class="row">
+            <?php
+            //First Product
+                 echo "
+                 <div class='col-sm' id='slots'>
+                 <center>
+                     <a href='$file[3]'><img class='img-fluid' src='../Images/$image[3]' alt='$name[3]'></imag></a>
+                 </center>
+                 <a href='$file[3]'>$name[3]</a>
+                 <br></br>
+                 <p id='p1'>$weight[3]</p>
+                ";
+                if($weeklyDeal[3] == 'no deal')
+                    echo " <b id='p1'><span class='bigger'>$price[3]</span> ea.</b>
+                            <p id='p1'>$price[3]/un.</p>";
+                else{
+                    echo "<b id='p2'><span class='bigger'>$weeklyDeal[3]</span> ea.</b>
+                        <p id='oldPrices'>$price[3] ea.</p>";
+                    } 
+        
+                echo "
+                    <p id='p1'>$pricePerWeight[3]</p>
+                    <br></br>
+                    <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
+                    <br></br>
+                </div>
+                "; 
+
+            ?>
+
             <!--Second Product-->
             <div class="col-sm" id="emptyslots">
             </div>
             <!--Third Product-->
             <div class="col-sm" id="emptyslots">
             </div>
+            </div>
         </div>
-    </div>
 
-    <!--The vegetables header-->
-
-    <div>
-        <center>
-            <h4>Vegetables</h4>
-        </center>
-    </div>
-
-    <div class="container">
+        <div>
+        <center><h4>Vegetables</h4></center>
+        </div>
+            
+        <div class="container">
         <!--The first row-->
         <div class="row" >
-            <!--The first product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="Celery.html"><img class="img-fluid" src="../Images/<?php echo $products[64];?>" alt="celery"></a>
-                </center>
-                <a href="Celery.html"><?php echo $products[52];?></a>
-                <br></br>
-                <p id="p1"><?php echo $products[57];?></p>
-                <b id="p1"> <span class="bigger"><?php echo $products[55];?></span> ea.</b>
-                <p id="p1"><?php echo $products[55];?>/un.</p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
-            <!--The second product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="Cucumber.html"><img class="img-fluid" src="../Images/<?php echo $products[77];?>" alt="cucumber"></a>
-                </center>
-                <a href="Cucumber.html"><?php echo $products[65];?></a>
-                <p id="p1"><?php echo $products[70];?></p>
-                <b id="p2"><span class="bigger"><?php echo $products[69];?></span> ea.</b>
-                <p id="oldPrices"><?php echo $products[68];?> ea.</p>
-                <p id="oldPrices"><?php echo $products[68];?>/un.</p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
-            <!--The third product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="Lettuce.html"><img class="img-fluid" src="../Images/<?php echo $products[103];?>" alt="lettuce"></a>
-                </center>
-                <a href="Lettuce.html"><?php echo $products[91];?></a>
-                <br></br>
-                <p id="p1"><?php echo $products[96];?></p>
-                <b id="p1"><span class="bigger"><?php echo $products[94];?></span> ea. </b>
-                <p id="p1"><?php echo $products[94];?>/un.</p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+        <?php 
+                //First product
+                 echo "
+                    <div class='col-sm' id='slots'>
+                    <center>
+                    <a href='$file[4]'><img class='img-fluid' src='../Images/$image[4]' alt='$name[4]'></imag></a>
+                    </center>
+                    <a href='$file[4]'>$name[4]</a>
+                    <br></br>
+                    <p id='p1'>$weight[4]</p>
+                    ";
+                    if($weeklyDeal[4] == 'no deal')
+                        echo " <b id='p1'><span class='bigger'>$price[4]</span> ea.</b>
+                                <p id='p1'>$price[4]/un.</p>";
+                    else{
+                        echo "<b id='p2'><span class='bigger'>$weeklyDeal[4]</span> ea.</b>
+                            <p id='oldPrices'>$price[4] ea.</p>";
+                            } 
+                    
+                    echo "
+                        <p id='p1'>$pricePerWeight[4]</p>
+                        <br></br>
+                        <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
+                        <br></br>
+                        </div>
+                        "; 
+                    
+                    //Second product
+                    echo "
+                    <div class='col-sm' id='slots'>
+                    <center>
+                    <a href='$file[5]'><img class='img-fluid' src='../Images/$image[5]' alt='$name[5]'></imag></a>
+                    </center>
+                    <a href='$file[5]'>$name[5]</a>
+                    <p id='p1'>$weight[5]</p>
+                    ";
+                    if($weeklyDeal[5] == 'no deal')
+                        echo " <b id='p1'><span class='bigger'>$price[5]</span> ea.</b>
+                                <p id='p1'>$price[5]/un.</p>";
+                    else{
+                        echo "<b id='p2'><span class='bigger'>$weeklyDeal[5]</span> ea.</b>
+                            <p id='oldPrices'>$price[5] ea.</p>";
+                            } 
+                    
+                    echo "
+                        <p id='p1'>$pricePerWeight[5]</p>
+                        <br></br>
+                        <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
+                        <br></br>
+                        </div>
+                        "; 
+
+                    //Third product
+                    echo "
+                    <div class='col-sm' id='slots'>
+                    <center>
+                    <a href='$file[7]'><img class='img-fluid' src='../Images/$image[7]' alt='$name[7]'></imag></a>
+                    </center>
+                    <a href='$file[7]'>$name[7]</a>
+                    <br></br>
+                    <p id='p1'>$weight[7]</p>
+                    ";
+                    if($weeklyDeal[7] == 'no deal')
+                        echo " <b id='p1'><span class='bigger'>$price[7]</span> ea.</b>
+                                <p id='p1'>$price[7]/un.</p>";
+                    else{
+                        echo "<b id='p2'><span class='bigger'>$weeklyDeal[7]</span> ea.</b>
+                            <p id='oldPrices'>$price[7] ea.</p>";
+                            } 
+                    
+                    echo "
+                        <p id='p1'>$pricePerWeight[7]</p>
+                        <br></br>
+                        <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
+                        <br></br>
+                        </div>
+                        "; 
+            ?>
         </div>
+        </div>
+
+        <div class="container">
         <!--The second row-->
         <div class="row" >
-            <!--The first product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="Pepper.html"><img class="img-fluid" src="../Images/<?php echo $products[90];?>" alt="red pepper"></a>
-                </center>
-                <a href="Pepper.html"><?php echo $products[78];?></a>
-                <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[81];?></span> avg. ea.</b>
-                <p id="p1">(<?php echo $products[83];?> avg.)</p>
-                <p id="p1"><?php echo $products[84];?></p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
-            <!--The second product-->
-            <div class="col-sm" id="emptyslots">
-            </div>
-            <!--The third product-->
-            <div class="col-sm" id="emptyslots">
-            </div>
+             <!--The first product-->
+             <?php
+                    echo "
+                    <div class='col-sm' id='slots'>
+                    <center>
+                        <a href='$file[6]'><img class='img-fluid' src='../Images/$image[6]' alt='$name[6]'></imag></a>
+                    </center>
+                    <a href='$file[6]'>$name[6]</a>
+                    <br></br>
+                ";
+                if($weeklyDeal[6] == 'no deal')
+                    echo " <b id='p1'><span class='bigger'>$price[6]</span> avg. ea.</b>";
+                else{
+                    echo "<b id='p2'><span class='bigger'>$weeklyDeal[6]</span> avg. ea.</b>
+                        <p id='oldPrices'>$price[6] avg. ea.</p>";
+                    } 
+    
+                echo "
+                    <p id='p1'>($weight[6] avg.)</p>
+                    <p id='p1'>$pricePerWeight[6]</p>
+                    <br></br>
+                    <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
+                    <br></br>
+                </div>
+                ";
+                ?>
+                <!--The second product-->
+                <div class="col-sm" id="emptyslots">
+                </div>
+                <!--The third product-->
+                <div class="col-sm" id="emptyslots">
+                </div>
+        </div>
         </div>
     </div>
-		</div>
-		
-	</div>
+
+    </div>
 </div>
 
-  
-    <!--The button for the pages-->
-    <br></br>
-    <center>
-        <a href="#" class="previous round">&#8249;</a>
-        <a href="#" class="next round">&#8250;</a>
-    </center>
+<!--The button for the pages-->
+<br></br>
+<center>
+    <a href="#" class="previous round">&#8249;</a>
+    <a href="#" class="next round">&#8250;</a>
+</center>
 
 <!--The footer-->
 <?php

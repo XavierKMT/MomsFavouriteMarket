@@ -69,24 +69,7 @@
             <td></td>
             <td>Collection</td>
             <!--The dropdown button for the different categories-->
-            <td>
-
-            <div class="dropdown">
-                        <button class = "dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         All Products
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="ProductList.html">All products</a>
-                          <a class="dropdown-item" href="BakeryProductList.html">Bakery</a>
-                          <a class="dropdown-item" href="ButcheryProductList.html">Butchery</a>
-                          <a class="dropdown-item" href="Dairy&EggsProductList.html">Dairy & Eggs</a>
-                          <a class="dropdown-item" href="F&VProductList.html">Fruits & Vegetables</a>
-                          <a class="dropdown-item" href="FrozenProductList.html">Frozen Food</a>
-                          <a class="dropdown-item" href="PantryProductList.html">Pantry</a>
-                        </div>
-                    </div>
-
-            </td>
+            <td></td>
            <!--The button to add a product-->
            <td><button type="button"><a href = "AddProductForm.php">Add Product</a></button></td>
            <!--The button to delete all product on the page-->
@@ -107,7 +90,7 @@
 
         <?php
            
-        for($i = 0 ; $i<$num; $i++){
+        for($i = 0 ; $i<$num-1; $i++){
 
             echo " 
                 <form action='deleteProductList.php' method='POST'>

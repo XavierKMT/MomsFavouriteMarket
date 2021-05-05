@@ -3,7 +3,7 @@ session_start();
 
 function delItem($itemName)
 {
-    $file = fopen("../data/frontCart.txt", "r");
+    $file = fopen("../data/cartOrder.txt", "r");
     $format="";
     $storage=array();
     
@@ -28,7 +28,7 @@ function delItem($itemName)
 
 
             fclose($file);
-            $file=fopen("../data/frontCart.txt","w");
+            $file=fopen("../data/cartOrder.txt","w");
 
             for($x=0; $x<sizeof($storage);$x++)
             {   
@@ -45,7 +45,7 @@ function delItem($itemName)
 
 function add($itemName)
 {
-    $file = fopen("../data/frontCart.txt", "r");
+    $file = fopen("../data/cartOrder.txt", "r");
     $format="";
     $storage=array();
     
@@ -74,7 +74,7 @@ function add($itemName)
 
 
             fclose($file);
-            $file=fopen("../data/frontCart.txt","w");
+            $file=fopen("../data/cartOrder.txt","w");
 
             for($x=0; $x<sizeof($storage);$x++)
             {   
@@ -91,7 +91,7 @@ function add($itemName)
 
 function subtract($itemName)
 {
-    $file = fopen("../data/frontCart.txt", "r");
+    $file = fopen("../data/cartOrder.txt", "r");
     $format="";
     $storage=array();
     
@@ -123,7 +123,7 @@ function subtract($itemName)
 
 
             fclose($file);
-            $file=fopen("../data/frontCart.txt","w");
+            $file=fopen("../data/cartOrder.txt","w");
 
             for($x=0; $x<sizeof($storage);$x++)
             {   
@@ -140,10 +140,11 @@ function subtract($itemName)
 
 function emptyCart()
 {
-    $file=fopen("../data/frontCart.txt","w"); 
+    $file=fopen("../data/cartOrder.txt","w"); 
     fwrite($file,"");
-
-
+  
+    session_unset();
+    session_destroy();
 }
 
 

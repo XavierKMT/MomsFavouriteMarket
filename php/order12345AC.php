@@ -6,7 +6,7 @@
 <?php 
 
  //Contents of the whole text file
- $content= file_get_contents("../data/cartOrder.txt")."<br/>";           //Saves As a String
+ $content= file_get_contents("../data/bCart.txt")."<br/>";           //Saves As a String
 
  //----------------------------------------------
 
@@ -100,9 +100,12 @@
                                         <button type='submit' name='deleItem'><i class='far fa-times-circle'></i></button>
     
                                 </td>
-                                <td style='vertical-align: middle;  font-size:17px;'><a href='template.php'
-                                    class='editButton'><button type='button'>EDIT</button></a>
-                                 </td>
+                                <td style='vertical-align: middle;  font-size:17px;'>
+                                    <input type='text' name='itemI' value='$items[$x]' hidden>
+                                    <input type='text' name='qtyQ' value='$qty[$x]' hidden>
+                                    <input type='text' name='priceP' value='$price[$x]' hidden>
+                                    <button type='submit' name='ed'>EDIT</button>
+                                </td>
 
                             </tr>
                             </form>

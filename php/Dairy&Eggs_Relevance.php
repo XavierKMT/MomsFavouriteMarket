@@ -1,10 +1,50 @@
-<!--The header-->
 <?php 
+    //The header
     include("headerForAisles.php");
+    include("organizingProduct_FE.php");
+
+$numProd = count($dairy);
+
+$name = array();
+$price = array();
+$weeklyDeal = array();
+$weight = array();
+$pricePerWeight = array();
+$productNum = array();
+$image = array();
+
+for($i = 0 ; $i<$numProd ; $i++){
+    $temp = explode(";", $dairy[$i]);
+
+    array_push($name, $temp[0]);
+    array_push($price, $temp[3]);
+    array_push($weeklyDeal, $temp[4]);
+    array_push($weight, $temp[5]);
+    array_push($productNum, $temp[10]);
+    array_push($pricePerWeight, $temp[6]);
+
+if($name[$i] == $item[$num-1]){
+
+        $lastImg = substr($temp[12], 0 ,-5);
+        array_push($image, $lastImg);
+    }
+
+else{
+    array_push($image, $temp[12]);
+    }   
+
+} 
+
+include("findFile.php");
+$file = array();
+for($i = 0 ; $i < $numProd ; $i++){
+    array_push($file, findProdFile($productNum[$i]));
+}
+
 ?>
 
-    <!--The banner-->
-    <br></br>
+   <!--The banner-->
+   <br></br>
     <center> <img class="img-fluid" src="../Images/Dairy&Eggs.jpg " alt="banner for dairy & eggs"> </center>
     <br></br>
 
@@ -35,11 +75,11 @@
                     Sort by
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="Dairy&Eggs_Relevance.html">Relevance</a>
-                    <a class="dropdown-item" href="Dairy&Eggs_AZ.html">Alphabetical order (A-Z)</a>
-                    <a class="dropdown-item" href="Dairy&Eggs_ZA.html">Alphabetical order (Z-A)</a>
-                    <a class="dropdown-item" href="Dairy&Eggs_PriceLH.html">Price (low to high)</a>
-                    <a class="dropdown-item" href="Dairy&Eggs_PriceHL.html">Price (high to low)</a>
+                    <a class="dropdown-item" href="Dairy&Eggs_Relevance.php">Relevance</a>
+                    <a class="dropdown-item" href="Dairy&Eggs_AZ.php">Alphabetical order (A-Z)</a>
+                    <a class="dropdown-item" href="Dairy&Eggs_ZA.php">Alphabetical order (Z-A)</a>
+                    <a class="dropdown-item" href="Dairy&Eggs_PriceLH.php">Price (low to high)</a>
+                    <a class="dropdown-item" href="Dairy&Eggs_PriceHL.php">Price (high to low)</a>
                 </div>
             </div>
         </div>
@@ -76,93 +116,147 @@
     </div>
     <!--The grid for the product (bootstrap)-->
 
-    <?php 
-        include 'products.php';
-    ?>
-
     <div class="container">
         <!--First row-->
         <div class="row" >
-            <!--First Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="ShreddedCheese.html"><img class="img-fluid" src="../Images/<?php echo $products[324];?>"
-                            alt="shredded cheese"></imag></a>
-                </center>
-                <a href="ShreddedCheese.html"><?php echo $products[312];?></a>
-                <b id="p1"><span class="bigger"><?php echo $products[315];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[317];?>)</p>
-                <p id="p1"><?php echo $products[318];?></p>
+            <?php
+            //First product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[0]'><img class='img-fluid' src='../Images/$image[0]'
+                        alt='$name[0]'></imag></a>
+            </center>
+            <a href='$file[0]'>$name[0]</a>
+            ";
+
+            if($weeklyDeal[0] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[0]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[0]</span> ea.</b>
+                    <p id='oldPrices'>$price[0] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[0])</p>
+                <p id='p1'>$pricePerWeight[0]</p>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-            </div>
-            <!--Second Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="CheddarCheese.html"><img class="img-fluid" src="../Images/<?php echo $products[337];?>"
-                            alt="cheddar cheese"> </img></a>
-                </center>
-                <a href="CheddarCheese.html"><?php echo $products[325];?></a>
+                </div>
+            ";
+            //Second product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[1]'><img class='img-fluid' src='../Images/$image[1]'
+                        alt='$name[1]'></imag></a>
+            </center>
+            <a href='$file[1]'>$name[1]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[1] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[1]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[1]</span> ea.</b>
+                    <p id='oldPrices'>$price[1] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[1])</p>
+                <p id='p1'>$pricePerWeight[1]</p>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[328];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[330];?>)</p>
-                <p id="p1"><?php echo $products[331];?></p>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                </div>
+            ";
+            //Third product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[2]'><img class='img-fluid' src='../Images/$image[2]'
+                        alt='$name[2]'></imag></a>
+            </center>
+            <a href='$file[2]'>$name[2]</a>
+            ";
+            
+            if($weeklyDeal[2] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[2]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[2]</span> ea.</b>
+                    <p id='oldPrices'>$price[2] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>$weight[2]</p>
+                <p id='p1'>$pricePerWeight[2]</p>
                 <br></br>
-            </div>
-            <!--Third Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="StrawberryYogurt.html"><img class="img-fluid" src="../Images/<?php echo $products[350];?>"
-                            alt="strawberry yogurt"></img></a>
-                </center>
-                <a href="StrawberryYogurt.html"><?php echo $products[338];?></a>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <b id="p2"><span class="bigger"><?php echo $products[342];?></span> ea.</b>
-                <p id="oldPrices"><?php echo $products[341];?> ea.</p>
-                <p id="p1"><?php echo $products[343];?></p>
-                <p id="p1"><?php echo $products[344];?></p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+                </div>
+            ";
+
+            ?>
         </div>
     </div>
     <!--Second row-->
     <div class="container">
         <div class="row" >
             <!--First Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="0yogurt.html"><img class="img-fluid" src="../Images/<?php echo $products[363];?>"
-                            alt="blueberry yogurt"></img></a>
-                </center>
-                <a href="0yogurt.html"><?php echo $products[351];?></a>
+            <?php
+            //First product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[3]'><img class='img-fluid' src='../Images/$image[3]'
+                        alt='$name[3]'></imag></a>
+            </center>
+            <a href='$file[3]'>$name[3]</a>
+            ";
+
+            if($weeklyDeal[3] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[3]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[3]</span> ea.</b>
+                    <p id='oldPrices'>$price[3] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>$weight[3]</p>
+                <p id='p1'>$pricePerWeight[3]</p>
                 <br></br>
-                <b id="p2"><span class="bigger"><?php echo $products[355];?></span> ea.</b>
-                <p id="oldPrices"><?php echo $products[354];?> ea.</p>
-                <p id="p1"><?php echo $products[256];?></p>
-                <p id="p1"><?php echo $products[357];?></p>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                </div>
+            ";
+            //Second product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[4]'><img class='img-fluid' src='../Images/$image[4]'
+                        alt='$name[4]'></imag></a>
+            </center>
+            <a href='$file[4]'>$name[4]</a>
+            <br />
+            ";
+
+            if($weeklyDeal[4] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[4]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[4]</span> ea.</b>
+                    <p id='oldPrices'>$price[4] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>$weight[4]</p>
+                <p id='p1'>$pricePerWeight[4]</p>
                 <br></br>
-            </div>
-            <!--Second Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="YogurtPack.html"><img class="img-fluid" src="../Images/<?php echo $products[376];?>"
-                            alt="yogurt pack"></img></a>
-                </center>
-                <a href="YogurtPack.html"><?php echo $products[364];?></a>
-                <b id="p1"><span class="bigger"><?php echo $products[367];?></span> ea.</b>
-                <p id="p1"><?php echo $products[369];?></p>
-                <p id="p1"><?php echo $products[370];?></p>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+                </div>
+            ";
+            ?>
             <!--Third Product-->
             <div class="col-sm" id="emptyslots">
             </div>
@@ -182,50 +276,86 @@
         <!--The first row-->
         <div class="row" >
             <!--The first product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="30eggs.html"><img class="img-fluid" src="../Images/<?php echo $products[389];?>" alt="30 eggs"></a>
-                </center>
-                <a href="30eggs.html"><?php echo $products[377];?></a>
+            <?php
+            //First product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[5]'><img class='img-fluid' src='../Images/$image[5]'
+                        alt='$name[5]'></imag></a>
+            </center>
+            <a href='$file[5]'>$name[5]</a><br /><br />
+            ";
+
+            if($weeklyDeal[5] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[5]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[5]</span> ea.</b>
+                    <p id='oldPrices'>$price[5] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>$weight[5]</p>
+                <p id='p1'>$pricePerWeight[5]</p>
                 <br></br>
-                <b id="p2"><span class="bigger"><?php echo $products[381];?></span> ea.</b>
-                <p id="oldPrices"><?php echo $products[380];?> ea.</p>
-                <p id="p1">(<?php echo $products[382];?>)</p>
-                <p id="p1"><?php echo $products[383];?></p>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                </div>
+            ";
+            //Second product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[6]'><img class='img-fluid' src='../Images/$image[6]'
+                        alt='$name[6]'></imag></a>
+            </center>
+            <a href='$file[6]'>$name[6]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[6] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[6]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[6]</span> ea.</b>
+                    <p id='oldPrices'>$price[6] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>$weight[6]</p>
+                <p id='p1'>$pricePerWeight[6]</p>
                 <br></br>
-            </div>
-            <!--The second product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="10eggsWhite.html"><img class="img-fluid" src="../Images/<?php echo $products[402];?>"
-                            alt="10 white eggs"></a>
-                </center>
-                <a href="10eggsWhite.html"<?php echo $products[390];?></a>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[393];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[395];?>)</p>
-                <p id="p1"><?php echo $products[396];?></p>
+                </div>
+            ";
+
+            //Third product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[7]'><img class='img-fluid' src='../Images/$image[7]'
+                        alt='$name[7]'></imag></a>
+            </center>
+            <a href='$file[7]'>$name[7]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[7] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[7]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[7]</span> ea.</b>
+                    <p id='oldPrices'>$price[7] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>$weight[7]</p>
+                <p id='p1'>$pricePerWeight[7]</p>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-            </div>
-            <!--The third product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="12eggsBrown.html"><img class="img-fluid" src="../Images/<?php echo $products[415];?>"
-                            alt="10 brown eggs"></a>
-                </center>
-                <a href="12eggsBrown.html"><?php echo $products[403];?></a>
-                <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[406];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[408];?>)</p>
-                <p id="p1"><?php echo $products[409];?></p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+                </div>
+            ";
+            ?>
 
         </div>
     </div>
@@ -238,97 +368,171 @@
     <div class="container">
         <!--First row-->
         <div class="row" >
-            <!--First Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="1milk4L.html"><img class="img-fluid" src="../Images/<?php echo $products[428];?>" alt="1% milk 4L"></img></a>
-                </center>
-                <a href="1milk4L.html"><?php echo $products[416];?></a>
+        <?php
+            //First product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[8]'><img class='img-fluid' src='../Images/$image[8]'
+                        alt='$name[8]'></imag></a>
+            </center>
+            <a href='$file[8]'>$name[8]</a><br /><br />
+            ";
+
+            if($weeklyDeal[8] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[8]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[8]</span> ea.</b>
+                    <p id='oldPrices'>$price[8] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[8])</p>
+                <p id='p1'>$pricePerWeight[8]</p>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[419];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[421];?>)</p>
-                <p id="p1"><?php echo $products[422];?></p>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                </div>
+            ";
+            //Second product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[9]'><img class='img-fluid' src='../Images/$image[9]'
+                        alt='$name[9]'></imag></a>
+            </center>
+            <a href='$file[9]'>$name[9]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[9] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[9]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[9]</span> ea.</b>
+                    <p id='oldPrices'>$price[9] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[9])</p>
+                <p id='p1'>$pricePerWeight[9]</p>
                 <br></br>
-            </div>
-            <!--Second Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="1milk1L.html"><img class="img-fluid" src="../Images/<?php echo $products[441];?>" alt="1milk1L"> </img></a>
-                </center>
-                <a href="1milk1L.html"><?php echo $products[429];?></a>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[432];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[434];?>)</p>
-                <p id="p1"><?php echo $products[435];?></p>
+                </div>
+            ";
+
+            //Third product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[10]'><img class='img-fluid' src='../Images/$image[10]'
+                        alt='$name[10]'></imag></a>
+            </center>
+            <a href='$file[10]'>$name[10]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[10] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[10]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[10]</span> ea.</b>
+                    <p id='oldPrices'>$price[10] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[10])</p>
+                <p id='p1'>$pricePerWeight[10]</p>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-            </div>
-            <!--Third Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="2milk4L.html"><img class="img-fluid" src="../Images/<?php echo $products[454];?>" alt="2milk4L"></img></a>
-                </center>
-                <a href="2milk4L.html"><?php echo $products[442];?></a>
-                <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[445];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[447];?>)</p>
-                <p id="p1"><?php echo $products[448];?></p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+                </div>
+            ";
+            ?>
         </div>
     </div>
     <!--Second row-->
     <div class="container">
         <div class="row" >
-            <!--First Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="2milk4L.html"><img class="img-fluid" src="../Images/<?php echo $products[467];?>" alt="2milk4L"></img></a>
-                </center>
-                <a href="2milk4L.html"><?php echo $products[455];?></a>
+        <?php
+            //First product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[11]'><img class='img-fluid' src='../Images/$image[11]'
+                        alt='$name[11]'></imag></a>
+            </center>
+            <a href='$file[11]'>$name[11]</a><br /><br />
+            ";
+
+            if($weeklyDeal[11] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[11]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[11]</span> ea.</b>
+                    <p id='oldPrices'>$price[11] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[11])</p>
+                <p id='p1'>$pricePerWeight[11]</p>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[458];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[460];?>)</p>
-                <p id="p1"><?php echo $products[461];?></p>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                </div>
+            ";
+            //Second product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[12]'><img class='img-fluid' src='../Images/$image[12]'
+                        alt='$name[12]'></imag></a>
+            </center>
+            <a href='$file[12]'>$name[12]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[12] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[12]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[12]</span> ea.</b>
+                    <p id='oldPrices'>$price[12] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[12])</p>
+                <p id='p1'>$pricePerWeight[12]</p>
                 <br></br>
-            </div>
-            <!--Second Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="SaltedButter.html"><img class="img-fluid" src="../Images/<?php echo $products[480];?>"
-                            alt="salted butter"></img></a>
-                </center>
-                <a href="SaltedButter.html"><?php echo $products[468];?></a>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[471];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[473];?>)</p>
-                <p id="p1"><?php echo $products[474];?></p>
+                </div>
+            ";
+
+            //Third product
+            echo "
+            <div class='col-sm' id='slots'>
+            <center>
+                <a href='$file[13]'><img class='img-fluid' src='../Images/$image[13]'
+                        alt='$name[13]'></imag></a>
+            </center>
+            <a href='$file[13]'>$name[13]</a><br />
+            <br />
+            ";
+
+            if($weeklyDeal[13] == 'no deal')
+                echo " <b id='p1'><span class='bigger'>$price[13]</span> ea.</b>";
+            else{
+                echo "<b id='p2'><span class='bigger'>$weeklyDeal[13]</span> ea.</b>
+                    <p id='oldPrices'>$price[13] ea.</p>";
+                } 
+
+            echo "
+                <p id='p1'>($weight[13])</p>
+                <p id='p1'>$pricePerWeight[13]</p>
                 <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
+                <button type='button' class='btn btn-dark btn-sm' id='addToCartStyle'>Add to cart</button>
                 <br></br>
-            </div>
-            <!--Third Product-->
-            <div class="col-sm" id="slots">
-                <center>
-                    <a href="UnsaltedButter.html"><img class="img-fluid" src="../Images/<?php echo $products[493];?>"
-                            alt="unsalted butter"></img></a>
-                </center>
-                <a href="UnsaltedButter.html"><?php echo $products[481];?></a>
-                <br></br>
-                <b id="p1"><span class="bigger"><?php echo $products[484];?></span> ea.</b>
-                <p id="p1">(<?php echo $products[486];?>)</p>
-                <p id="p1"><?php echo $products[487];?></p>
-                <br></br>
-                <button type="button" class="btn btn-dark btn-sm" id="addToCartStyle">Add to cart</button>
-                <br></br>
-            </div>
+                </div>
+            ";
+            ?>
 
         </div>
     </div>

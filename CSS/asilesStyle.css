@@ -1,4 +1,3 @@
-/* What I added*/
 
 .btn-toolbar{
     margin-left:11.5%;
@@ -10,8 +9,6 @@
 .container .dropdown{
     margin-right: 1%;  
   }
-
-
 
   .container a:link{color: black; text-decoration: none;}
   .container a:visited{color: black}
@@ -56,6 +53,20 @@
     margin-bottom: 0%;
     margin-left: 5%;
     font-size: 95%;
+}
+
+#p2{
+    margin-bottom: 0%;
+    margin-left: 5%;
+    font-size: 95%;
+    color: red;
+}
+
+#oldPrices{
+    margin-bottom: 0%;
+    margin-left: 5%;
+    font-size: 95%;
+    text-decoration: line-through;
 }
 
 h4 {text-align:center; margin-right: 11.5%;margin-left:11.5%;}

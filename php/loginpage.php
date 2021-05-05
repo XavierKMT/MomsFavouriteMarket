@@ -27,7 +27,7 @@
 
 <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="../Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="../index.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->

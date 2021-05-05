@@ -115,7 +115,13 @@
                     <h2 class='product'>$line[0]</h2>
                     <table style='width:100%;'>
                         <tr class='price'>
-                            <th><h4>$line[3]</h4></th>
+                            <th><h4>";
+                            if ($line[4] == "no deal") {
+                                echo $line[3];
+                            } else {
+                                echo $line[4];
+                            }
+                            print "</h4></th>
                             <th><h4>$line[5]</h4></th>
                             <th><h4>$line[6]</h4></th>
                         </tr>
@@ -128,6 +134,7 @@
                     
                     <div style='margin: 9% 27%;'>
                         <form method='post' action='";
+                                if ($_POST[num]>0) {
                                     $file = "../data/newProdList.txt";
                                     $readfile = fopen($file,"r");
                                     while (!feof($readfile)) {
@@ -140,7 +147,11 @@
                                             for($i=0;$i<sizeof($fullCart);$i++) {
                                                 $newLine = explode(";",fgets($cartFile));
                                                 if (in_array($line[0], $newLine)) {
-                                                    $fullCart[$i] = $line[0].";".$line[3].";".$_POST[num]."\n";
+                                                    if ($line[4] == "no deal") {
+                                                        $fullCart[$i] = $line[0].";".ltrim($line[3],'$').";".$_POST[num]."\n";
+                                                    } else {
+                                                        $fullCart[$i] = $line[0].";".ltrim($line[4],'$').";".$_POST[num]."\n";
+                                                    }
                                                     $fileReset = fopen($newFile,"w");
                                                     for($j=0;$j<sizeof($fullCart);$j++) {
                                                         fwrite($fileReset,$fullCart[$j]);
@@ -149,10 +160,15 @@
                                                 }
                                             }
                                             if(!$passed) {
-                                                fwrite($cartFile,$line[0].";".$line[3].";".$_POST[num]."\n");
+                                                if ($line[4] == "no deal") {
+                                                    fwrite($cartFile,$line[0].";".ltrim($line[3],'$').";".$_POST[num]."\n");
+                                                } else {
+                                                    fwrite($cartFile,$line[0].";".ltrim($line[4],'$').";".$_POST[num]."\n");
+                                                }
                                             }
                                         }
-                                    }                                
+                                    }
+                                }                               
                                 print "'>
                             <button type='button' onclick='change(this,true)'><i class='fas fa-plus-circle'></i></button>
                             <input type='text' style='border:none;' name='num' value='1' size='1'>

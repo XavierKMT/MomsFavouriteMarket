@@ -46,6 +46,8 @@ else{
 
 } 
 
+include("findFile.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +77,7 @@ else{
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php"><img src="../Images/logo.png" class="img-fluid"
+            <a class="navbar-brand" href="../index.php"><img src="../Images/logo.png" class="img-fluid"
                     alt="Responsive image"><span id="title">Mom's Favourite Market</span>
             </a>
             <!--LINK TO MAIN PAGE-->
@@ -86,7 +88,7 @@ else{
             <div class="collapse navbar-collapse" id="main-navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link">Home</a>
+                        <a href="../index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -162,10 +164,13 @@ else{
 
                 <?php
                     for($i = 0; $i < $saleNum; $i++){
+
+                        $file = findProdFile($productNum[$i]); 
+
                         echo "
                         <tr>
-                            <th><a href='30eggs.html'><img class = 'img-fluid' src = '../Images/$image[$i]'></a></th>
-                            <td><a href='30eggs.html'>$name[$i]</a></td>
+                            <th><a href='$file'><img class = 'img-fluid' src = '../Images/$image[$i]'></a></th>
+                            <td><a href='$file'>$name[$i]</a></td>
                             <td>$aisle[$i]</td>
                             <td id = 'sales'><span class = 'bigger'>$weeklyDeal[$i]</span> ea.</td>
                             <td>$weight[$i]</td>

@@ -13,7 +13,7 @@ Sliced Whole Wheat Bread;Bakery;Breads;$4.19;no deal;675g;$0.64/100g;Price;Weigh
 French Baguette;Bakery;Breads;$3.19;$2.49;250g;$1.28/100g;Price;Weight;Price per weight;313;10;Baguette.png
 Maple Pastry Bites;Bakery;Pastries;$4.99;no deal;12 x 20g;$2.08/100g;Price;Weight;Price per weight;321;15;mapplepastry.png
 Palm Leaf Pastries;Bakery;Pastries;$6.99;no deal;150g;$4.66/100g;Price;Weight;Price per weight;322;15;leafpastry.png
-Lean Ground Beef;Butchery;Meat;approx. $7.73;approx. $3.87;approx 500g;$1.55/100g;Average price;Average weight;Price per weight;411;100;groundbeef.png
+Lean Ground Beef;Butchery;Meat;$7.73;$3.87;approx 500g;$1.55/100g;Average price;Average weight;Price per weight;411;100;groundbeef.png
 Rib Steak;Butchery;Meat;$10.58;$5.29;300g;$35.25/kg;Average price;Average weight;Price per weight;413;100;steak.png
 Butterfly Pork Chops, 3 Pack;Butchery;Meat;$8.59;$4.30;600g;$13.21/kg;Average price;Average weight;Price per weight;414;100;pork.png
 Boneless Chicken Breast, 3 Pack;Butchery;Poultry;$10.21;$5.11;600g;$1.70/100g;Average price;Average weight;Price per weight;431;150;chickenbreast.png

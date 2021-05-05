@@ -1,11 +1,8 @@
 <?php
- include("products.php");
- include("cartHeader.php");
+ include ("products.php");
+ include ("cartHeader.php");
 
- 
-
-    // //Contents of the whole text file
-$content= file_get_contents("../data/frontCart.txt")."<br/>";           //Saves As a String
+$content= file_get_contents("../data/cartOrder.txt")."<br/>";           //Saves As a String
 
 $data=explode("\n",$content);
 
@@ -386,8 +383,8 @@ for($x=0; $x<$num;$x++)
                     </table>";
                     ?>
 
-                    <button type="button" onclick="proceedToPay()">CHECKOUT</button>
-                    <a href="index.html">
+                    <a href="CheckoutSuccess.php"><button type="button">CHECKOUT</button></a>
+                    <a href="../index.php">
                         <button type="button" id="specialButton" style="margin-bottom: 10px;">CONTINUE SHOPPING</button>
                     </a>
                 </div>
